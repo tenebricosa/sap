@@ -1,0 +1,495 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<link rel=Edit-Time-Data href="StartingIFS.files/editdata.mso">
+<title>Запуск служб IFS и Oracle</title>
+
+<link rel=Stylesheet type="text/css" media=all
+href="../General/TMExternalStyleSheet.css">
+
+<style>
+<!--
+div.Section1 {page:Section1;}span.ScreenOutput31 { font-family:"Courier New"; }span.ScreenOutput26 { font-family:"Courier New"; }-->
+</style>
+
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=darkblue
+vlink=darkblue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+
+<div>
+		<h2 style="line-height: 150%"><font size="6"><a name = "part_3"></a>3. 
+		Оптимизация управления решением SAP</font></h2>
+		<p style="line-height: 150%">&nbsp;&nbsp;<a href="#vved_3">Введение</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp; <a href="#part_3_1">3.1 Обзор сервисов пакета  SAP Solution Management Optimization</a> </p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_3_1_1">Оптимизация производительности системы</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_3_1_2">Интеграция приложений</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_3_1_3">Оптимизация объема данных</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_3_1_4">Оптимизация администрирования</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_3_1_5">Оптимизация тестирования</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp; <a href="#part_3_2">3.2 Система отчетов SAP Early Watch</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp; <a href="#part_3_3">3.3 Пакет 
+		сервисов SAP Safeguarding</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp; <a href="#part_3_4">3.4 Служба 
+		поддержки</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp; <a href="#part_3_5">3.5 Вопросы для самоконтроля</a></p>
+
+		
+<h2 style="line-height: 150%"><a name="vved_3"></a>Введение&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Сегодня компании работают в 
+условиях все более усложняющегося информационного ландшафта. Ключевые 
+бизнес-процессы распределены по различным системам, характеризующимся 
+гетерогенными приложениями и технологиями, в связи с этим оптимизировать работу 
+решений очень сложно. Сбои в информационных системах могут нанести значительный 
+урон даже самым жизнеспособным организациям. Следовательно, необходимо 
+обеспечить высокую надежность и производительность этих систем, свести до 
+минимума влияние рисков, связанных с усложнением технологий.</p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Компания SAP предлагает клиентам полный комплекс услуг по поддержке, 
+		сопровождению и оптимизации решений. Компания SAP не просто поставляет 
+		программное обеспечение, но и действует как стратегический партнер на 
+		всем протяжении жизненного цикла решения, от разработки концепции и 
+		внедрения до поддержки эксплуатации и постоянной оптимизации решений SAP.</p>
+		<h2 style="line-height: 150%">&nbsp;<a name="part_3_1"></a>3.1 
+Обзор сервисов пакета SAP Solution Manager Optimization</h2>
+	<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В пакет <b>SAP 
+Solution Management Optimization</b> <i>(Оптимизация управления решением SAP)</i> входят 
+разнообразные сервисы, выполняемые непосредственно на предприятии, в рамках 
+удаленного доступа к системе или самостоятельно клиентом. С их помощью можно 
+оптимизировать ключевые бизнес-процессы системы. Они позволяют решать проблемы, 
+связанные с производительностью эксплуатации решения, или выявить потенциальную 
+возможность возникновения таких проблем с помощью средств пакета <a href="#part_3_3">«SAP 
+Safeguarding»</a>. Сервисы можно приобрести как по отдельности, так и в комплексе с 
+другими сервисами, позволяющими оптимизировать производительность системы, 
+интеграцию приложений, объем данных, тестирование и системное администрирование.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Чтобы определить, где сервисы пакета SAP Solution Management Optimization 
+	принесут предприятию максимальную выгоду, SAP рекомендует выполнить ряд 
+	проверок с помощью средств пакета <b>SAP Safeguarding</b>, например, <b>«SAP 
+	Solution Management Assessment»</b> <i>(«Оценка решения со стороны SAP»)</i>. 
+	Если проверка выявит потенциал для оптимизации,
+	<span style="background: yellow">системой</span> составляется подробный план с перечнем сервисов, необходимых 
+	для решения конкретных задач. Сервисы пакета «SAP Solution Management 
+	Optimization» можно заказать и без пакета «SAP Safeguarding» через 
+	информационный портал «SAP Service Marketplace». </p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Аспекты оптимизации с помощью пакета <span id=Toggle2>
+		SAP Solution Management Optimization и инструменты пакета изображены на 
+		рисунке 3.1.</span></p><span id=Toggle1>
+		<p style="line-height: 150%; text-align:center">
+		<img src="Images/opt.jpg" border="0" align="middle" Name = "3_11" width="558" height="418" ></p>
+		<p style="line-height: 150%; text-align:center">Рисунок 3.1&nbsp; – 
+		Аспекты оптимизации решения<b>.<p style="text-align: justify; text-autospace: none; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Сервисы пакета SAP Solution Management Optimization повышают 
+		эффективность эксплуатации решения SAP путем:</p>
+		<ul>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Оптимизации выполнения 
+			ключевых бизнес-процессов предприятия, обеспечения 
+			непротиворечивости данных;</li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Устранения узких мест 
+			производительности, сокращения времени реакции системы и повышения 
+			пропускной способности решения SAP;</li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Сокращения закупок 
+			аппаратного обеспечения в будущем благодаря оптимальному 
+			использованию имеющихся ресурсов;</li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Повышения эффективности 
+			работы конечных пользователей как результата стабильности, скорости 
+			выполнения и постоянной доступности выполнения бизнес-процессов в 
+			системе;</li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Сокращения времени на 
+			выполнение операции обслуживания системы, например, резервного 
+			копирования, восстановления данных и обновления системы;</li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Исследования ключевых 
+			бизнес-процессов предприятия и их влияния на эксплуатацию системы;</li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			Раннего обнаружения 
+			системных рисков и своевременного выбора сервисов оптимизации с 
+			помощью системы отчетов <a href="#part_3_2">SAP EarlyWatch</a>.</li>
+		</ul>
+		</b></span>
+<p class="MsoNormal" style="line-height: 150%">Рассмотрим сервисы пакета «SAP Solution Management 
+Optimization» более подробно.
+</p>
+<div>
+		<h3 style="line-height: 150%"><a name="part_3_1_1"></a>Оптимизация производительности системы<span style="font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+		<p class="MsoNormal" style="line-height: 150%">
+		<span style="font-size: 9.0pt; font-family: FranklinGothicDemiC; color: black; layout-grid-mode: line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><b>«SAP Business Process Performance Optimization»</b> повышает 
+		производительность решения SAP. Он направлен на решение проблем 
+		производительности, вызванных программами клиента, ресурсоемкими 
+		SQL-запросами, неэффективным использованием стандартных транзакций SAP и 
+		избыточной обработкой данных. Консультанты SAP могут на месте 
+		проанализировать ключевые бизнес-процессы и выработать план действий по 
+		оптимизации производительности.</p>
+		<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>«SAP 
+		Storage Subsystem Optimization</b>» позволяет оптимально 
+		сконфигурировать подсистемы хранения данных и тем самым повысить 
+		производительность и пропускную способность ключевых бизнес-процессов 
+		системы. Оптимизировав структуру базы данных и сконфигурировав 
+		подсистему хранения данных, предприятие будет хорошо подготовлено к 
+		увеличению объема базы данных и росту количества операций чтения/записи 
+		данных в будущем.</p>
+		<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>«SAP 
+		Remote Performance Optimization»</b> это дистанционный сервис, 
+		предназначенный для устранения узких мест, снижающих производительность 
+		системы. Он позволяет оптимизировать SQL-запросы, программы клиента, 
+		приложения и проанализировать элементы платформы «SAP NetWeaver», 
+		влияющие на производительность системы. В рамках этого сервиса
+		<span style="background-color: #FFFF00">SAP</span> вырабатывает план 
+		действий по устранению узких мест и повышению производительности 
+		системы.</p>
+		<h3 style="line-height: 150%"><a name="part_3_1_2"></a>Интеграция приложений</h3>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В комплексной среде решения SAP, состоящей из приложений SAP, работающих 
+совместно с внешними приложениями, часто требуется использование множества 
+программных интерфейсов, и здесь важную роль играет интеграция приложений. Для 
+решения этой задачи предназначены следующие сервисы:</p>
+		<p class="MsoNormal" style="line-height: 150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<b>«SAP Business Process Management»</b>
+		позволяет проанализировать ключевые бизнес-процессы и выработать 
+		стратегию,&nbsp; предусматривающую определение объектов мониторинга, 
+		процедуры обработки ошибок и путей решения проблем. Он может 
+		использоваться также для настройки функции мониторинга&nbsp; 
+		бизнес-процессов в решении SAP Solution Manager.</p>
+		<p style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		«SAP Interface Management» </b>
+		позволяет проанализировать и оптимизировать дизайн, конфигурацию и 
+		работу интерфейсов, наиболее значимых для ключевых бизнес-процессов. 
+		Интерфейсы – это потенциально слабые звенья бизнес-процессов, и сбои в 
+		них ведут к непредусмотренным затратам. В рамках предоставления сервиса 
+		сотрудники предприятия получат обширные знания, которые они смогут 
+		использовать в будущем для анализа и устранения критических ситуаций в 
+		управлении интерфейсами.</div>
+<p style="line-height: 150%"></p>
+		<h3 style="line-height: 150%"><a name="part_3_1_3"></a>Оптимизация объема данных</h3>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		С ростом объема баз данных соответственно повышаются затраты на их 
+		ведение, особенно в инсталляциях с большими базами данных. Для решения 
+		этой задачи SAP предлагает использовать следующие сервисы:</p>
+<p class="MsoNormal" style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; «SAP Data 
+Management» </b>позволяет определить, можно ли оптимизировать базу данных так, 
+чтобы она занимала меньшее пространство на диске. Для этого используются такие 
+методы, как устранение лишних данных, их уплотнение и архивация, которые 
+применяются в установленном SAP порядке. Благодаря оптимизации процессов 
+управления базой данных и ее архивации можно высвободить значительные 
+дополнительные ресурсы. В результате сокращаются затраты на аппаратное 
+обеспечение, а также время и, следовательно, затраты на поддержку системы.</p>
+<p class="MsoNormal" style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; «SAP Data 
+Archiving Optimization» </b>предлагает стратегию архивации, адаптированную к 
+конкретному решению SAP. Оптимизированная стратегия архивации повышает 
+производительность решения SAP.</p>
+<h3 style="line-height: 150%"><a name="part_3_1_4"></a>Оптимизация системного администрирования</h3>
+<p style="text-align: justify; text-indent: 15.35pt; line-height: 150%; margin-left: 0cm; margin-right: 1.45pt; margin-top: 8.15pt; margin-bottom: .0001pt; background: white">
+<span style="color:black;letter-spacing:-.05pt">&nbsp;&nbsp;&nbsp; 
+		</span>Системное администрирование является особенно сложной задачей, 
+		если системная среда представляет собой гетерогенный ландшафт, в котором 
+		системные ресурсы и бизнес-процессы распределены между географически 
+		разнесенными местами. Сервис «SAP System Administration» позволяет 
+		решить эту задачу с помощью анализа ситуации, разработки планов действий 
+		и соответствующего обучения системных администраторов.</p>
+<p class="MsoNormal" style="line-height: 150%"><b><span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></b> В<b> «SAP System Administration»</b> анализируются основные аспекты 
+		эксплуатации решения и производится оптимизация ключевых аспектов. В 
+		результате, благодаря снижению уровня отказов системы, лучшей 
+		осведомленности персонала предприятия о ключевых бизнес-процессах и 
+		оптимизации технической инфраструктуры, снижаются эксплуатационные 
+		затраты. Знания, полученные персоналом в рамках специализированного 
+		семинара, обеспечат долгосрочную экономию средств и повысят надежность 
+		работы системы.</p>
+<h3 style="line-height: 150%"><a name="part_3_1_5"></a>Оптимизация тестирования</h3>
+<p style="text-align: justify; text-indent: 14.9pt; line-height: 150%; margin-left: 0cm; margin-right: 1.2pt; margin-top: 3.6pt; background: white">
+<span style="color:black;letter-spacing:-.3pt">&nbsp;&nbsp;&nbsp;</span></span>Чтобы 
+		решение SAP отвечало высоким требованиям, предъявляемым к 
+		бизнес-процессам предприятия, необходимо применение эффективных процедур 
+		тестирования реализации бизнес-процессов. Сервисы по оптимизации 
+		тестирования решений SAP предоставляют функциональность для целостного и 
+		комплексного тестирования, обеспечивают достоверность результатов 
+		тестирования и тем самым снижают уровень финансовых затрат.</p>
+<p class="MsoNormal" style="line-height: 150%"><span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><b>«SAP Test Management Optimization»</b> улучшает управление 
+		тестированием при подготовке к установке пакетов поддержки, обновлению 
+		системы или перехода к продуктивной эксплуатации решения SAP.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Сервис <b>«SAP Volume Test Optimization»</b>, который обычно проводится при 
+		внедрении нового решения или при увеличении числа пользователей, 
+		обеспечивает достоверность результатов тестирования, моделируя ключевые 
+		бизнес-процессы в реальных условиях. При этом учитывается установленное 
+		аппаратное обеспечение, количество пользователей и реальный объем 
+		данных. На основе результатов оптимизации можно с уверенностью 
+		определить, достаточны ли ресурсы аппаратного обеспечения и оптимальна 
+		ли конфигурация системы для ее ввода в продуктивную эксплуатацию.</p>
+<h2 style="line-height: 150%"><a name="part_3_2"></a>3.2 
+		Система отчетов <span lang="en-us">SAP Early Watch</span></h2>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Сведения 
+		о результатах применения сервисов по оптимизации или о возможностях 
+		оптимизации, подобно системе заблаговременного предупреждения, можно 
+		получить с помощью следующих сервисов системы отчетов SAP:</p>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Профилактический сервис <b>«SAP EarlyWatch Alert»</b> ведет 
+		периодический мониторинг системы SAP и предлагает подробный анализ ее 
+		производительности в важных сферах администрирования на протяжении всего 
+		ее жизненного цикла. В результате на ранних стадиях в системе можно 
+		выявить и устранить узкие места.</p>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Сервис
+		<b>«SAP EarlyWatch Check»</b> позволяет 
+		проанализировать совокупность и отдельные компоненты решения SAP, 
+		операционной системы и используемой базы данных.</p>
+<p class="MsoNormal" style="text-indent:36.0pt; line-height:150%">В рамках анализа SAP 
+		разрабатывает план действий, предусматривающий устранение узких мест 
+		производительности, сокращение времени реакции системы, оптимизацию 
+		инвестиций в аппаратное обеспечение и существенное снижение риска 
+		дорогостоящих простоев системы.</p>
+<h2 style="line-height: 150%"><a name="part _3_3"></a>3.3 Пакет сервисов «SAP Safeguarding»</h2>
+		<p style="line-height: 150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пакет <b>«SAP Safeguarding»</b> помогает свести к минимуму технические риски и 
+обеспечить техническую надежность решения SAP при его внедрении, переходе на 
+новую версию ПО, миграции или в ходе эксплуатации систем. Цель этого сервиса 
+заключается в выявлении рисков, которым подвергается техническая реализация и 
+эксплуатация решения, и составлении плана управления рисками и необходимого 
+технического обслуживания, направленных на снижение этих рисков.<p style="line-height: 150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В рамках предоставления сервиса выполняется верификация ключевых 
+бизнес-процессов, компонентов решений SAP, интерфейсов и основных модификаций с 
+целью минимизации рисков и обеспечения технической надежности систем, что 
+особенно важно в условиях гетерогенных ИТ-инфраструктур, отражающих комплексные 
+потребности бизнеса компании.<p style="line-height: 150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При реализации проектов, существенно затрагивающих ключевые бизнес-процессы 
+компании, особенно важно эффективное управление техническими рисками, призванное 
+предотвратить опасность серьезных финансовых потерь, которые могут вызвать 
+технические проблемы в ключевых бизнес-процессах. Избежать таких потерь помогает 
+реализация сервиса <b>«SAP Safeguarding for Implementation»</b>, который целесообразно 
+использовать в период после приемки фазы создания концептуального проекта, перед 
+этапом интеграционного тестирования.<p style="line-height: 150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При использовании этого сервиса осуществляется выявление технических рисков на раннем этапе. Работы по 
+верификации функциональной пригодности выполняются по запросу клиента. После реализации процессов и интерфейсов специалисты службы поддержки SAP 
+выполняют подробную идентификацию технических проблем и предоставляет 
+рекомендации по их решению с учетом особенностей бизнес-процессов, среды решения 
+и интерфейсов. Вырабатываются рекомендации, нацеленные на повышение 
+производительности, согласованности данных, надежности и удобства сопровождения 
+системы.<p style="line-height: 150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Стоимость услуг в рамках сервиса «SAP Safeguarding for Implementation» 
+определяется на основе количества базовых бизнес-процессов и компонентов решений 
+SAP (таких, например, как SAP APO, mySAP CRM, SAP R/3), а также количеству 
+подлежащих анализу в рамках данного сервиса прочих систем клиента, разработанных 
+другими поставщиками или клиентом самостоятельно.<p style="line-height: 150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Перечень базовых бизнес-процессов клиента определяется условиями бизнеса 
+клиента. Затем составляется список компонентов систем, которые задействованы в 
+поддержке функционирования каждого из анализируемых базовых бизнес-процессов.
+<h2 style="line-height: 150%"><a name="part_3_4"></a>3.4 Служба поддержки</h2>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+В процессе внедрения и эксплуатации решения внутренние клиенты или конечные или 
+ключевые пользователи могут создавать сообщения о проблемах - <b>сообщения 
+поддержки</b>. Система автоматически выполняет сбор системных данных для 
+сообщения поддержки. Эти сообщения направляются в службу поддержки SAP Solution 
+Manager. Внутренняя служба поддержки может включать несколько отделов, 
+обрабатывающих различные виды сообщений. </p>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+В настройке службы поддержки установлены критерии, в соответствии с которыми 
+входящее сообщение присваивается единице поддержки, например: приоритет, 
+категория, регион автора. 
+Таким образом, сообщение, например из 
+определенной системы, попадает ответственному за данный компонент 
+обработчику.</p>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp; Схема 
+обработки сообщений представлена на рисунке 3.2</p>
+<p style="line-height: 150%; text-align:center">
+<img src="Images/mess.jpg" border="0" align="middle" Name = "3_11" width="629" height="362" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 3.2&nbsp; – Обработка 
+сообщений.</p>
+		<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Ответственный за проблему обработчик службы поддержки может выполнять 
+		ввод <b>симптомов</b> проблемы во внутреннюю базу данных решений и поиск решений. Также 
+можно выполнить поиск<b> SAP-нот</b> в SAP Service Marketplace и присвоить ее 
+сообщению поддержки. Внутренняя база решений создается по мере накопления 
+информации о системе и компонентах. Если решение проблемы не найдено, обработчик 
+может перенести сообщение о проблеме в последующие единицы поддержки или в 
+подразделение <span style="color: black">SAP Active Global Support</span> и 
+контролировать динамику обработки сообщения в службе поддержки.</p>
+<p class="MsoListBullet" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:black">&nbsp;В SAP определены следующие приоритеты для 
+		сообщений (см. рис. 3.3):</span></p>
+		<p style="line-height: 150%; text-align:center">
+<img src="Images/prior.jpg" border="0" align="middle" Name = "3_11" width="306" height="298" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 3.3&nbsp; – Виды приоритетов сообщений поддержки.</p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Высший (Very high):</b><span style="color:black"> сообщению следует 
+		присвоить приоритет «Высший», если последствия возникшей проблемы могут 
+		стать критическими для нормального функционирования бизнес-процессов и 
+		не представляется возможным выполнить срочные работы. </span></p>
+		<p class="MsoNormal" style="text-align: justify; text-indent: -9.0pt; line-height: 150%; text-autospace: none; margin-left: 9.0pt">
+		<span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Обычно речь идет о следующих обстоятельствах:
+		</span></p>
+		<ul>
+			<li>
+			<p class="MsoNormal" style="text-align: justify; text-indent: -9.0pt; line-height: 150%; text-autospace: none; margin-left: 9.0pt">
+			П<span style="color:black">олная потеря работоспособности системы;</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: justify; text-indent: -9.0pt; line-height: 150%; text-autospace: none; margin-left: 9.0pt">
+			О<span style="color:black">тказ функций центральной SAP-системы в 
+			продуктивной системе;</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: justify; text-indent: -9.0pt; line-height: 150%; text-autospace: none; margin-left: 9.0pt">
+			<span style="color:black">Задержки запланированного продуктивного 
+			старта или перехода на новую версию решения в течение последующих 
+			3-х рабочих дней;</span></li>
+			<li>
+			<p class="MsoNormal" style="text-align: justify; text-indent: -9.0pt; line-height: 150%; text-autospace: none; margin-left: 9.0pt">
+			<span style="color:black">Сообщение требует немедленной обработки, 
+			так как неисправность может повлечь за собой серьезные потери.</span></li>
+		</ul>
+		<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+		<b><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Высокий (High):<i> </i></span></b>
+		<span style="color:black">сообщению следует присвоить приоритет 
+		“Высокий”, если бизнес-процессам может быть нанесен серьезный урон и не 
+		могут быть выполнены необходимые задачи. Такая ситуация обычно является 
+		результатом некорректной или неверной работы в системе SAP тех функций, 
+		использование которых необходимо в процессе работы.</span></p>
+		<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+		<b><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Средний (Medium): </span></b>
+		<span style="color:black">приоритет сообщения следует классифицировать 
+		как средний, если ситуация затрудняет нормальное выполнение 
+		бизнес-процессов. Проблема вызвана некорректной работой функций в 
+		системе SAP.</span></p>
+		<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+		<b><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Низкий (Low): </span></b>
+		<span style="color:black">сообщению следует присвоить приоритет 
+		“низкий”, если проблема оказала незначительное воздействие на 
+		бизнес-процессы или вообще не оказала на них никакого влияния. Проблема 
+		вызвана неверной работой в SAP-системе тех функций, которые не 
+		задействованы в ежедневной работе или используются редко. </span></p>
+		<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+		<span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Необходимо отметить, что сообщениям об аналогичных ситуациях, возникших 
+		в тестовых системах, приоритет присваивается на один уровень ниже, чем в 
+		продуктивных системах. </span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Функциональные возможности службы 
+		поддержки иллюстрирует рисунок 3.4.</p>
+		<p align="center" style="text-align: center; line-height: 150%">
+<img src="Images/support.jpg" border="0" align="middle" Name = "3_11" width="545" height="370" ></p>
+		<p style="line-height: 150%"></p>
+<p style="line-height: 150%; text-align:center">Рисунок 3.4&nbsp; – Функциональные возможности Службы поддержки.</p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%; text-autospace: none">
+<p style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Централизованное управление сообщениями поддержки</b></p>
+		<ul>
+			<li>
+			<p class="MsoListBullet" style="line-height: 150%">Прямое создание 
+			сообщений поддержки из любой транзакции;</p></li>
+			<li>
+			<p class="MsoListBullet" style="line-height: 150%">
+			&nbsp;Автоматический 
+			сбор важных данных о системе, в которой было создано сообщение 
+			поддержки, например, номера инсталляции, установленных компонентов 
+			программного обеспечения, операционной системы, транзакции, номера 
+			экрана;</p></li>
+			<li>
+			<p class="MsoListBullet" style="line-height: 150%">Автоматическое 
+			присвоение сообщения поддержки уровню поддержки;</p></li>
+			<li>
+			<p class="MsoListBullet" style="line-height: 150%">Центральная обработка сообщений в SAP Solution Manager.</p>
+			</li>
+		</ul>
+		<p class="MsoListBullet2" style="line-height: 150%"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Центральная обработка сообщений дает следующие возможности:</i></p>
+		<ul>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Просмотр данных 
+			клиента, описания проблемы, приоритета, присоединенных документов;</p>
+			</li>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Присвоение обработчика;</p>
+			</li>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Отправка сообщений автору и другим обработчикам;</p>
+			</li>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Перенос сообщения к другим обработчикам или отделам поддержки;</p>
+			</li>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Создание документов и URL, 
+			присоединение документов;</p></li>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Присвоение и контроль статуса;</p>
+			</li>
+			<li>
+			<p class="MsoListBullet2" style="line-height: 150%">Создание рабочего списка с условиями выбора.</p>
+			</li>
+		</ul>
+		<p style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Поиск и импорт SAP-нот</b></p>
+		<ul>
+			<li>
+			<p class="MsoListBullet" style="line-height: 150%">Поиск SAP-нот в SAP Service Marketplace;</p>
+			</li>
+			<li>
+			<p class="MsoListBullet" style="line-height: 150%">Импорт и просмотр SAP-нот при помощи
+			<i>SAP Notes Assistant.</i></p></li>
+	</ul>
+	<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При невозможности обработки сообщения 
+		поддержки и отсутствии решения в
+<span lang="DE">SAP</span>-нотах или базе данных решений необходимо выполнить 
+передачу этого сообщения поддержки в <span lang="DE">SAP</span>-поддержку.
+		В случае, если обработка сообщения 
+		задерживается и клиент не получает от SAP требуемую информацию в 
+		разумные сроки, при этом в силу производственной необходимости требуется 
+		ускорить обработку сообщения, необходимо известить об этом сервисную 
+		службу SAP. Такую информацию необходимо направлять по электронному 
+		адресу <i>support.cis@sap.com </i>c указанием причин, по которым 
+		требуется ускорение обработки сообщения, и номера сообщения в сервисной 
+		системе SAP.</p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Компанией SAP с целью 
+повышения удовлетворенности клиентов результатами обработки сообщений 
+		предлагается сервис<b> « «Positive Call Closure»</b> (PCC). После 
+подтверждения обработки сообщения в сервисной системе клиент имеет возможность 
+заполнить PCC-анкету. Если опрос показывают, что клиент не удовлетворен 
+обслуживанием, сотрудник SAP, отвечающий за проведение PCC-опроса, связывается с 
+клиентом и выясняет причину недовольства клиента. Полученная информация 
+собирается и анализируется, на основе этого анализа разрабатываются мероприятия 
+по повышению качества обслуживания и клиенты, в конечном итоге, получают от SAP 
+усовершенствованные услуги по сопровождению. </p>
+
+<h2 style="line-height: 150%"><a name="part_3_5"></a>3.5 Вопросы для самоконтроля</h2>
+		<ol>
+			<li>
+			<p style="line-height: 150%">Назначение пакета сервисов SAP 
+Solution Management Optimization.</li>
+		<li>
+		<p style="line-height: 150%">Сервисы пакета SAP 
+Solution Management Optimization.</li>
+<li>
+<p style="line-height: 150%">Система отчетов SAP EarlyWatch.</li>
+<li>
+<p style="line-height: 150%">Пакет сервисов SAP Safeguarding.</li>
+<li>
+<p style="line-height: 150%">Сообщения поддержки. Данные сообщения поддержки, 
+виды приоритетов. </li>
+<li>
+<p style="line-height: 150%">Обработка сообщений поддержки внутренней службой 
+поддержки. Внутренняя база данных решений.</li>
+<li>
+<p style="line-height: 150%">Обработка сообщений поддержки компанией SAP.</li>
+</ol>
+		<h2 style="line-height: 150%">&nbsp;</h2>
+</div>
+</body>
+
+</html>

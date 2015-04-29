@@ -1,0 +1,524 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>ФАЗА2. Концептуальный проект.</title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+div.Section1 {page:Section1;}-->
+</style>
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=blue
+vlink=blue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+<div>
+<h2 style="line-height: 150%"><font size="6">2. Внедрение решения mySAP Business 
+Suite</font> </h2>
+
+<h2 style="line-height: 150%"><a name="part_2_3"></a>2.3 ФАЗА 3. Реализация</h2>
+<p style="line-height: 150%"><a href="#vved_2_3">Введение</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_3_1">Конфигурирование 
+бизнес-процессов</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_2_3_2">Распределение 
+настройки. 
+Проверка непротиворечивости</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_3_3">Организация тестирования</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_3_4">Вопросы 
+для самоконтроля</a></p>
+
+<h2 style="line-height: 150%"><a name="vved_2_3"></a>Введение<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></h2>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Цель фазы реализации состоит в конфигурировании и тестировании внедренного 
+решения. Задачами являются окончательная конфигурация 
+системы, полное тестирование и деблокирование системы для продуктивной 
+эксплуатации.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+На этой фазе осуществляется определение и тестирование параметров настройки с 
+использованием основных данных и организационных единиц, включенных в объем на 
+фазе концептуального проекта.
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+На фазе реализации проекта в SAP Solution Manager должны 
+быть выполнены следующие 
+операции (см. рис. 2.15):</div>
+<p style="line-height: 150%">
+		<img src="Images/phase3.jpg" border="0" align="left" Name = "2_9" width="670" height="167" ></p>
+		<p style="text-align: center; line-height:150%">&nbsp;</p>
+				<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">
+Рисунок 2.15
+<span style="font-size: 10.5pt; font-family: Times New Roman; color: black">–
+</span>Реализация<ul>
+	<li>
+	<p style="line-height:150%">Распределение настройки;</li>
+	<li>
+	<p style="line-height:150%">Конфигурация;</li>
+	<li>
+	<p style="line-height:150%">Проверка непротиворечивости;</li>
+	<li>
+	<p style="line-height:150%">Организация тестирования.</li>
+</ul>
+<h2 style="line-height: 150%"><a name="part_2_3_1"></a>Конфигурирование бизнес-процессов</h2>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+С использованием транзакции <b>SOLAR01</b> можно получить доступ к различным 
+инструментальным средствам настройки. Это центральная точка доступа для 
+конфигурирования системных настроек в рамках проекта внедрения. </p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Используемые в структурах объекты из 
+<a href="../StartingSM/StartingSM.htm#business_process">Репозитария бизнес-процессов</a> могут быть уже 
+присвоены транзакциям и пакетам настройки бизнес-конфигурации. При создании 
+структур без использования объектов из Репозитария бизнес-процессов возможно 
+самостоятельное присвоение транзакций и пакетов настройки бизнес-конфигурации, объектов <span lang="DE">IMG</span> 
+и контрольных примеров.</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Конфигурация включает следующие 
+шаги (см. рис. 2.16).</p>
+<p style="line-height: 150%">
+		<img src="Images/konfig.jpg" border="0" align="left" Name = "2_10" width="670" height="167" ></p>
+		<p style="text-align: center; line-height:150%">&nbsp;</p>
+				<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">&nbsp;
+				<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">&nbsp;<p style="text-align: center; line-height:150%">
+Рисунок 2.16 – Конфигурация 
+<p class="MsoListBullet" style="line-height: 150%">
+<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp; 
+</span><b>Присвоение транзакций/программ</b></p>
+<p class="MsoListContinue" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Возможен вызов присвоенных 
+в концептуальном проекте транзакций, добавление 
+	новых или удаление лишних транзакций из объема проекта.</p>
+<p class="MsoListContinue" style="line-height: 150%">&nbsp; <b>Присвоение/обработка пакетов настройки бизнес-конфигурации</b></p>
+<p class="MsoListContinue" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Имеется возможность присвоения этапам проекта 
+	пакетов настройки бизнес-конфигурации, просмотра&nbsp; содержимого присвоенных 
+	пакетов и удаление из объема ненужных пакетов. Также можно активировать один или все пакеты 
+	настройки бизнес-конфигурации, присвоенные определенному процессу. В прикладной системе возможно создание и 
+	присвоение в SAP Solution Manager новых пакетов настройки 
+	бизнес-конфигурации для проекта или специфичных для компании параметров 
+	настройки, например, в целях развертывания в рамках концерна или для 
+	создания собственных решений.</p>
+<p class="MsoListBullet" style="line-height: 150%">&nbsp;<b>Присвоение IMG</b></p>
+<p class="MsoListContinue" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Этапам проекта могут быть присвоены объекты <a href="../StartingSM/StartingSM.htm#part_1_3">IMG</a>. 
+	Эти параметры настройки, а также параметры настройки, созданные при помощи 
+	пакетов настройки бизнес-конфигурации в руководстве по внедрению, можно 
+	просматривать и обрабатывать.</p>
+<p class="MsoListBullet" style="line-height: 150%"><b>Обработка контрольных примеров</b></p>
+<p class="MsoListContinue" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; После 
+конфигурации возможно проведение начального тестирования функций. Имеется возможность присвоения контрольных примеров, 
+сценариев, процессов или шагов процессов для последующего использования в 
+ориентированных на процессы тестах. Возможно присвоение существующих контрольных 
+примеров или создание новых. Для создания, изменения и просмотра доступны 
+следующие виды контрольных примеров:</p>
+<ul>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Описание контрольного примера в форме документа 
+	Microsoft Word;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Описание контрольного примера в форме веб-ссылки 
+	(URL);</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Контрольные примеры, выполняемые вручную;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Внешние приложения, например, внешние 
+	инструментальные средства тестирования с сертифицированным интерфейсом или 
+	документы MicrosoftWord;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">
+	<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman">&nbsp;</span>Автоматические 
+	контрольные примеры, например, конфигурации тестов CATT или eCATT;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Тесты функциональных модулей.</li>
+</ul>
+<h2 style="line-height: 150%"><a name="part_2_3_2"></a>Распределение настройки. Проверка 
+непротиворечивости&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h2>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В системной среде могут присутствовать несколько 
+компонентов SAP, например, системы R/3 и SAP CRM. В основе операций в системе 
+SAP CRM лежат данные, уже имеющиеся в системе R/3; эти системы взаимодействуют 
+во многих бизнес-сценариях. Параметры пользовательской настройки,  
+определяющие бизнес-процессы в системах,
+должны быть синхронизированы для обеспечения корректного и 
+бесперебойного обмена данными. Области,
+в которых должны быть синхронизированы настройки систем 
+R/3 и SAP 
+CRM, включают клиента и группы продуктов,
+рынки сбыта, условия платежа,
+условия поставки, группы комиссионных,
+валюты,страны, 
+регионы и единицы измерения.</p>
+<p style="line-height:150%; margin-left:0cm; margin-right:0cm">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+После внедрения и конфигурирования 
+системной среды были также настроены различные прикладные компоненты SAP. 
+Системная среда включает различные компоненты, имеющие собственные независимые 
+таблицы настройки (с технической точки зрения). Для этих компонентов по 
+практическим соображениям также требуется совместная настройка.&nbsp; 
+В идеальном случае система CRM использует данные системы SAP R/3 Enterprise. В 
+определенных областях конфигурация этих двух систем должна совпадать. Совместная 
+настройка должна быть синхронизирована. В частности, изменения в системе R/3 
+могут потребовать изменений в прикладном компоненте SAP.</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для синхронизации выбранных параметров пользовательской настройки в 
+исходной системе (например, системе R/3) с параметрами пользовательской настройки в целевых 
+системах (например, системе SAP CRM, APO и т.п.) 
+можно воспользоваться функцией  <b>распределение настройки </b>(Customizing 
+distribution).</p>
+<p class="MsoNormal" style="line-height:150%; margin-left:0cm; margin-right:0cm">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Распределение настройки инициирует 
+процесс переноса параметров настройки в целевые системы.Для 
+переноса изменений настройки из систем разработок в системы обеспечения качества 
+(<span lang="en-us">QAS</span>) 
+и продуктивные<span lang="en-us"> (PRD)</span> системы в рамках функции распределения настройки используются 
+запросы на перенос. Распределение настройки выполняется только между системами 
+разработок (<span lang="en-us">DEV</span>).&nbsp;&nbsp;Принцип работы функции распределения настройки демонстрирует рисунок 2.17.</p>
+<p style="line-height: 150%; text-align:center">
+<img src="Images/cust_distr.jpg" border="0" align="middle" Name = "2_11" width="655" height="341" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 2.17 – Принцип работы распределения настройки.</p>
+
+<p class="MsoNormal" style="margin:3.0pt 0cm; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Распределение настройки позволяет выполнять в отношении параметров 
+пользовательской настройки в среде разработок следующие функции:</p>
+<ul>
+	<li>
+	<p class="MsoNormal" style="text-indent: -16.6pt; margin-left: 28.1pt; margin-right: 0cm; margin-top: 3.0pt; margin-bottom: 3.0pt; line-height:150%">Начальная выгрузка из 
+	исходной системы в целевую систему (начальное распределение);</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -16.6pt; margin-left: 28.1pt; margin-right: 0cm; margin-top: 3.0pt; margin-bottom: 3.0pt; line-height:150%">Запланированное 
+	распределение;</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -16.6pt; margin-left: 28.1pt; margin-right: 0cm; margin-top: 3.0pt; margin-bottom: 3.0pt; line-height:150%">
+	<span style="font-size:10.0pt;font-family:Arial">Автоматическое 
+	распределение после каждого деблокирования переноса или изменения настройки 
+	(из системы R/3 4.6C);</span></li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -16.6pt; margin-left: 28.1pt; margin-right: 0cm; margin-top: 3.0pt; margin-bottom: 3.0pt; line-height:150%">
+	<span style="font-size:10.0pt;font-family:Arial">Распределение вручную.</span></li>
+</ul>
+<p class="MsoNormal" style="margin:0 0cm; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Процедура распределения настройки используется для синхронизации 
+пользовательской настройки при внедрении или обновлении системной среды. Прежде 
+чем синхронизировать пользовательскую настройку, можно выполнить сравнение 
+параметров настройки с помощью другого инструментального </p>
+<p class="MsoNormal" style="margin:3.0pt 0cm; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В системе предварительно необходимо определить конкретные объекты, 
+по которым должна быть выполнена синхронизация – <b>объекты настройки (синхронизации)</b>. Редактор групп 
+синхронизации позволяет определить группы объектов группы синхронизации, для которых должна быть выполнена корректировка путем распределения 
+настройки или сравнение с помощью инструмента Customizing Scout. В редакторе доступны такие 
+функции, как создание, обработка, копирование, удаление и перенос.</p>
+<div class="Section1">
+	<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Объекты синхронизации могут 
+	представлять собой объекты настройки следующих типов:</p>
+	<ul>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Таблица (табличная 
+		область);</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Ракурс;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Табличная область с 
+		таблицей текстов;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Кластер ракурсов;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Транзакции;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Логические объекты 
+		переноса.</li>
+	</ul>
+</div>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Порядок распределения настройки отражает рисунок 2.18.</p>
+<p style="line-height: 150%; text-align:center">
+<img src="Images/cust_distr_2.jpg" border="0" align="middle" Name = "2_12" width="485" height="459" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 2.18 – Распределение настройки</p>
+<ol>
+	<li>
+	<p style="line-height: 150%; ">Изменение параметров;</p></li>
+	<li>
+	<p style="line-height: 150%; ">Запись изменений в запрос на перенос;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%; ">Сохранение изменений в базе данных;</p></li>
+	<li>
+	<p style="line-height: 150%; ">Уведомление центральной системы об изменении 
+	параметров;</p></li>
+	<li>
+	<p style="line-height: 150%; ">Чтение измененных исходных параметров 
+	настройки;</p></li>
+	<li>
+	<p style="line-height: 150%; ">Создание целевых параметров настройки;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%; ">Рассылка целевых параметров;</p></li>
+	<li>
+	<p style="line-height: 150%; ">Активация настройки параметров в целевой 
+	системе;</p></li>
+	<li>
+	<p style="line-height: 150%; ">Передача журнала о настройке в центральную 
+	систему.</p></li>
+</ol>
+
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+После распределения настройки необходимо проверить, было ли распределение 
+выполнено успешно. <b>Журналы распределения настройки</b> предоставляют обзор 
+успешно выполненных и не выполненных распределений настройки. Эта функция 
+позволяет выяснить причины ошибок в неуспешно выполненных распределениях 
+настройки и повторно запустить распределение настройки вручную. Имеется 
+возможность проверки всех журналов распределения настройки и отслеживания 
+операций по этим журналам. </p> <p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Необходимо регулярно выполнять 
+проверку непротиворечивости настройки с целью обеспечения синхронизации 
+настройки системы R/3 с настройкой прикладного компонента. SAP Solution Manager 
+включает в себя инструмент Customizing Scout, позволяющий сравнить различные 
+параметры настройки в SAP. Объектами сравнения для Customizing Scout являются те 
+же определенные заранее объекты синхронизации.</p><h2 style="line-height: 150%"><a name="part_2_3_3"></a>&nbsp;Организация 
+тестирования</h2>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+<span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Операции по 
+организации тестирования проводятся после создания концептуального проекта и 
+начальной конфигурации в фазе реализации. Основные работы по тестированию 
+изображены на рисунке 2.19.<span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="line-height: 150%; text-align:center">
+<img src="Images/test.jpg" border="0" align="middle" Name = "2_13" width="425" height="495" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 2.19 – Организация 
+тестирования.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Первой 
+задачей при организации тестирования является создание плана тестирования. В 
+фазе концептуального проекта была создана <a href="Phase02.htm#part_2_2_1">структура проекта</a>, содержащая 
+бизнес-сценарии, процессы и задачи процессов. После этого задачам процессов были 
+присвоены транзакции и контрольные примеры. При создании плана тестирования 
+система предлагает эту структуру проекта в качестве основы для создания планов 
+тестирования. Также предоставляются все контрольные примеры (выполняемые как 
+вручную, так и автоматически), присвоенные процессам или задачам процессов. Эти 
+примеры можно выбрать для включения в план тестирования. </p>
+<p class="MsoNormal" style="margin:3.0pt 0cm; line-height:150%"><span style="font-size:10.0pt;font-family:Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Управление 
+планами тестирования предоставляет следующие возможности:</span></p>
+<ul>
+	<li>
+	<p style="line-height: 150%">Создание, изменение, копирование или удаление планов тестирования;</li>
+	<li>
+	<p style="line-height: 150%">Перенос планов тестирования;</li>
+	<li>
+	<p style="line-height: 150%"> Разделение планов 
+тестирования на пакеты тестов и присвоение этих пакетов тестерам;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Контроль динамики 
+процесса при помощи инфо-системы статусов и экспорт результатов тестирования.</li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Планы тестирования можно изменить, 
+поместив новые контрольные примеры, которые еще не были помещены в структуру 
+проекта, в существующие планы тестирования, или путем реорганизации контрольных 
+примеров. Изменения структуры плана тестирования не переносятся автоматически на 
+структуру проекта.  </p>
+<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="DE">
+Контрольные примеры для </span>каждого тестера <span lang="DE">группируются в 
+пакеты тестов</span>, который затем присваивается тестеру. Контрольные примеры 
+для пакета тестов выбираются из плана тестирования. Таким образом, после вызова 
+тестером инструментальных средств тестирования на экран выводится обзор 
+контрольных примеров, присвоенных этому тестеру в его рабочем списке (см. рис. 
+2.14). </p>
+<p style="line-height: 150%; text-align:center">
+<img src="Images/paket_test.jpg" border="0" align="middle" Name = "2_14" width="391" height="224" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 2.20 – Пакеты тестов.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Возможны многократные присвоения пакетов тестерам и наоборот. Для выполнения 
+одного контрольного примера дважды независимо друг от друга необходимо 
+скопировать пакет тестов и присвоить каждый пакет разным тестерам. </p>
+<p class="MsoNormal" style="margin:3.0pt 0cm; line-height:150%"><span style="font-size: 10.0pt; font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Д</span><span lang="DE" style="font-size: 10.0pt; font-family: Arial">оступны</span><span lang="DE" style="font-size:10.0pt;font-family:Arial">
+</span><span style="font-size:10.0pt;font-family:Arial">&nbsp;административные
+</span><span lang="DE" style="font-size: 10.0pt; font-family: Arial">функции</span><span lang="DE" style="font-size:10.0pt;font-family:Arial">
+</span><span lang="DE" style="font-size: 10.0pt; font-family: Arial">для</span><span style="font-size:10.0pt;font-family:Arial">:</span></p>
+<ul>
+	<li>
+	<p style="line-height: 150%" >Проверки рабочих списков 
+тестеров;</p></li>
+	<li>
+	<p style="line-height: 150%" >П<span style="font-size:10.0pt;font-family:Arial">олучения информации по 
+загрузке и выгрузке;</span></p></li>
+	<li>
+	<p style="line-height: 150%" >П<span style="font-size:10.0pt;font-family:Arial">росмотра данных проекта 
+для проекта с присвоенным планом тестирования;</span></p></li>
+	<li>
+	<p style="line-height: 150%" >Проверки системной среды проекта, которой присвоен план тестирования.</p>
+	</li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Существует возможность вывести отчет по динамике тестирования в проекте по 
+процессам для всех планов тестирования. Он позволяет выяснить, в каком плане 
+тестирования и пакете тестов используется данный контрольный пример (если 
+используется вообще).</p>
+<p class="MsoNormal" style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Анализ 
+тестирования с помощью инфо-системы статусов позволяет контролировать динамику 
+процесса одного или нескольких планов тестирования. Статус плана 
+тестирования, как правило, является результатом выполнения отдельного теста. 
+Анализы статуса, не зависящие от плана тестирования, сочетают результаты 
+различных планов тестирования и могут считаться общим результатом комплексного 
+тестирования, включающего несколько планов тестирования.</p>
+<p class="MsoNormal" style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Итогом является актуальный анализ статуса всех пакетов тестов в выбранном плане 
+тестирования. К передаваемому анализу статуса можно добавить комментарий (с 
+помощью офисной почтовой программы).  </p>
+<p class="MsoNormal" style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+В SAP Solution Manager имеется система сообщений о проблемах, в которой тестеры 
+могут создавать сообщения о проблемах. Сообщения о проблемах создаются тестерами 
+в случае невозможности выполнения теста.</p>
+<div class="Section1">
+	<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В обзоре 
+	проблем содержится следующая информация:</p>
+	<ul>
+		<li>
+		<p class="MsoListBullet">Статус сообщения о проблеме;</li>
+		<li>
+		<p class="MsoListBullet">Приоритет сообщения о проблеме;</li>
+		<li>
+		<p class="MsoListBullet">Автор сообщения;</li>
+		<li>
+		<p class="MsoListBullet">Текущий обработчик;</li>
+		<li>
+		<p class="MsoListBullet">Краткий текст сообщения;</li>
+		<li>
+		<p class="MsoListBullet">Связанный контрольный пример и план 
+		тестирования.</li>
+	</ul>
+	<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В обзоре 
+	проблем можно обработать список всех сообщений о проблемах, относящихся к 
+	определенному плану тестирования. Доступны следующие функции:</p>
+	<ul>
+		<li>
+		<p class="MsoListBullet">Просмотр;</li>
+		<li>
+		<p class="MsoListBullet">Печать;</li>
+		<li>Фильтрация;</li>
+		<li>
+		<p class="MsoListBullet">Экспорт в приложения Microsoft Office;</li>
+		<li>
+		<p class="MsoListBullet">Сохранение в локальный файл;</li>
+		<li>Передача по электронной почте.</li>
+	</ul>
+	<h2 style="line-height: 150%"><a name="part_2_3_5"></a>&nbsp;Анализ проекта</h2>
+	<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Существует возможность сохранения информации о проекте по фазам или 
+	операциям проекта, например, по статусу, по календарному планированию или по 
+	членам проектной группы. На этой информации основан <b>анализ проекта</b>. 
+	Чем больше подробной информации записано, тем большее количество опций 
+	анализа проекта имеется в наличии. Можно анализировать проект, ракурс 
+	проекта (только для проектов настройки) или нескольких проектов 
+	одновременно, в зависимости от выбранного вида проекта.</p>
+	<p style="text-autospace: none; line-height: 150%; background: white">
+	Анализы проекта включают следующие программы. </p>
+	<p style="text-autospace: none; line-height: 150%; background: white"><b>
+	Концептуальный проект</b></p>
+	<ul>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		<i>Администрирование</i>: анализ информации по администрированию и 
+		рабочих списков, которые могут быть присвоены одному или нескольким 
+		членам проектной группы. При анализе по рабочим спискам основное 
+		внимание уделяется определенным данным, например, статусу и плановому 
+		сроку окончания.</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		<i>Присвоения:</i> анализ присвоений в структуре проекта, которые могут 
+		являться документацией (общей или проектной) и поставляемыми или 
+		добавленными в течение проекта транзакциями.</li>
+	</ul>
+	<p style="text-autospace: none; line-height: 150%; background: white"><b>
+	Конфигурация</b></p>
+	<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Анализ аналогичен таковому на фазе концептуального проекта, где также можно 
+	анализировать объекты конфигурации (например, пакеты настройки 
+	бизнес-конфигурации, САТТ, IMG-операции), контрольные примеры и сообщения о 
+	проблемах с присвоениями. Кроме этого, возможен общесистемный анализ IMG 
+	проекта в системах компонентов на локальном уровне.</p>
+	<ul>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		<i>Организация тестирования</i>: анализ планов тестирования (по 
+		отдельности или совместно)</li>
+	</ul>
+	<p style="text-autospace: none; line-height: 150%; background: white"><b>
+	Служба поддержки</b></p>
+	<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Можно выполнить отчет по созданным сообщениям о проблемах и просмотреть 
+	статус этих сообщений. Эта задача может включать в себя, например, следующие 
+	сценарии использования:</p>
+	<ul>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Анализ сообщений о проблемах со статусом &quot;Открыто&quot;;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Анализ сообщений о проблемах, созданных определенным пользователем;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Проверка статуса обработки всех сообщений с приоритетом &quot;Очень высокий&quot;.</li>
+	</ul>
+	<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Анализ проекта и опции просмотра результата анализа обладают гибкой 
+	конфигурацией. Для ограничения объема анализа можно установить критерии 
+	выбора. Кроме того, можно определить способ вывода результатов анализа. 
+	Можно создать стандартные анализы и сохранить их как варианты выбора. 
+	Возможен вызов выведенных элементов структуры проекта или IMG-операций 
+	непосредственно в результатах анализа.</p>
+	<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	В зависимости от указанных критериев выбора, при анализе проектов доступны 
+	следующие виды анализа:</p>
+	<ul>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Информация по проекту: информация по статусу и анализ видов 
+		документации;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Контроль динамики, например, путем создания различных комбинаций 
+		информации по статусу (например, члены проектной группы и определенный 
+		статус) или путем агрегирования информации <b>по </b>проекту;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Общие анализы, например, ежедневные анализы;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Отчеты по администрированию используются для отслеживания динамики 
+		различных фаз проекта и экспорта в Microsoft Excel/Microsoft Project;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Отчеты по присвоениям используются специально для документов и сообщений 
+		с целью получения их обзора;</li>
+		<li>
+		<p style="text-autospace: none; line-height: 150%; background: white">
+		Доступные варианты отчета необходимо адаптировать в соответствии с 
+		требованиями проекта.</li>
+	</ul>
+	<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Анализ проекта можно сделать по всем проектам и фазам или для конкретного 
+	проекта или определенной фазы.
+</div>
+<h2 style="line-height: 150%"><a name="part_2_3_4"></a>&nbsp;Вопросы для самоконтроля</h2>
+<ol>
+	<li>
+	<p style="line-height: 150%">Каковы этапы фазы реализации.</p></li>
+	<li>
+	<p style="line-height: 150%">Конфигурирование бизнес-процессов. Операции по 
+конфигурированию.</p></li>
+	<li>
+	<p style="line-height: 150%">Для чего необходима синхронизация объектов в <span lang="en-us">SAP-</span>системе. 
+Инструменты синхронизации.</p></li>
+	<li>
+	<p style="line-height: 150%">Что такое объекты синхронизации?</p></li>
+	<li>
+	<p style="line-height: 150%">Принцип работы функции распределения настройки.</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Инструмент проверки непротиворечивости.</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Организация тестирования в SAP Solutin&nbsp; 
+	Manager. План тестирования. Пакеты тестов.</p></li>
+	<li>
+	<p style="line-height: 150%">Анализ тестирования с помощью инфо-системы 
+	статусов.</p></li>
+	<li>
+	<p style="line-height: 150%">Анализ проекта.</p></li>
+</ol>
+<h2 style="line-height: 150%">&nbsp;</h2>
+
+</body>
+
+</html>

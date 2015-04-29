@@ -1,0 +1,631 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>Внедрение решения mySAP.com</title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+div.Section1 {page:Section1;}-->
+</style>
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=blue
+vlink=blue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+<div>
+<h2><font size="6"><a name="part_2"></a>2. Внедрение решения mySAP Business 
+Suite</font> </h2>
+
+<h2><a name="part_2_1"></a>2.1 ФАЗА 1. Подготовка проекта</h2>
+<p><a href="#vved_2_1">Введение</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_1">Создание проекта. Определение общих данных</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_2">Определение объема проекта</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_4">Назначение членов проектной команды</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_5">Определение стандартов проекта</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_6">Определение запросов на перенос проекта</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_7">Создание организационной структуры проекта</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_8">Определение системной среды. Системные роли</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_2_1_9">Вопросы для самоконтроля</a></p>
+
+<h2><a name="vved_2_1"></a>Введение<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></h2></div>
+<p style="line-height: 150%">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Целью этой фазы является 
+обеспечение первоначального планирования и подготовки проекта SAP. 
+&nbsp;В транзакции управления проектом SAP Solution 
+Manager выполняются 
+все центральные административные задачи:</p>
+<ul>
+	<li>
+	<p style="line-height: 150%">Создание проекта;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Определение общих данных;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Определение объема проекта;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Назначение членов проектной 
+команды;</p></li>
+	<li>
+	<p style="line-height: 150%">Определение стандартов 
+проекта (значения статуса, виды документации, ключевые слова);</p></li>
+	<li>
+	<p style="line-height: 150%">Определение системной среды;</p>
+	</li>
+	<li>
+	<p style="line-height: 150%">Определение данных запросов 
+на перенос (в зависимости от вида проекта) (см. рис. 2.2).</p></li>
+</ul>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/phase1.jpg" border="0" align="left" Name = "2_2" width="670" height="167" ></p>
+		<p style="text-align: center">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center">&nbsp;</p>
+<p style="text-align: center">&nbsp;</p>
+<p style="text-align: center"><font size="2" >Рисунок 2.2 </font>
+<font face="Times New Roman">–</font><font size="2" > Подготовка проекта.</font></p>
+<p >
+ Существующие проекты можно 
+просмотреть в обзоре проектов SAP Solution 
+Manager. </p>
+<h2><a name="part_2_1_1"></a>Создание проекта. Определение общих данных</h2>
+<p >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Функцию 
+создания и управления 
+проектом можно вызвать с помощью транзакции
+<b>
+SOLAR_PROJECT_ADMIN.</b></p>
+<p >
+<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В SAP Solution Manager 
+возможно создание следующих </span><b> <a name="vid_project"></a></b><span ><b>видов проектов </b>
+(см. рис. 2.3).
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/project_vid.jpg" border="0" align="middle" Name = "2_3" width="436" height="253" ></p>
+		<p style="text-align: center"><font size="2">Рисунок 2.3 </font>
+		<font face="Times New Roman">–</font><font size="2">Виды 
+		проектов в <span lang="en-us">SAP Solution Manager</span>.</font></p>
+
+</span></p>
+<p >
+<b>Проект внедрения</b></p>
+<p >
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Целью проекта внедрения 
+является внедрение решения в одном местоположении. При создании проекта 
+внедрения можно выбрать предварительно определенные сценарии из шаблонных 
+проектов.</span></p>
+<p >
+<b><a name="shab"></a>Шаблонный проект</span></b></p>
+<p >
+<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Целью шаблонного проекта является 
+внедрение решения в нескольких местоположениях. При создании шаблонного проекта 
+можно выбрать предварительно определенные сценарии. Шаблонные проекты можно 
+переносить в другие системы SAP Solution Manager.</span></p>
+<p >
+<b>Проект оптимизации</span></b></p>
+<p style="line-height: 150%" >
+<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Проект, разработанный с целью 
+оптимизации потока бизнес-процессов или методов применения программных решений.</span><span style="font-size: 12.0pt; line-height: 150%; color: windowtext">
+</span></p>
+<p style="line-height: 150%" >
+<b>Проект защиты</span></b></p>
+<p style="line-height: 150%" >
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Проект, разработанный с целью 
+разрешения критических ситуаций, возникающих в ходе внедрения или использования 
+решения. Проекты защиты позволяют выявить причины возникновения критической 
+ситуации и скоординировать меры, необходимые для разрешения проблемы.</span></p>
+<p style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<b>
+Проект апгрейда (обновления)</b></p>
+<p style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<span style="background-position: 0 0"><font size="3"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b></font></span><span>Позволяет подготовить, структурировать и спланировать 
+обновления.</span></p>
+<p style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<span style="background-position: 0 0"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span>Выбранный для проекта вид непосредственно определяет 
+варианты обработки, доступные на различных фазах проекта (<a href="Phase02.htm">концептуальный проект</a>, 
+<a href="Phase03.htm">реализация</a>).</span></p>
+<p class="Normal" style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При создании проекта в SAP Solution 
+Manager можно ввести следующие <b>общие данные</b>.</p>
+<p class="Normal" style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Руководитель проекта (Project 
+Leader).</i>
+В администрации проекта системы SAP 
+должны существовать ответственные сотрудники. Для изменения этих присвоений 
+необходимо воспользоваться справкой по допустимым значениям ввода, т.е. все сотрудники 
+должны быть зарегистрированными администратором пользователями SAP. 
+Здесь можно ввести одновременно ответственных со стороны заказчика и 
+консультантов.</p>
+<p class="Normal" style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Язык проекта (Project 
+Language).</i> 
+Выбранный язык проекта используется для подготовки и вывода всей зависящей от 
+языка информации (проектная документация и информация по статусу) для всех 
+сотрудников проекта. Этот язык применяется независимо от языка входа в систему 
+того или иного сотрудника проекта. Структура проекта создается на определенном 
+языке проекта и все содержимое хранится на выбранном языке проекта. После выбора 
+и сохранения язык проекта изменить нельзя.</p>
+<p class="Normal" style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Описание (Project 
+Description).</i> Можно создать новый документ с описанием проекта или вставить ссылку на 
+существующий документ.</p>
+<p style="text-align:justify;line-height:150%"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#stat">Статус</a> (Status) 
+проекта</i>. Статус проекта позволяет контролировать состояние проекта, его 
+завершенность. Только что созданному проекту присваивается статус &quot;Открытый&quot;.</p>
+<p style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Плановые данные (Plan 
+Data)</i>. 
+Плановые сроки начала и окончания проекта, а также 
+объем работ в человеко-днях (MD).</p>
+<p style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Фактические данные (Actual 
+Data).</i> Фактические сроки начала и конца проекта и объем 
+фактических работ в человеко-днях (MD).</p>
+<p style="text-align: justify; line-height: 150%; text-autospace: none; background: white">
+Плановые и фактические данные 
+относятся ко всему жизненному циклу проекта. </p>
+<h2><a name="part_2_1_2"></a>Определение объема проекта</h2>
+<p style="line-height: 150%"><font size="5">&nbsp;&nbsp;&nbsp; </font>
+&nbsp;&nbsp;
+Структура проекта определяется путем указания объема проекта, в который входят 
+только те элементы, которые относятся к выбранному шаблону или шаблонам. Объем 
+проекта можно установить различными способами в зависимости от выбранного вида 
+проекта. </p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Для <i>проекта внедрения </i> объем можно установить
+путем 
+выбора шаблонов SAP, пользователя и/или партнера, созданных в шаблонном проекте, либо создать структуру проекта при помощи 
+элементов, содержащихся в <a href="../StartingSM/StartingSM.htm#business_process">Репозитарии бизнес-процессов</a> или <a href="Phase02.htm#part_2_2_1">концептуальном 
+проекте</a>.</p>
+<p class="MsoNormal" style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Для <i>шаблонного проекта</i> – путем выбора одного или нескольких решений
+<span lang="EN-US">SAP </span>и/или 
+партнера в качестве основы проекта. Либо без выбора существующих шаблонов. Тогда 
+решение должно быть полностью определено в документе концептуального проекта. 
+Это решение может быть централизованно отражено в запросах на перенос и затем 
+распределено по другим системам.</p>
+<p class="MsoNormal" style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; На этом же 
+этапе следует определить <a href="../StartingSM/StartingSM.htm#roadmap">маршрутную карту</a> проекта. В зависимости от объема 
+проекта, можно выбирать различные маршрутные карты для различных решений или 
+прикладных компонентов SAP. Список операций остается неизменным, но 
+акселераторы, связанные с этими операциями, будут применяться к конкретному 
+решению или прикладному компоненту SAP. 
+Каждому проекту можно присвоить только одну маршрутную карту.</p>
+<p style="line-height: 150%">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В <span lang="en-us">
+SAP Solution Manager </span>существует возможность <b>контроля динамики проекта</b> 
+по определенным в маршрутной карте и проекте вехам (критическим точкам): после 
+выбора маршрутной карты для проекта, 
+на одной из закладок <span lang="en-us">
+SAP Solution Manager</span> появится список этапов выбранной маршрутной карты. </p>
+<h2><a name="part_2_1_4"></a>Назначение членов проектной команды</h2>
+<p style="text-indent: 35.4pt; text-autospace: none; line-height: 150%; background: white">
+Каждому проекту может быть присвоено любое количество 
+членов проектной команды. Это присвоение выполняется руководителем проекта в 
+транзакции управления проектом. Для присвоения пользователей можно выбирать из 
+списка пользователей системы <span lang="en-us">S<span style="background-color: #FFFFFF; background-position: 0% 0%">AP</span></span><span style="background-color: #FFFFFF; background-position: 0% 0%">, 
+или вводить вручную</span>. С помощью специальной функции можно проверить<i>,</i> являются ли перечисленные на этой закладке члены проекта пользователями системы SAP. </p>
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Рядом с каждым пользователем можно ввести описание сотрудника проекта. Это поле доступно 
+только для внутреннего использования в рамках проекта. Например, оно может 
+использоваться для документального подтверждения присвоения члена проектной 
+команды подпроекту или проектной группе. При этом, если пользователь определен в 
+системе SAP, имя пользователя подставляется автоматически.</p>
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Также можно определить 
+имена и подробную информацию о партнерах SAP, вовлеченных в проект.</p>
+<h2><a name="part_2_1_5"></a>Определение стандартов проекта</h2>
+<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Определение стандартов проекта состоит из определения следующих данных (см. рис. 
+2.4).</p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/standart.jpg" border="0" align="middle" Name = "2_4" width="314" height="260" ></p>
+		<p style="text-align: center">Рисунок 2.4 <font face="Times New Roman">–</font> Определение 
+		стандартов проекта.<p style="text-autospace: none; line-height: 150%; background: white"><b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name=stat></a>Значения статуса.</b> Значения 
+статусов позволяют получить представление о статусе проекта или <a href="../StartingSM/StartingSM.htm#tran">транзакции 
+конфигурации</a>. Значения статусов состоят из десятизначного идентификатора 
+и описания. Помимо поставляемых значений, 
+пользователь может определить и свои статусы.</p>
+<p style="text-align:justify;line-height:150%">Поставляемые значения статусов:</p>
+<table border="1" width="73%" id="table1">
+	<tr>
+		<td width="110" height="32" align="center">
+		<p align="center"><b>Статус</b></td>
+		<td width="145" height="32">
+		<p align="center"><b>Описание</b></td>
+		<td height="32">
+		<p align="center"><b>Реакция системы</b></td>
+	</tr>
+	<tr>
+		<td width="110" height="32" align="center">
+		<p align="center">01</td>
+		<td width="145" height="32">
+		<p align="center">Открыто</td>
+		<td height="32">
+		<p align="center">Нет</td>
+	</tr>
+	<tr>
+		<td width="110" align="center">
+		<p align="center">02</td>
+		<td width="145">
+		<p align="center">Выполняется</td>
+		<td>
+		<p align="center">Нет</td>
+	</tr>
+	<tr>
+		<td width="110" align="center">
+		<p align="center">03</td>
+		<td width="145">
+		<p align="center">Завершено</td>
+		<td>
+		<p align="center">Запрет внесения изменений на закладке <i>
+		Администрирование</i> </td>
+	</tr>
+		<tr>
+		<td width="110" align="center">
+		<p align="center">04</td>
+		<td width="145">
+		<p align="center">Нерелевантно</td>
+		<td>
+		<p align="center">Нет</td>
+	</tr>
+</table>
+<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ключевые слова.</b> Для проекта могут 
+быть определены ключевые слова, по которым позже может быть выполнен поиск в 
+транзакции
+<a tppabs="http://help.sap.com/saphelp_sm310/helpdata/ru/3e/5fc33af038134fe10000000a11402f/content.htm" style="color: blue; text-decoration: underline; text-underline: single" href="file:///D:/DOC/РЈР§РЃР‘Рђ/Р”РРџР›РћРњ/Untitled/content-165.htm">
+Анализ проекта</a> . Ключевые слова должны быть краткими и точными.</p>
+<p style="text-autospace: none; line-height: 150%; background: white"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="vid_doc"></a>Виды документации.&nbsp; </b><span style="background-color: #FFFFFF; background-position: 0% 0%">
+<font size="3">Д</font></span>ля всех видов проектов доступны 
+различные форматы представления документации. Обзор форматов представления 
+документации представлен ниже. </p>
+<p style="text-autospace: none; line-height: 150%; background: white; text-align:center">
+<img src="Images/1.jpg" border="0" align="middle" width = "626" height="374" Name = "2_1" ></p>
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для каждого вида документации 
+возможно создание шаблонов проектной документации на закладке. Эти шаблоны позволяют определить внешний вид и формат документации и используются для создания новых 
+документов на фазах концептуального проекта и реализации.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При необходимости с помощью атрибутов 
+проектной документации можно определить возможность использовать данный вид 
+документации в других проектах; получение возможности многократного 
+присвоения вида документации элементам в структуре проекта (это позволяет 
+добавлять, например, несколько документов Microsoft Word к одному структурному 
+элементу).</p>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Как уже отмечалось ранее, шаблоны документации хранятся в 
+локальной системе <span lang="EN-US">Knowledge Warehouse
+</span><font size="3">в </font>
+<span lang="EN-US">SAP Solution Manager</span>, 
+а не в таблицах <span lang="EN-US">SAP Script</span>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Значения статуса, ключевых слов 
+и видов проектной документации задаются по умолчанию в транзакции управления 
+проектом. Если проекту не присвоены эти значения, администратор может 
+использовать шаблон, содержащий не зависящие от проекта значения статуса, 
+ключевые слова и виды документации. Значения в шаблоне проекта подходят ко всем 
+проектам. Решение о том, какие именно значения из шаблона следует использовать и 
+присвоить проекту, принимается администратором проекта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<h2 style="text-autospace: none; background: white; line-height:150%">
+<a name="part_2_1_6"></a>&nbsp;Определение запросов на перенос проекта</h2>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В SAP Solution Manager предусмотрены 
+функциональные возможности для переноса шаблонных проектов. В транзакции 
+управления проектом можно проверить запросы на перенос (подробнее о запросах на 
+перенос см. курс лекций &quot;Платформа SAP NetWeaver<font face="Times New Roman">&quot;)</font>, относящиеся к данному проекту. 
+Также для шаблонных проектов для переноса определяется <b>
+пакет</b>. Структура проекта и присвоенные ему 
+элементы (бизнес-содержимое) присваиваются указанному пакету. После этого любые 
+изменения структуры проекта, например, объема проекта или концептуального 
+проекта, автоматически присваиваются этому пакету. Требуется лишь ввести 
+соответствующий запрос на перенос.</p>
+<h2 style="text-autospace: none; background: white; line-height:150%">
+&nbsp;<a name="part_2_1_7"></a>Создание организационной структуры проекта</h2>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В SAP Solution 
+Manager предусмотрена возможность для ввода данных об используемых в проекте организационных единицах. Информация, 
+помимо названия подразделения, может включать функцию, страну, 
+часовой пояс.<b><span style="font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></b></p>
+<h2><a name="part_2_1_8"></a>Определение системной среды. Системные роли</h2>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Для получения доступа к системам компонентов на последующих фазах проекта 
+необходимо определить для шаблонного проекта или проекта внедрения системную 
+среду.</p>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SAP Solution Manager позволяет централизованно управлять всеми логическими 
+системами в рамках проекта.&nbsp; </p>
+<p style="text-autospace: none; background: white; line-height:150%">
+Данные системной среды проекта включают 
+(см. рис 2.5):</p>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Логический компонент;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">Версию 
+	продукта;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Логические системы выбранных системных ролей.</p></li>
+</ul>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/sys_sred.jpg" border="0" align="middle" Name = "2_5" width="310" height="259" ></p>
+		<p style="text-align: center">Рисунок 2.5 <font face="Times New Roman">–</font> Определение системной среды.<p style="text-autospace: none; background: white; line-height:150%">
+<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><b>Логический компонент</b> отражает набор 
+логических систем (инстанций) для продукта. Выбор логического компонента влияет на 
+выбор сценариев/процессов из <a href="../StartingSM/StartingSM.htm#business_process">Репозитария бизнес-процессов</a> в фазе <a href="Phase02.htm">концептуального 
+проекта</a>. Выбрать можно только те сценарии/процессы, которые соответствуют 
+определенному логическому компоненту и версии продукта.</p>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Вместе с <span lang="EN-US">SAP 
+Solution Manager </span>поставляются различные <b>системные роли</b> внедрения. 
+Участники проекта могут входить в проект по внедрению с помощью присвоенных им 
+ролей и полномочий и работать над определенными задачами проекта. Профили 
+полномочий могут быть адаптированы к требованиям проекта. Для копирования и 
+изменения ролей SAP Solution Manager используется<b> Генератор профилей </b>(PFCG).</p>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Концепция 
+полномочий SAP Solution Manager предварительно определена для следующих ролей:</p>
+<ul>
+	<li>
+	<p class="MsoNormal">Руководитель проекта (SAP_SOLAR_PM);</li>
+	<li>
+	<p class="MsoNormal">Консультант по приложению (SAP_SOLAR_AC);</li>
+	<li>
+	<p class="MsoNormal">Консультант по разработке/базису (SAP_SOLAR_BC);</li>
+	<li>
+	<p class="MsoNormal">Технический консультант (SAP_SOLAR_TC).</li>
+</ul>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Каждая роль 
+состоит из различных функций членов проектной команды, типичных для этой роли. Все 
+вышесказанное иллюстрирует рисунок 2.6.</p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img border="0" src="Images/roles.jpg"></p>
+		<p style="text-align: center">Рисунок 2.6 <font face="Times New Roman">–</font> Использование системных ролей SAP 
+		Solution Manager.<p style="text-autospace: none; background: white; line-height:150%">
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В ходе 
+проекта можно добавить системы для системных ролей. После сохранения информацию о логических системах для внешних 
+продуктов (не SAP) 
+изменить невозможно.</p>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Рассмотрим каждую роль и определенные 
+для нее задачи проекта по внедрению.</p>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;Руководитель проекта (SAP_SOLAR_PM)</b></p>
+<p style="text-autospace: none; background: white; line-height:150%">
+Руководители проекта отвечают за управление и достижение необходимых результатов 
+проекта. Они предупреждают отклонения от хода выполнения проекта и выполняют 
+мероприятия по корректировке. Основные обязанности руководителя проекта<span lang="en-us">
+</span>(реализуются в<span lang="en-us">SAP Solution Manager</span>)&nbsp; 
+включают:</p>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Разработка стратегий и 
+	процедур для зффективного внедрения SAP;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Поддержка определения и 
+	моделирования бизнес-процессов;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Конфигурация ПО в 
+	соответствии с бизнес-требованиями;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Определение глобальных и 
+	локальных требований стандартизации;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Определение требований для 
+	организационных изменений на предприятии;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Помощь в передаче знаний 
+	другим членам проектной группы;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Поддержка в организации и 
+	проведении тестов;</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	<span style="font-family: Helvetica\, sans-serif">Определение требований для 
+	профиля полномочий и полномочий на доступ.</span></p></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">
+<span style="font-family: Helvetica\, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Функции, определенные для роли руководителя проекта изображены на рисунке 
+2.7</span></p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img border="0" src="Images/roles_ruk.jpg"></p>
+		<p style="text-align: center">Рисунок 2.7 <font face="Times New Roman">–</font> 
+		Функции для Руководителя 
+		проекта.<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Консультант по приложению (SAP_SOLAR_AC).</b></p>
+<p style="line-height: 150%; margin-bottom: 0">
+<span style="font-family: Helvetica\, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Консультанты по приложениям отвечают за адаптацию концептуального бизнес-проекта 
+и конфигурации ПО к бизнес-процессам, а также за выполнение требований по 
+анализу и отчетности. Для выполнения этих задач применяются знания испытанных 
+бизнес-процедур. Эта роль обладает ограниченными полномочиями и предназначена 
+для участников проекта. Ее можно адаптировать к другим полномочиям. </span></p>
+<p style="line-height: 150%; margin-bottom: 0">Основные обязанности консультанта<span lang="en-us">
+</span>по приложению&nbsp; 
+включают:</p>
+<ul>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Разработка стратегий и 
+	процедур для эффективного внедрения SАР;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Поддержка определения и 
+	моделирования бизнес-процессов;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Конфигурация ПО в 
+	соответствии с бизнес-требованиями;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Определение глобальных и 
+	локальных требований стандартизации;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Определение требований для 
+	организационных изменений на предприятии;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Помощь в передаче знаний 
+	другим членам проектной группы;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Поддержка в организации и 
+	проведении тестов;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Определение требований для 
+	профиля полномочий и полномочий на доступ.</span></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">
+<span style="font-family: Helvetica\, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Функции, определенные для роли консультанта по приложению изображены на рисунке 
+2.8</span></p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img border="0" src="Images/roles_pril.jpg"></p>
+		<p style="text-align: center">Рисунок 2.8 <font face="Times New Roman">–</font> 
+		Функции для Консультанта 
+		по приложению.<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Консультант по разработке/базису (SAP_SOLAR_BC).</b></p>
+<p style="line-height: 150%; margin-bottom: 0">
+<span style="font-size:7.0pt;font-family:&quot;Helvetica\, sans-serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Консультанты по разработке/Базису вместе с&nbsp; руководителем проекта и 
+консультантом по приложению работают над планированием и организацией концепции 
+полномочий, Они также выполняют задачи по разработке и специфичные для клиентов 
+разработки. </p>
+<p style="line-height: 150%; margin-bottom: 0">Основные обязанности консультанта 
+по Базису включают следующие действия: </p>
+<ul>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">Организация полномочий;</li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">Разработка АВАР-программ, 
+	например, интерфейсов, форм или модификаций;</li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">Работа с инструментальными 
+	средствами АВАР;</li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">Для дополнительных полномочий 
+	доступна роль SAP_BC_DWB_ABAPDEVELOPER, которая содержит полномочие на 
+	внедрение новых приложений и расширений, а также на изменение стандартных 
+	приложений с помощью инструментов м сервисов, предоставленных 
+	инструментальными средствами АВАР.</li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">
+<span style="font-family: Helvetica\, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span lang="en-us">&nbsp;</span>Функции, определенные для роли консультанта по разработке/Базису изображены на рисунке 
+2.9</span></p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img border="0" src="Images/roles_baz.jpg"></p>
+		<p style="text-align: center">Рисунок 2.9 <font face="Times New Roman">–</font> 
+		Функции для Консультанта по Базису.<p class="MsoNormal"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Технический консультант (SAP_SOLAR_TC).</b></p>
+<p style="line-height: 150%; margin-bottom: 0">
+<span style="font-size:7.0pt;font-family:&quot;Helvetica\, sans-serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family: Helvetica\, sans-serif">&nbsp;Технические 
+консультанты вместе с руководителями проекта и группы технических специалистов 
+разрабатывают технические требования и затем выполняют необходимые технические 
+задачи в системе. В зависимости от объема и сложности проекта внедрения, 
+технические консультанты могут работать в нескольких областях, например 
+системное администрирование, управление базой данных, управление сетями, 
+управление операционной системой, разработка компонентов для всех приложений или 
+АВАР-разработка. </span></p>
+<p style="line-height: 150%; margin-bottom: 0">
+<span style="font-family: Helvetica\, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Основные обязанности технического консультанта включают следующие действия: </span></p>
+<ul>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Настройка и установка 
+	системного ландшафта;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Управление системным 
+	ландшафтом и соответствующим ландшафтом переноса;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Обеспечение поддержки и 
+	помощи по всем техническим вопросам входе проекта внедрения ;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Разработка и реализация 
+	плана подготовки перед продуктивным запуском;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Эффективная коммуникация с 
+	группами по бизнес-процессам;</span></li>
+	<li>
+	<p style="line-height: 150%; margin-bottom: 0">
+	<span style="font-family: Helvetica\, sans-serif">Эффективная передача 
+	знаний сотрудникам отдела системного администрирования.</span></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">
+<span style="font-family: Helvetica\, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Функции, определенные для роли технического консультанта изображены на рисунке 
+2.</span><span style="font-family: Helvetica\, sans-serif" lang="en-us">10</span><span style="font-family: Helvetica\, sans-serif">.</span></p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img border="0" src="Images/roles_teh.jpg"></p>
+		<p style="text-align: center">Рисунок 2.10 <font face="Times New Roman">
+		– </font>Функции для Технического 
+		консультанта. 
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Вернемся в системной среде. В зависимости от определяемой системной среды, 
+будут доступны следующие функции:</p>
+<ul>
+	<li>
+	<p>
+	Переход к к бизнес-содержимому в системах 
+компонентов;</p></li>
+	<li>
+	<p>
+	Создание <a href="../StartingSM/StartingSM.htm#part_1_3">IMG-проектов </a> в системах компонентов и распределение 
+центральных данных проекта;</p></li>
+	<li>
+	<p>
+	Сравнение и распределение настроек в локальных системах.</p></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; После выбора логических компонентов 
+проекта и определения системы разработок в проекте SAP Solution Manager есть 
+возможность увидеть все подпроекты 
+настройки. Для подпроектов настройки можно создавать соответствующие IMG проекты и распределять центральные данные 
+проекта (общие данные, информацию о сотрудниках, стандартах проекта, выбранных 
+странах). После создания IMG проекта в системах компонентов вся 
+соответствующая информация заносится в данные по объему проекта. Напротив 
+каждого системного компонента есть поле, представляющее собой светофор. Зеленый и красный сигналы светофора указывают на 
+то, было ли выполнено создание IMG проекта и распределение соответствующих данных 
+или нет.</p>
+<h2><a name="part_2_1_9"></a>Вопросы для самоконтроля</h2>
+<ol>
+	<lЦели фазы &quot;Подготовка проекта&quot; в SAP Solution Manager</li>
+	<li>Какие виды проектов существуют в <span lang="en-us">SAP Solution Manage</span>?.</li>
+	<li>Транзакция &quot;Управление проектом&quot;. Общие данные проекта. </li>
+	<li>Назначение 
+	членов проектной команды.</li>
+	<li>Как определяется объем проекта.</li>
+	<li>Статусы проекта. Ключевые слова. Виды документации.</li>
+	<li>Запросы на перенос.</li>
+	</li>
+	<li>Определение системной среды. Что такое логический компонент?</li>
+<li>Системные роли в SAP Solution Manager.</li>
+</ol>
+<h2>&nbsp;</h2>
+</body>
+
+</html>

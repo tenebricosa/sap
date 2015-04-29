@@ -1,0 +1,376 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+
+<title>Общесистемные концепции</title>
+<link rel=Stylesheet type="text/css" media=all
+href="../General/TMExternalStyleSheet.css">
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=blue
+vlink=darkblue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+
+<div>
+
+<h1><a name="_Toc92013405"></a><a name="_Toc101241272">Общесистемные концепции</a></h1>
+<p><a href="#_t0">Введение</a></p>
+<p><a href="#_t1">1. Организационные элементы</a></p>
+<p><a href="#_t2">2. Основные данные</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t21">2.1 Основные записи клиентов</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t22">2.2 Основные записи материалов</a></p>
+<p><a href="#_t3">3. <span lang="en-us">SAP - </span>транзакция</a></p>
+<p><a href="#_t4">4. Поток операций</a></p>
+<p><a href="#_t5">5. Система отчетов</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t51">5.1 Представление в виде списков</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t52">5.2 Информационные системы</a></p>
+<p><a href="#_t6">6. Контрольные вопросы</a></p>
+
+
+
+
+<p></p>
+
+<h2><a name="_t0">Введение</a></h2>
+<p class="MsoNormal">Все решения SAP базируются на бизнес-процессах. 
+Бизнес-процессы основаны на элементах и основных данных, взаимодействующих между 
+собой и обеспечивающих определенный ход бизнеса. </p>
+<p class="MsoNormal">Общие концепции, которые являются основными элементами, 
+спроектированными и используемыми для представления структуры предприятия и 
+бизнес-процессов в SAP-системе:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 36.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>организационные элементы;</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 36.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>основные данные;</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 36.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>транзакции;</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 36.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>поток операций;</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 36.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>система отчетов.</p>
+<h2><a name="_t1">1. Организационные элементы</a></h2>
+<p class="MsoNormal">Структура предприятия отображается в приложениях SAP 
+посредством организационных элементов. </p>
+<p class="MsoNormal">Организационные элементы представляют собой механизм 
+определения структуры предприятия в SAP-системе в юридических и/или коммерческих 
+целях. Организационные элементы включают юридические лица компании, заводы, 
+склады, офисы продаж, а также места возникновения прибыли и могут быть присвоены 
+одному приложению (например, сбытовая организация присваивается сбыту) или 
+нескольким приложениям (например, завод присваивается &nbsp;управлению материальными 
+потоками и планированию производства).</p>
+<p class="MsoNormal">Краткая характеристика организационных элементов:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span><b>Мандат</b> – самый верхний уровень всех организационных единиц; 
+предприятие -&nbsp; клиент SAP.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span><b>Балансовая единица </b>– центральный организационный элемент <b>
+Финансового учета</b>; может быть несколько в пределах Предприятия.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span><b>Завод</b> – центральный организационный элемент в рамках <b>
+Планирования производства</b> и <b>Управления производством</b>.
+<span style="color:black;layout-grid-mode:line">Завод является местом 
+производства. Завод образует размещающую и управляющую запасами единицу и тем 
+самым является и для <b>Управления материальными потоками </b>центральной 
+организационной единицей. </span></p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span><b>Сбытовая организация</b> – центральный организационный элемент 
+в рамках <b>Сбыта</b>, &nbsp;регулирующий сроки продаж клиенту.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span><b>Сектор</b> – обычно используется для&nbsp; представления жизненного 
+цикла продукта.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span><b>Склады</b> – складные помещения для хранения товара; может быть 
+несколько в пределах Завода.</p>
+<p align=image style="text-align: center"><img border=0 width=492 height=362
+src="./BasicConcept_files/image001.jpg"></p>
+<p class="MsoNormal" style="text-align: center"><i>Рис. 13 Организационная структура: терминология</i></p>
+<p class="MsoNormal">Каждый организационный элемент, например Завод, сначала 
+определяется в руководстве по внедрению, а затем присваивается 
+(связывается) другим организационным элементам (например, завод присваивается 
+балансовой единице). Таким образом, представляется вся структура предприятия. 
+При определении организационных элементов следует помнить, что они определяют 
+структуру ввода, отслеживания и извлечения данных в SAP-системе.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p align=image style="text-align: center"><img border=0 width=550 height=404
+src="./BasicConcept_files/image002.jpg"></p>
+<span style="font-size: 12.0pt; font-family: Times New Roman">
+<p class="MsoNormal" align="center" style="text-align: center"><i>Рис. 14 
+Организационная структура: уровни</i></p>
+</span>
+<h2><a name="_t2">2. Основные данные</a></h2>
+<p class="MsoNormal">Под основными данными понимают данные, которые хранятся в 
+базе данных в течение долгого периода времени (например, данные о дебиторах, 
+поставщиках, материалах, счета).</p>
+<p class="MsoNormal">В SAP-системе основные данные создаются централизованно и 
+доступны всем приложениям и всем уполномоченным пользователям. </p>
+<p class="MsoNormal">Наиболее важные виды основных данных:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>основные записи клиентов;</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>основные записи материалов;</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>основные записи поставщиков. </p>
+<p class="MsoNormal">Основные данные также имеют организационный аспект, 
+поскольку их информация организована в виде ракурсов, присвоенных 
+организационным элементам.</p>
+<p class="MsoNormal">Объединение всех связанных данных (например, клиентов или 
+материалов) в единую базу данных дает возможность устранить проблему 
+избыточности данных и повысить их целостность. Хранимые данные могут 
+использоваться во всех областях, например, в сбыте, закупках, управлении 
+запасами, планировании потребности в материалах, контроле счетов и т.д.</p>
+
+<h3><a name="_t21">2.1 Основные записи клиентов</a>
+</h3>
+<p class="MsoNormal">Основные записи клиентов содержат ключевую информацию, 
+определяющую бизнес - отношения между компанией и ее клиентом. Они также 
+содержат специфичные для данного клиента параметры, поддерживающие выполнение 
+таких бизнес-процессов, как ввод заказов клиента, поставки, фактурирование и 
+обработка платежей.</p>
+<p class="MsoNormal">Информация в основных записях клиентов организована в виде 
+трех ракурсов различных организационных уровней: </p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Общие данные (Мандант);</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>&nbsp;Данные внешнего учета и отчетности (Балансовая единица);</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Данные сбыта (Рынок сбыта).</p>
+<p class="MsoNormal" style="line-height:150%">&nbsp;</p>
+<p align=image style="text-align: center"><img border=0 width=646 height=432
+src="./BasicConcept_files/image004.jpg"></p>
+
+<p class="MsoNormal" style="text-align: center"><i>Рис. 15 Основные данные: основные записи клиентов</i></p>
+
+<h3><a name="_t22">2.2 Основные записи материалов</a></h3>
+<p class="MsoNormal">Основные записи материалов содержат всю ключевую 
+информацию, необходимую компании для управления материальными потоками внутри 
+нее. Помимо прочего, основные записи материалов определяют порядок продажи, 
+изготовления, закупки, хранения, учета и оценки продукции. Информация в основных 
+записях материалов сгруппирована в ракурсы, организованные по бизнес-функции.</p>
+<p class="MsoNormal">Большинство ракурсов в основных записях материалов 
+относятся к уровню завода.</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:27.0pt">&nbsp;</p>
+<p align=image style="text-align: center"><i><img border=0 width=642 height=430
+src="./BasicConcept_files/image005.jpg"></i></p>
+<p class="MsoNormal" align="center" style="text-align: center"><i>Рис. 16 Основные 
+данные: основные записи материалов</i></p>
+<h2><a name="_t3">3. SAP-транзакция</a></h2>
+<p>Транзакции - центральный компонент работы конечных 
+пользователей SAP-системы.</p>
+<p class="MsoNormal">Транзакции - объединенные в группы единицы обработки, 
+обеспечивающие выполнение специальных функций. Они имеют четыре основных 
+атрибута. Вместе начальные буквы этих атрибутов образуют акроним ACID:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Элементарный</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Непротиворечивый</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Изолированный</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Длительный</p>
+<p class="MsoNormal">Это означает следующее:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 54.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Транзакция выполняется либо полностью успешно, либо остается 
+безрезультатной (элементарный). При завершении работы системы, ориентированной 
+на выполнение транзакций, необходимо убедиться, что неконсистентные, частичные 
+результаты не сохраняются.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 54.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Системный статус переходит из одного состояния, правильного и 
+целостного в организационно-экономическом смысле, в другое, также правильное и 
+целостное в организационно-экономическом смысле. </p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 0cm; margin-left: 54.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Изменения в пределах транзакции можно видеть лишь при помощи 
+других транзакций, выполняемых одновременно, после окончательного подтверждения 
+(«Commit»).</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 0cm; margin-left: 54.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Результаты транзакции являются продолжительными, т.е. после 
+окончательного подтверждения они навсегда записываются в базу данных.</p>
+
+<p class="MsoNormal" style="text-align: left">Транзакции SAP неразрывно связаны 
+с взаимодействием пользователей, которые находятся в том или ином экране, 
+потому что в системе SAP любая операция основывается на взаимодействии между 
+экранами. Транзакции приложений в рамках SAP отличаются от транзакций, знакомых 
+нам по работе с базами данных, хотя в их основе заложен принцип внесения 
+изменений в базу данных.</p>
+<p class="MsoNormal" style="text-align: left">Транзакция SAP состоит из серии 
+последовательных диалоговых окон, логически связанных между собой, заполнение 
+которых приводит к обновлению баз данных.</p>
+<p class="MsoNormal" style="text-align: left">Каждое появляющееся окно — это, по 
+сути, динамическая программа, представленная в виде экрана. Каждый экран 
+состоит из информации о конфигурации окна, полях для заполнения, определениях 
+этих полей, подтверждения изме­нений в полях, сверке подтверждений и других 
+операциях по обработке данных.</p>
+<p class="MsoNormal" style="text-align: left">Выполнение Транзакции SAP состоит 
+из двух фаз: фаза он-лайн и фаза внесения обновлений. Транзакция не считается 
+завершенной, пока все логически взаимосвязанные операции не будут успешно 
+выполнены. Кроме того, в случае, если транзакция SAP не будет успешно завершена, 
+все обновления баз дан­ных, внесенные во время выполнения промежуточных шагов, 
+будут отменены.</p>
+<p class="MsoNormal" style="text-align: left"><i>Например,</i> при выполнении 
+транзакции «Создать заказ клиента» пользователь должен ввести номер основной 
+записи клиента, при этом копируется вся соответствующая информация о клиенте. 
+Аналогично, после ввода номеров основных записей для заказываемых материалов 
+происходит копирование соответствующих данных по материалам в заказ клиента. </p>
+<p class="MsoNormal" style="text-align: left">Кроме того, при выполнении каждой 
+транзакции необходимо ввести соответствующие организационные элементы.</p>
+<p class="MsoNormal" style="text-align: left"><i>Например</i>, 
+при вводе информации по сбытовой организации соответствующей группе сбыта 
+засчитывается операция сбыта; указание местоположения завода/склада определяет 
+выбор источника поставки продукции.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p align=image style="text-align: center"><img border=0 width=645 height=363
+src="./BasicConcept_files/image010.jpg"></p>
+<p class="MsoNormal" style="text-align: center"><i>Рис. 17 Транзакции</i></p>
+<p class="MsoNormal">При выполнении любой транзакции в системе создается 
+документ. Этот документ (запись данных для этой транзакции) содержит всю 
+соответствующую предварительно определенную информацию из основных данных и 
+организационных элементов.</p>
+<h2 align="left"><a name="_t4">4. Поток операций</a></h2>
+<p class="MsoNormal"><b>WebFlow Engine</b> - это инструмент поддержки, 
+предназначенный для оптимизации выполнения операций. (Подробнее см.<b> </b> <a href="../Integration/Integration.htm#_t3">Технлогии коммуникации и интеграции. WebFlow Engine.</a>)</p>
+<p class="MsoNormal">В целях координации потока информации последовательно 
+выполняемые рабочие шаги могут быть автоматизированы. Потоки операций 
+обеспечивают возможность электронного управления структурированными потоками 
+операций, которые:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Охватывают последовательность операций.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Всегда имеют одинаковую или похожую форму.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Включают несколько отделов или сотрудников.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p align=image style="text-align: center"><img border=0 width=615 height=449
+src="./BasicConcept_files/image006.jpg"></p>
+<p class="MsoNormal" style="text-align: center"><i>Рис. 18 Поток операций</i></p>
+<p class="MsoNormal">Потоки операций контролируют передачу информации в 
+соответствии с предварительно определенной моделью и особенно подходят для 
+структурированных организаций, разделенных на<span style="letter-spacing:.05pt">
+</span>отделы или сектора.</p>
+<p class="MsoNormal">Потоки операций обеспечивают выполнение правильной работы в 
+правильном порядке в правильное время правильными людьми. Это достигается путем 
+использования автоматизированной почты или элементов потока операций.</p>
+<h2 align="left"><a name="_t5">5. Система отчетов</a></h2>
+<p class="MsoNormal">Информационная система должна 
+обеспечивать получение руководством компании информации по важным факторам, 
+необходимой для принятия коммерческих решений. Документы (заказы клиентов, 
+заказы на поставку, производственные заказы и документы материалов) собираются и 
+сохраняются в SAP-системе вместе с различными объемами информации, в то время 
+как отчеты могут запускаться в любое время. </p>
+
+<p class="MsoNormal">В информационных 
+SAP-системах показатели выводятся из основных и операционных данных и 
+переносятся в систему показателей. Эти показатели описывают как корпоративные 
+факторы (бюджетную ситуацию, финансы, структуру персонала и т.д.), так и внешние 
+(цены, клиентов, поставщиков и т.д.) Настройка системы показателей в 
+соответствии со специфическими требованиями компании к отчетности осуществляется 
+путем выбора, присвоения и агрегации информации, доступной в сервисной области. 
+Информационные SAP-системы содержат большое количество предварительно 
+определенных отчетов, а также предоставляют пользователям широкие возможности 
+определения собственных структур отчетов.</p>
+<p align=image style="text-align: center"><img border=0 width=564 height=452
+src="./BasicConcept_files/image007.jpg"></p>
+<p class="MsoNormal" style="text-align: center"><i>Рис.19 Система отчетов</i></p>
+<p class="MsoNormal">Различаются следующие виды отчетов:</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Документы списков стандартных отчетов, основные данные и 
+комбинации этих объектов (признаков), выбираемые в запросе отчета.</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Отчетность посредством информационных систем в приложениях: 
+стандартный анализ из систем FIS (Financials), LIS (Logistics), HIS (Human 
+Resources).</p>
+<p class="MsoNormal" style="text-indent: 0cm; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span>Отчетность посредством информационных систем с отдельными базами 
+данных и инструментами создания гибких структур отчетов: системы EIS (Executive 
+Information System) и BW(Business Warehouse).</p>
+<p class="MsoNormal">Рассмотрим два инструмента отчетности: просмотры списков и 
+информационные системы (например, информационная система логистики).</p>
+
+<h3><a name="_t51">5.1 Представление в виде списков</a>
+</h3>
+<p class="MsoNormal" style="text-align: left">Представление в виде списков - это 
+один из доступных в SAP-системе инструментов отчетности. Представление в виде 
+списков дает пользователю возможность запрашивать перечень документов или 
+информацию из основных данных, а также комбинации этих объектов (признаков). В 
+списке отображаются отчеты, созданные непосредственно из оперативных транзакций 
+или других источников обобщенных данных. Из списков пользователь может 
+осуществлять прямой доступ к первичным документам.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p align=image style="text-align: center"><img border=0 width=531 height=387
+src="./BasicConcept_files/image008.jpg"></p>
+<p class="MsoNormal" style="text-align: center"><i>Рис. 20 Список заказов клиентов</i></p>
+
+<h3><a name="_t52">5.2 Информационные системы</a>
+</h3>
+<p class="MsoNormal" style="text-align: left">Основные инструменты отчетности 
+SAP-системы включают информационные системы приложений (например, Logistics, 
+Accounting, Human Resources).&nbsp; Подробная информация по транзакции хранится в 
+SAP-системе и агрегируется для информационных систем в статистических целях. В 
+аналитических целях также возможен ввод данных из других систем.</p>
+<p class="MsoNormal" style="text-align: left">Деревья отчетов приложений 
+содержат большое количество отчетов, предварительно определенных SAP в 
+соответствии с бизнес-требованиями (стандартный анализ). Информационные системы 
+приложений также позволяют определять собственные информационные структуры в 
+соответствии со специфическими требованиями предприятия (гибкий анализ).</p>
+<p class="MsoNormal" style="line-height:150%">&nbsp;</p>
+<p align=image style="text-align: center"><img border=0 width=540 height=391
+src="./BasicConcept_files/image009.jpg"></p>
+<p class="MsoNormal" style="text-align: center"><i>Рис. 21 Структура информационных систем</i></p>
+<p class="MsoNormal">&nbsp;</p>
+<h2 align="left"><a name="_t6">6. Контрольные вопросы</a></h2>
+<ol>
+	<li>
+	<p align="left">Что&nbsp; является&nbsp; организационными элементами?</li>
+<li>
+<p align="left">Какие виды основных данных существуют?</li>
+<li>
+<p align="left">Что дает объединение всех связанных данных в единую базу?</li>
+<li>
+<p align="left">Что означает акроним ACID?</li>
+<li>
+<p align="left">В чем отличие <span lang="en-us">SAP-</span>транзакции от 
+транзакции БД?</li>
+<li>
+<p align="left">Транзакции представляют собой прикладные программы, выполняющие 
+бизнес-процессы в SAP-системе?</li>
+<li>
+<p align="left">Каково назначение потока операций SAP?</li>
+<li>
+<p align="left">Какие виды отчетов существуют в <span lang="en-us">SAP-</span>системе?</li>
+</ol>
+<p align="left">&nbsp;</p>
+<p>&nbsp;</div>
+
+</body>
+
+</html>

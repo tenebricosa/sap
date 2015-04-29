@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>ФАЗА2. Концептуальный проект.</title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+div.Section1 {page:Section1;}-->
+</style>
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=blue
+vlink=blue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+<div>
+<h2 style="line-height: 150%"><font size="6">2. Внедрение решения mySAP Business 
+Suite</font> </h2>
+
+<h2 style="line-height: 150%"><a name="part_2_4"></a>2.4 ФАЗА 4. Заключительная 
+подготовка</h2>
+<p style="line-height: 150%"><a href="#vved_2_4">Введение</a></p>
+
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_4_1">Создание 
+учебных материалов. Учебные карты</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_4_2">Вопросы 
+для самоконтроля</a></p>
+
+<h2 style="line-height: 150%"><a name="vved_2_4"></a>Введение</h2>
+<p class="MsoNormal" style="text-autospace: none; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+На данном этапе ответственность за выполнение бизнес-процессов и техническую 
+инфраструктуру берет на себя служба поддержки. Вся соответствующая документация 
+оформлена и передана проектной командой соответствующим группам поддержки.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+В SAP Solution Manager этот процесс поддерживается посредством транзакции <b>
+SOLUTION_MANAGER</b>, в которой выполняется автоматический перенос из фазы 
+внедрения в фазу использования решения. Например, структура бизнес-процесса в 
+фазе внедрения является входными данными для функции контроля бизнес-процессов в 
+фазе использования решения.</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для 
+данной фазы мы рассмотрим процесс создания электронных учебных материалов.</div>
+<h2 style="line-height: 150%"><a name="part_2_4_1"></a>Создание учебных 
+материалов. Учебные карты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h2>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При внедрении 
+новых решений и функций конечные пользователи должны получать знания о новых 
+функциях, которые они будут использовать. С помощью системы 
+SAP Solution Manager на основе существующей структуры 
+проекта создаются учебные карты по задачам конечного пользователя,
+например, новым функциям, которые будет использовать закупщик в компании.
+</p>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;</b><span lang="DE"><b>Учебная 
+карта</b> представляет собой структурированное оглавление интерактивного курса 
+для самостоятельного изучения</span><span lang="EN-US">, </span><span lang="DE">
+содержащее краткую информацию о рассматриваемых темах и ссылки на учебный 
+материал в формате</span><span lang="EN-US"> HTML. </span><span lang="DE">В 
+курсы самообучения можно внести материалы электронного обучения</span><span lang="EN-US">,
+</span><span lang="DE">например</span><span lang="EN-US">, </span>
+<span lang="DE">обучающие программы</span><span lang="EN-US"> SAP.</span> </p>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Структура 
+учебной карты приведена на рисунке 2.21.</p>
+<p style="line-height: 150%; text-align:center">
+<img src="Images/uchkard.jpg" border="0" align="middle" Name = "2_11" width="389" height="277" ></p>
+<p style="line-height: 150%; text-align:center">Рисунок 2.21&nbsp; – Структура 
+учебной карты</p>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для создания 
+учебной карты необходимо сначала определить роли для тех групп пользователей, 
+которым требуется впоследствии отправить эти учебные карты, например, закупщика 
+или бухгалтера. В SAP Solution Manager используются деловые роли Должность и 
+Организационная единица из HR. Если эти деловые роли не определены, их 
+необходимо создать.</p>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; На фазе 
+реализации, а именно в конфигурации выполняется присвоение учебного материала 
+структурным элементам, например, материала для электронного обучения, такого как 
+обучающие программы SAP, презентации или контрольные примеры. Здесь же можно 
+присвоить созданные роли структурным элементам для получения 
+возможности фильтрации структуры проекта по группам пользователей (ролям), для 
+которых предназначены определенные учебные разделы.</p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; По окончании тестирования проекта 
+создаются учебные разделы на основе 
+структуры проекта и присвоенного ей учебного материала, также на его 
+основе создаются
+учебные карты в формате HTML для различных групп пользователей (ролей) в 
+транзакции.
+<span style="font-style:normal; font-variant:normal; font-weight:normal">С</span>сылки на учебные карты 
+рассылаются конечным пользователям.</p>
+<h2 style="line-height: 150%"><a name="part_2_4_2"></a>&nbsp;Вопросы для самоконтроля</h2>
+<ol>
+	<li>
+	<p style="line-height: 150%">Создание электронных учебных материалов.</li>
+<li>
+<p style="line-height: 150%">Структура учебной карты.</li>
+</ol>
+<h2 style="line-height: 150%">&nbsp;</h2>
+
+</body>
+
+</html>

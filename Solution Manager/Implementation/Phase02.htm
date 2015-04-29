@@ -1,0 +1,331 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>ФАЗА2. Концептуальный проект.</title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+div.Section1 {page:Section1;}-->
+</style>
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=blue
+vlink=blue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+<div>
+<h2 style="line-height: 150%"><font size="6">2. Внедрение решения mySAP Business 
+Suite</font> </h2>
+
+<h2 style="line-height: 150%"><a name="part_2_2"></a>2.2 ФАЗА 2. Концептуальный проект</h2>
+<p style="line-height: 150%"><a href="#vved_2_2">Введение</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_2_1">Концептуальный проект</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_2_2">Создание концептуального проекта</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_2_3">Создание и печать документа концептуального проекта</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_2_4">Создание проектной документации</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_2_5">Администрирование</a></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp; <a href="#part_2_2_6">Вопросы для самоконтроля</a></p>
+
+<h2 style="line-height: 150%"><a name="vved_2_2"></a>Введение<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></h2></div>
+<p style="text-autospace: none; line-height: 150%; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Цель этой фазы состоит в создании <a href="#part_2_2_1">концептуального проекта</a>, 
+который является подробной документацией по требованиям к бизнес-процессам 
+компании. В концептуальном проекте описываются общие принципы отражения 
+бизнес-процессов в одной или нескольких SAP-системах. В нем 
+подробно описывается назначение бизнес-сценариев, бизнес-процессов, шагов 
+процессов и требования по внедрению решения SAP.</p>
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Концептуальный проект является 
+необходимой предпосылкой для перехода к фазе <a href="Phase03.htm">реализации</a>, во время которой 
+выполняется конфигурация и тестирование бизнес-процессов. 
+<span>Все планы тестирования 
+базируются на структуре концептуального проекта. В процессе создания плана 
+тестирования транзакции, присвоенные шагам процесса в концептуальном проекте, 
+помещаются в планы тестирования и выполняются в качестве&nbsp; функциональных 
+тестов, проводимых с целью проверки выполнения транзакций.</span></p>
+<h2 style="line-height: 150%"><a name="part_2_2_1"></a>Концептуальный проект</h2>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Концептуальный проект включает в себя следующие 
+<b>структурные элементы</b>, организованные в виде иерархии:</p>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%; margin-left:0">
+	Организационные единицы (Organizational Units);</p>
+	</li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%; margin-left:0">
+	Основные данные (Master Data);</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%; margin-left:0">
+	Бизнес-сценарии 
+	(Business Scenario);</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%; margin-left:0">
+	Бизнес-процессы<span lang="en-us"> 
+	(Business process);</span></p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%; margin-left:0">
+	Шаги процессов 
+	(<span lang="en-us">P<span style="background-color: #FFFFFF; background-position: 0% 0%">rocess 
+	Step</span></span>).</p></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">
+<span lang="en-us"><font size="3">&nbsp;&nbsp;&nbsp; </font> </span>Данные в концептуальном проекте, например, 
+проектная документация, пакеты настройки бизнес-конфигурации или транзакции, 
+присваиваются отдельным структурным элементам в SAP Solution Manager.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; На уровнях ниже уровня бизнес-сценариев можно 
+создавать структурные элементы для организационных единиц и основных данных. Эти 
+структурные элементы используются лишь в том случае, если организационные 
+единицы и основные данные релевантны только для бизнес-процесса, расположенного 
+в структуре на более высоком уровне (см. рис. 2.11). Все уровни этой структуры можно изменять, что 
+позволяет создать решение, полностью адаптированное к требованиям заказчика.</p>
+<p style="text-autospace: none; background: white; line-height:150%; text-align:center">
+<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>&nbsp;&nbsp;&nbsp;
+<img src="Images/buss_scen.jpg" border="0" align="middle" width = "641" height="383" Name = "2_6" ></p>
+<p style="text-align: center; line-height:150%" >
+Рисунок 2.11 <font face="Times New Roman">–</font> Структура стандартного 
+сценария</p>
+<p style="line-height:150%" >
+<span style>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Стоит&nbsp; напомнить, чт<span style="background-color: #FFFFFF; background-position: 0% 0%">о 
+п</span>ри создании концептуального проекта заказчики могут создать свои 
+процессы, а могут выбирать предварительно 
+сконфигурированные бизнес-процессы из <a href="../StartingSM/StartingSM.htm#business_process">Репозитария бизнесс-процессов</a>. 
+В зависимости от выбранного вида проекта и объема проекта будет доступно 
+различное содержимое репозитария.</p>
+<p style="line-height: 150%" >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Документ концептуального проекта также можно <a href="#part_2_2_3">распечатать</a>.
+<font size="5">&nbsp;&nbsp; </font>
+<font size="3">&nbsp;&nbsp;</font></p>
+<h2 style="line-height: 150%"><a name="part_2_2_2"></a>Создание концептуального проекта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h2>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Этапы определения концептуального 
+проекта указаны на рисунке 2.12 и описаны ниже.</p>
+		<p class="image" style="line-height: 150%">&nbsp;&nbsp;&nbsp;
+		<img src="Images/phase2.jpg" border="0" align="left" Name = "2_7" width="692" height="180" ></p>
+		<p style="text-align: center; line-height:150%">&nbsp;</p>
+<p style="line-height: 150%">&nbsp;</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p style="line-height: 150%">&nbsp;</p>
+<p style="line-height: 150%; text-align:center">&nbsp;</p>
+<p style="line-height: 150%; text-align:center">Рисунок 2.12
+<font face="Times New Roman">–</font> Определение 
+концептуального проекта</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При определении концептуального проекта документируются бизнес-процессы, которые 
+должны быть отражены в системе SAP. Создается структура проекта, в которой релевантные 
+бизнес-сценарии, бизнес-процессы и шаги процессов организованы в иерархическую 
+структуру (см. рис. 2.6). Также существует возможность создания проектной документации и 
+присвоения созданных документов отдельным сценариям, процессам или шагам 
+процессов. </p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В SAP 
+Solution Manager существуют следующие возможности создания или 
+изменения структуры проекта:</p>
+<div class="Section1">
+	<ul>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Добавление к 
+		структуре проекта новых организационных единиц, основных данных, 
+		сценариев, бизнес-процессов и шагов процессов;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Удаление из проекта 
+		или системной среды структурных элементов, определенных при помощи 
+		операций SAP Solution Manager, или выбор этих элементов из репозитария 
+		бизнес-процессов и помещение в структуру проекта;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Корректировка имен 
+		структурных элементов в зависимости от клиента;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Удаление из структуры 
+		проекта созданного структурного элемента;</li>
+		<li>
+		<p class="MsoListBullet" style="line-height: 150%">Перемещение 
+		структурных элементов. Перемещение структурных элементов может 
+		осуществляться только в пределах того же уровня. Например, перемещение 
+		шагов процессов выполняется только на уровне шагов процессов.</li>
+	</ul>
+</div>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Существующий структурный элемент можно скопировать и затем вставить из буфера 
+обмена. Это упрощает одновременное использование двух или более элементов в 
+одном процессе или бизнес-требовании, например, в планировании логистической 
+цепочки, где технология производства продукта на склад может отличаться от 
+процесса единичного производства по заказу клиента, а бизнес-требования к 
+отгрузке и биллингу могут быть одинаковыми независимо от продукта. Функция 
+копирования доступна для общей и проектной документации, но копирование присвоенных управляющих данных и 
+проблем невозможно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для определения способов выполнения бизнес-процессов в системах SAP 
+необходимо присвоить каждой задаче процесса соответствующие транзакции.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Шагам процесса можно присвоить следующие объекты:</p>
+<ul>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Транзакции;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Программы;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Предварительно определенные URL из списка;</li>
+	<li>
+	<p class="MsoListBullet" style="line-height: 150%">Веб-адрес или файл.</p></li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В настоящее время можно присвоить даже те транзакции и программы, которые еще не 
+созданы. Это может оказаться полезным при необходимости ввода всей информации о 
+данном этапе проекта в текущий момент, тогда как выполнение этих транзакций или 
+программ может быть отложено на более позднее время.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Для организационных единиц, основных данных и задач процессов необходимо указать 
+компонент в <a href="Phase01.htm#part_2_1_8">системной среде</a>, которому принадлежит структурный элемент. Для 
+бизнес-процессов указать компонент невозможно, поскольку некоторые 
+бизнес-процессы проходят через различные компоненты. Присвоение компонентов 
+выполняется на уровне задач процессов.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+При выборе в <a href="../StartingSM/StartingSM.htm#business_process">Репозитарии бизнес-процессов</a> предварительно определенного 
+структурного элемента его компоненты определяются автоматически.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В SAP Solution Manager содержатся графические 
+представления бизнес-процессов. С помощью них можно узнать какие задачи содержатся в процессе, в каких логических компонентах 
+выполняются задачи процесса,&nbsp; какие зависимости существуют между 
+задачами процесса (отношения &quot;предшественник-преемник&quot;). Можно не 
+только просматривать процессы, но и изменять связи между элементами графики.</p>
+<div class="Section1">
+	<p class="MsoNormal" style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для всех 
+	присвоений, выполненных на этапе создание концептуального проекта<i>, </i>существует возможность создания журнала 
+	использования.</div>
+<h2 style="line-height: 150%"><a name="part_2_2_3"></a>&nbsp;Создание и печать документа концептуального проекта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h2>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; После <a href="#part_2_2_2">создания
+концептуального проекта</a> (структуры проекта, документации, присвоений транзакций) 
+можно распечатать документ концептуального проекта для утверждения или дальнейшего использования.
+Для <a href="Phase01.htm#shab">шаблонного проекта</a> можно выбрать общую или проектную документацию. Существует
+возможность интеграции общей документации в концептуальные проекты,
+например, для ее распространения при <a href="../StartingSM/StartingSM.htm#glob_imp">глобальном развертывании</a>.</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Перед созданием документа 
+концептуального проекта необходимо выбрать элементы, включаемые в документ&nbsp; 
+концептуального проекта, и элементы для вывода на печать. Например, можно 
+выполнить фильтрацию по виду или по статусу документа или выбрать элементы из 
+структуры проекта. <span style>Если один документ встречается в 
+концептуальном проекте несколько раз, то можно либо несколько раз включить 
+документ целиком, либо вставить ссылку на уже включенный документ. </span></p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp; Документ концептуального проекта может создаваться в режиме оффлайн или онлайн.</p>
+		<p class="image" style="line-height: 150%">&nbsp;&nbsp;&nbsp;
+		<img src="Images/gen_doc.jpg" border="0" align="middle" Name = "2_7" width="345" height="308" ></p>
+		<p style="text-align: center; line-height:150%">Рисунок 2.13
+		<font face="Times New Roman">–</font> Создание документа 
+		концептуального проекта.<p style="text-autospace: none; background: white; line-height:150%">
+
+<p style="line-height: 150%" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Во время создания<b> </b>документа<b> </b>в<b> режиме онлайн</b> SAP блокируется (рекомендуется только для небольших 
+документов концептуального проекта). При создании документа проекта в <b>режиме оффлайн</b> 
+данные загружаются из SAP-системы на жесткий диск, и в документе концептуального 
+проекта запускается макрос создания (для любых 
+документов концептуального проекта).</p>
+<p style="line-height: 150%" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Документ концептуального проекта можно распечатать при использовании 
+функции печати текстового редактора. При помощи функции сохранения текстового 
+редактора можно сохранить документ в локальном каталоге. </p>
+<h2 style="line-height: 150%"><a name="part_2_2_4"></a>&nbsp;Создание проектной документации</h2>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Разделим всю документацию на этапе концептуального проектирования на (см. рис 
+2.14):</p>
+<ul>
+	<li>
+	<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">Общую 
+	документацию;</p></li>
+	<li>
+	<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+	Проектную документацию.</p></li>
+</ul>
+		<p class="image" style="line-height: 150%">&nbsp;&nbsp;&nbsp;
+		<img src="Images/doc.jpg" border="0" align="middle" Name = "2_7" width="345" height="227" ></p>
+		<p style="text-align: center; line-height:150%">Рисунок 2.14
+		<font face="Times New Roman">–</font> Документация.<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Общая документация</b><span style="font-size: 12.0pt; font-family: Times New Roman">&nbsp;<span lang="EN-US">–</span></span><span style="background-color: #FFFFFF; background-position: 0% 0%">
+</span>вся документация, поставляемая
+<span lang="EN-US" style="font-size: 10.5pt">SAP</span><span style="font-size: 10.5pt">.</span> 
+Это все документы и диаграммы сценариев. Эти документы включают в себя, 
+например, описания сценариев, руководства по инсталляции, документацию по 
+транзакциям. Имеется возможность сортировки или выгрузки документов, а также 
+копирование документов для дальнейшего использования их в проектной документации. </p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Проектная документация</b><span lang="EN-US" style="font-size: 10.5pt"> </span>
+<span lang="EN-US" style="font-size: 12.0pt; font-family: Times New Roman">–</span><span style="font-size: 12.0pt; font-family: Times New Roman"> 
+это </span>документация по отдельным структурным элементам, относящаяся к 
+данному проекту. Порядок присвоенных документов в структуре также 
+отражается в документе концептуального проекта.</p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Всем создаваемым документам присваивается 
+определенный <a href="Phase01.htm#vid_doc">вид документа</a>. В зависимости от вида документа, вызывается 
+соответствующий шаблон документа. Можно использовать только те виды документов, 
+которые имеют либо образцы документов, либо расширения файлов, поддерживаемые в SAP Solution Manager. 
+Если шаблон или расширение файла виду документа не присвоены, запускается 
+текстовый редактор. </p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Поставляемые виды документации 
+зависят от определения проекта и его присвоений, выполненных в транзакции 
+управления проектом на этапе <a href="Phase01.htm#part_2_1_6">Определение стандартов проекта</a>.</p>
+<h2 style="line-height: 150%"><a name="part_2_2_5"></a>Администрирование</h2>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="font-size: 10.0pt; font-family: Arial">В администрировании 
+концептуального проекта есть возможность ввода актуальных данных проекта по 
+каждому структурному элементу в структуре проекта.</span></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">
+<span style="font-size:10.0pt;font-family:Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Можно ввести или изменить следующие данные проекта:</span></p>
+<ul>
+	<li>
+	<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">Статус;</li>
+	<li>
+	<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">Плановые 
+	данные (начало, завершение, рабочие дни);</li>
+	<li>
+	<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">
+	Фактические данные (начало, завершение, рабочие дни, оставшиеся ресурсы).
+	<span style="font-size: 10.0pt; font-family: Arial">В случае ввода дат, не 
+	принадлежащих периоду проекта внедрения, появится сообщение об ошибке;&nbsp;
+	</span></li>
+	<li>
+	<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">
+	Присвоенные сотрудники проекта (присвоенные в процессе подготовки проекта);</li>
+	<li>
+	<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">
+	Имя/описание.</li>
+</ul>
+<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+По умолчанию изменения данных проекта (например, изменения и удаления членов 
+проектной группы и ключевых слов) не наследуется автоматически структурными 
+элементами более низкого уровня.&nbsp;&nbsp; Для такого рода передачи данных 
+существует функция <i>Массовые изменения</i>. </p>
+<p class="MsoNormal" style="page-break-after: avoid; line-height: 150%; margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: 3.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+С помощью друой функции <i>Наследование данных подпозициями </i>можно передать 
+измененные данные всем зависимым структурным элементам.</p>
+<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Введенные данные применимы только на текущей фазе проекта. После завершения 
+выполнения всех операций на&nbsp; фазе концептуального проекта для данного 
+структурного элемента, структурному элементу в этой фазе присваивается статус <i>
+Завершено</i>. 
+В фазе реализации этому структурному элементу снова присваивается статус <i>
+Открыто</i>.</p>
+<p class="MsoNormal" style="line-height: 150%; margin: 3.0pt 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Все сохраненные изменения фиксируются в специальном журнале.</p>
+<h2 style="line-height: 150%"><a name="part_2_2_6"></a>Вопросы для самоконтроля</h2>
+<ol>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Что такое концептуальный проект. Его назначение и структура.</p>
+	</li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">Этапы 
+	определения концептуального проекта.</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Создание и печать документа концептуального проекта.</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Проектная документация. Виды проектной документации.</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Администрирование фазы создания концептуального проекта.</p></li>
+</ol>
+<h2 style="line-height: 150%">&nbsp;</h2>
+
+</body>
+
+</html>
