@@ -1,10 +1,10 @@
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
-<link rel="File-List" href="Фаза3.files/filelist.xml">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<link rel="File-List" href="Р¤Р°Р·Р°3.files/filelist.xml">
 
-<title>ФАЗА3. Реализация.</title>
+<title>Р¤РђР—Рђ3. Р РµР°Р»РёР·Р°С†РёСЏ.</title>
 <link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
 <style>
 <!--
@@ -32,7 +32,7 @@ vlink=blue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
 margin-right:55.0pt'>
 <div>
 
-<h2><a name="part_4"></a>&nbsp;ФАЗА 3. Реализация</h2>
+<h2><a name="part_4"></a>&nbsp;Р¤РђР—Рђ 3. Р РµР°Р»РёР·Р°С†РёСЏ</h2>
 <span style="font-size: 12.0pt; font-family: Arial"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
  coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
  filled="f" stroked="f">
@@ -58,407 +58,407 @@ margin-right:55.0pt'>
  mso-position-vertical-relative:margin' o:bordertopcolor="white"
  o:borderleftcolor="white" o:borderbottomcolor="white" o:borderrightcolor="white"
  o:allowoverlap="f">
- <v:imagedata src="Фаза3.files/image001.wmz" o:title="" croptop="9792f"
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image001.wmz" o:title="" croptop="9792f"
   cropbottom="10004f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=289
-src="Фаза3.files/image002.gif" v:shapes="_x0000_s1040"><![endif]></span><p><a name="ogl_4"></a><a href="#vved_4_1">Введение</a></p>
-<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_1_1">Управление проектом</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_4_2_1">Управление системой</a></p>
-<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_3_1">Конфигурация и тестирование</a></p>
-<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_4_1">Дополнительные настройки и разработки</a></p>
-<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_5_1">Составление документации пользователя и тестирование</a></p>
-<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_6_1">Проверка качества</a></p>
+src="Р¤Р°Р·Р°3.files/image002.gif" v:shapes="_x0000_s1040"><![endif]></span><p><a name="ogl_4"></a><a href="#vved_4_1">Р’РІРµРґРµРЅРёРµ</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_1_1">РЈРїСЂР°РІР»РµРЅРёРµ РїСЂРѕРµРєС‚РѕРј</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#part_4_2_1">РЈРїСЂР°РІР»РµРЅРёРµ СЃРёСЃС‚РµРјРѕР№</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_3_1">РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ Рё С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_4_1">Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Рё СЂР°Р·СЂР°Р±РѕС‚РєРё</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_5_1">РЎРѕСЃС‚Р°РІР»РµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#part_4_6_1">РџСЂРѕРІРµСЂРєР° РєР°С‡РµСЃС‚РІР°</a></p>
 
 
-<h2><a name="vved_4_1"></a>Введение<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></h2>
+<h2><a name="vved_4_1"></a>Р’РІРµРґРµРЅРёРµ<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></h2>
 <p class="MsoNormal" style="text-autospace: none; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Цель фазы реализации состоит в удовлетворении требований к бизнес-процессам на 
-основе концептуального проекта. Операции сосредоточены на конфигурировании и 
-тестировании внедренного решения. Задачами являются окончательная конфигурация 
-системы, полное тестирование и деблокирование системы для продуктивной 
-эксплуатации.</p>
+Р¦РµР»СЊ С„Р°Р·С‹ СЂРµР°Р»РёР·Р°С†РёРё СЃРѕСЃС‚РѕРёС‚ РІ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅРёРё С‚СЂРµР±РѕРІР°РЅРёР№ Рє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°Рј РЅР° 
+РѕСЃРЅРѕРІРµ РєРѕРЅС†РµРїС‚СѓР°Р»СЊРЅРѕРіРѕ РїСЂРѕРµРєС‚Р°. РћРїРµСЂР°С†РёРё СЃРѕСЃСЂРµРґРѕС‚РѕС‡РµРЅС‹ РЅР° РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёРё Рё 
+С‚РµСЃС‚РёСЂРѕРІР°РЅРёРё РІРЅРµРґСЂРµРЅРЅРѕРіРѕ СЂРµС€РµРЅРёСЏ. Р—Р°РґР°С‡Р°РјРё СЏРІР»СЏСЋС‚СЃСЏ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅР°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ 
+СЃРёСЃС‚РµРјС‹, РїРѕР»РЅРѕРµ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ Рё РґРµР±Р»РѕРєРёСЂРѕРІР°РЅРёРµ СЃРёСЃС‚РµРјС‹ РґР»СЏ РїСЂРѕРґСѓРєС‚РёРІРЅРѕР№ 
+СЌРєСЃРїР»СѓР°С‚Р°С†РёРё.</p>
 <p class="MsoNormal" style="text-autospace: none; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-На этой фазе осуществляется определение и тестирование параметров настройки с 
-использованием основных данных и организационных единиц, включенных в объем на 
-фазе концептуального проекта.</div>
-<h2><a name="part_4_1_1"></a>Управление проектом</h2>
-<img border="0" src="Фаза3.files/Фаз1.jpg" width="649" height="359"><p class="MsoNormal">
-Цель этого пакета работ – установить цикл операций по руководству проектом для 
-обеспечения соблюдения графика проекта внедрения. Он определяет операции 
-планирования, контроля, обновления и обеспечения качества. Он также определяет 
-изменения в отношениях между бизнес-процессами и организационной структурой, 
-которые необходимо будет согласовывать с руководителями отделов. Такой же пакет 
-работ выполняется на следующих фазах.</p>
+РќР° СЌС‚РѕР№ С„Р°Р·Рµ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РѕРїСЂРµРґРµР»РµРЅРёРµ Рё С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°СЃС‚СЂРѕР№РєРё СЃ 
+РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РѕСЃРЅРѕРІРЅС‹С… РґР°РЅРЅС‹С… Рё РѕСЂРіР°РЅРёР·Р°С†РёРѕРЅРЅС‹С… РµРґРёРЅРёС†, РІРєР»СЋС‡РµРЅРЅС‹С… РІ РѕР±СЉРµРј РЅР° 
+С„Р°Р·Рµ РєРѕРЅС†РµРїС‚СѓР°Р»СЊРЅРѕРіРѕ РїСЂРѕРµРєС‚Р°.</div>
+<h2><a name="part_4_1_1"></a>РЈРїСЂР°РІР»РµРЅРёРµ РїСЂРѕРµРєС‚РѕРј</h2>
+<img border="0" src="Р¤Р°Р·Р°3.files/Р¤Р°Р·1.jpg" width="649" height="359"><p class="MsoNormal">
+Р¦РµР»СЊ СЌС‚РѕРіРѕ РїР°РєРµС‚Р° СЂР°Р±РѕС‚ вЂ“ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С†РёРєР» РѕРїРµСЂР°С†РёР№ РїРѕ СЂСѓРєРѕРІРѕРґСЃС‚РІСѓ РїСЂРѕРµРєС‚РѕРј РґР»СЏ 
+РѕР±РµСЃРїРµС‡РµРЅРёСЏ СЃРѕР±Р»СЋРґРµРЅРёСЏ РіСЂР°С„РёРєР° РїСЂРѕРµРєС‚Р° РІРЅРµРґСЂРµРЅРёСЏ. РћРЅ РѕРїСЂРµРґРµР»СЏРµС‚ РѕРїРµСЂР°С†РёРё 
+РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ, РєРѕРЅС‚СЂРѕР»СЏ, РѕР±РЅРѕРІР»РµРЅРёСЏ Рё РѕР±РµСЃРїРµС‡РµРЅРёСЏ РєР°С‡РµСЃС‚РІР°. РћРЅ С‚Р°РєР¶Рµ РѕРїСЂРµРґРµР»СЏРµС‚ 
+РёР·РјРµРЅРµРЅРёСЏ РІ РѕС‚РЅРѕС€РµРЅРёСЏС… РјРµР¶РґСѓ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°РјРё Рё РѕСЂРіР°РЅРёР·Р°С†РёРѕРЅРЅРѕР№ СЃС‚СЂСѓРєС‚СѓСЂРѕР№, 
+РєРѕС‚РѕСЂС‹Рµ РЅРµРѕР±С…РѕРґРёРјРѕ Р±СѓРґРµС‚ СЃРѕРіР»Р°СЃРѕРІС‹РІР°С‚СЊ СЃ СЂСѓРєРѕРІРѕРґРёС‚РµР»СЏРјРё РѕС‚РґРµР»РѕРІ. РўР°РєРѕР№ Р¶Рµ РїР°РєРµС‚ 
+СЂР°Р±РѕС‚ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РЅР° СЃР»РµРґСѓСЋС‰РёС… С„Р°Р·Р°С….</p>
 <p>&nbsp;</p>
-<h2><a name="part_4_2_1"></a>Управление системой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</h2><img border="0" src="Фаза3.files/1.bmp" width="925" height="371"><h3 style="margin-left: 0">
+<h2><a name="part_4_2_1"></a>РЈРїСЂР°РІР»РµРЅРёРµ СЃРёСЃС‚РµРјРѕР№&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h2><img border="0" src="Р¤Р°Р·Р°3.files/1.bmp" width="925" height="371"><h3 style="margin-left: 0">
 <b>1.<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b>
-Управление системой</h3>
+РЈРїСЂР°РІР»РµРЅРёРµ СЃРёСЃС‚РµРјРѕР№</h3>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1039" type="#_x0000_t75" style='width:245.25pt;height:228pt'>
- <v:imagedata src="Фаза3.files/image003.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image003.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=327 height=304
-src="Фаза3.files/image004.gif" v:shapes="_x0000_s1039"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal">Цель этого пакета работ состоит в подготовке к продуктивной 
-эксплуатации. Сюда входит мониторинг потребностей продуктивной инфраструктуры и 
-определение того, какие операции по системному администрированию являются 
-необходимыми.</p>
-<p class="MsoNormal">&nbsp;Сюда входят следующие задачи.</p>
-<p class="MsoNormal">·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><b>Создание системной среды «Обеспечение качества» (<span lang="EN-US">QA</span>)</b></p>
+src="Р¤Р°Р·Р°3.files/image004.gif" v:shapes="_x0000_s1039"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal">Р¦РµР»СЊ СЌС‚РѕРіРѕ РїР°РєРµС‚Р° СЂР°Р±РѕС‚ СЃРѕСЃС‚РѕРёС‚ РІ РїРѕРґРіРѕС‚РѕРІРєРµ Рє РїСЂРѕРґСѓРєС‚РёРІРЅРѕР№ 
+СЌРєСЃРїР»СѓР°С‚Р°С†РёРё. РЎСЋРґР° РІС…РѕРґРёС‚ РјРѕРЅРёС‚РѕСЂРёРЅРі РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїСЂРѕРґСѓРєС‚РёРІРЅРѕР№ РёРЅС„СЂР°СЃС‚СЂСѓРєС‚СѓСЂС‹ Рё 
+РѕРїСЂРµРґРµР»РµРЅРёРµ С‚РѕРіРѕ, РєР°РєРёРµ РѕРїРµСЂР°С†РёРё РїРѕ СЃРёСЃС‚РµРјРЅРѕРјСѓ Р°РґРјРёРЅРёСЃС‚СЂРёСЂРѕРІР°РЅРёСЋ СЏРІР»СЏСЋС‚СЃСЏ 
+РЅРµРѕР±С…РѕРґРёРјС‹РјРё.</p>
+<p class="MsoNormal">&nbsp;РЎСЋРґР° РІС…РѕРґСЏС‚ СЃР»РµРґСѓСЋС‰РёРµ Р·Р°РґР°С‡Рё.</p>
+<p class="MsoNormal">В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>РЎРѕР·РґР°РЅРёРµ СЃРёСЃС‚РµРјРЅРѕР№ СЃСЂРµРґС‹ В«РћР±РµСЃРїРµС‡РµРЅРёРµ РєР°С‡РµСЃС‚РІР°В» (<span lang="EN-US">QA</span>)</b></p>
 <p class="MsoNormal" style="line-height: 11.75pt; margin-left: 63.0pt; margin-right: 0mm; margin-top: 3.6pt; margin-bottom: .0001pt; background: white">
-<span style="color:black;letter-spacing:-.05pt">Система </span>
+<span style="color:black;letter-spacing:-.05pt">РЎРёСЃС‚РµРјР° </span>
 <span lang="EN-US" style="color: black; letter-spacing: -.05pt">QA</span><span lang="EN-US" style="color:black;letter-spacing:-.05pt">
-</span><span style="color:black;letter-spacing:-.05pt">используется для 
-проведения окончательного интеграционного тестирования, эту систему необходимо 
-инсталлировать и сконфигурировать.</span></p>
-<p class="MsoNormal">&nbsp;·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><b>Создание рабочей среды</b></p>
-<p class="MsoNormal" style="margin-left:63.0pt">Создание рабочей среды означает 
-инсталляцию и конфигурацию продуктивной системы. Чтобы инсталлировать 
-продуктивную систему <span lang="EN-US">SAP R</span>/3, следует обратиться к 
-Руководству по установке <span lang="EN-US">SAP R</span>/3 (<span lang="EN-US">Advanced 
-Installation Guide</span>). Создание продуктивной среды включает в себя:</p>
+</span><span style="color:black;letter-spacing:-.05pt">РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ 
+РїСЂРѕРІРµРґРµРЅРёСЏ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕРіРѕ РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ, СЌС‚Сѓ СЃРёСЃС‚РµРјСѓ РЅРµРѕР±С…РѕРґРёРјРѕ 
+РёРЅСЃС‚Р°Р»Р»РёСЂРѕРІР°С‚СЊ Рё СЃРєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°С‚СЊ.</span></p>
+<p class="MsoNormal">&nbsp;В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>РЎРѕР·РґР°РЅРёРµ СЂР°Р±РѕС‡РµР№ СЃСЂРµРґС‹</b></p>
+<p class="MsoNormal" style="margin-left:63.0pt">РЎРѕР·РґР°РЅРёРµ СЂР°Р±РѕС‡РµР№ СЃСЂРµРґС‹ РѕР·РЅР°С‡Р°РµС‚ 
+РёРЅСЃС‚Р°Р»Р»СЏС†РёСЋ Рё РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РїСЂРѕРґСѓРєС‚РёРІРЅРѕР№ СЃРёСЃС‚РµРјС‹. Р§С‚РѕР±С‹ РёРЅСЃС‚Р°Р»Р»РёСЂРѕРІР°С‚СЊ 
+РїСЂРѕРґСѓРєС‚РёРІРЅСѓСЋ СЃРёСЃС‚РµРјСѓ <span lang="EN-US">SAP R</span>/3, СЃР»РµРґСѓРµС‚ РѕР±СЂР°С‚РёС‚СЊСЃСЏ Рє 
+Р СѓРєРѕРІРѕРґСЃС‚РІСѓ РїРѕ СѓСЃС‚Р°РЅРѕРІРєРµ <span lang="EN-US">SAP R</span>/3 (<span lang="EN-US">Advanced 
+Installation Guide</span>). РЎРѕР·РґР°РЅРёРµ РїСЂРѕРґСѓРєС‚РёРІРЅРѕР№ СЃСЂРµРґС‹ РІРєР»СЋС‡Р°РµС‚ РІ СЃРµР±СЏ:</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 90.0pt">
-·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Инсталляцию рабочего компьютерного оборудования</p>
+В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>РРЅСЃС‚Р°Р»Р»СЏС†РёСЋ СЂР°Р±РѕС‡РµРіРѕ РєРѕРјРїСЊСЋС‚РµСЂРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 90.0pt">
-·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Инсталляцию продуктивной системы</p>
+В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>РРЅСЃС‚Р°Р»Р»СЏС†РёСЋ РїСЂРѕРґСѓРєС‚РёРІРЅРѕР№ СЃРёСЃС‚РµРјС‹</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 90.0pt">
-·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Инсталляцию и конфигурацию сетевого окружения</p>
+В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>РРЅСЃС‚Р°Р»Р»СЏС†РёСЋ Рё РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ СЃРµС‚РµРІРѕРіРѕ РѕРєСЂСѓР¶РµРЅРёСЏ</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 90.0pt">
-·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Инсталляцию и конфигурацию настольных компьютеров и периферии</p>
+В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>РРЅСЃС‚Р°Р»Р»СЏС†РёСЋ Рё РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РЅР°СЃС‚РѕР»СЊРЅС‹С… РєРѕРјРїСЊСЋС‚РµСЂРѕРІ Рё РїРµСЂРёС„РµСЂРёРё</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 90.0pt">
-·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Обеспечение безопасности операционной системы и баз данных</p>
+В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>РћР±РµСЃРїРµС‡РµРЅРёРµ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ СЃРёСЃС‚РµРјС‹ Рё Р±Р°Р· РґР°РЅРЅС‹С…</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 90.0pt">
-·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Создание системы принтеров.</p>
+В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>РЎРѕР·РґР°РЅРёРµ СЃРёСЃС‚РµРјС‹ РїСЂРёРЅС‚РµСЂРѕРІ.</p>
 <p>&nbsp;</p>
 <span lang="en-us">
-<h2><a name="part_4_3_1"></a>&nbsp;</span>Конфигурация и тестирование</h2>
+<h2><a name="part_4_3_1"></a>&nbsp;</span>РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ Рё С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ</h2>
 <p class="MsoNormal">
-<img border="0" src="Фаза3.files/2.bmp" width="925" height="371"></p>
+<img border="0" src="Р¤Р°Р·Р°3.files/2.bmp" width="925" height="371"></p>
 <h3 style="margin-left: 0"><b>1.<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></b>Конфигурация прототипа</h3>
+</span></b>РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РїСЂРѕС‚РѕС‚РёРїР°</h3>
 <p class="MsoNormal" style="margin-left:51.95pt"><!--[if gte vml 1]><v:shape
  id="_x0000_s1038" type="#_x0000_t75" style='width:270.75pt;height:219pt'>
- <v:imagedata src="Фаза3.files/image005.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image005.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=361 height=292
-src="Фаза3.files/image006.gif" v:shapes="_x0000_s1038"><![endif]><!--[if gte mso 9]><![endif]--></p>
+src="Р¤Р°Р·Р°3.files/image006.gif" v:shapes="_x0000_s1038"><![endif]><!--[if gte mso 9]><![endif]--></p>
 <p class="MsoNormal"><b><u><span style="font-family: Arial; color: black">
-Baseline</span></u></b><span style="font-family: Arial; color: black"> – <b><u>
-Прототип.</u></b> &nbsp;Уровень конфигурации, который был официально рассмотрен и 
-согласован. Прототип служит как платформа разработки и является базисом для 
-дальнейшей конфигурации и разработки бизнес-процессов.</span></p>
-<p class="MsoNormal">В самом начале составляется документ по объему прототипа, 
-путем выбора необходимых БП из Основного Списка Бизнес-Процессов (полученного на 
-фазе 2).</p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">Консультанты 
-конфигурируют:</span></p>
+Baseline</span></u></b><span style="font-family: Arial; color: black"> вЂ“ <b><u>
+РџСЂРѕС‚РѕС‚РёРї.</u></b> &nbsp;РЈСЂРѕРІРµРЅСЊ РєРѕРЅС„РёРіСѓСЂР°С†РёРё, РєРѕС‚РѕСЂС‹Р№ Р±С‹Р» РѕС„РёС†РёР°Р»СЊРЅРѕ СЂР°СЃСЃРјРѕС‚СЂРµРЅ Рё 
+СЃРѕРіР»Р°СЃРѕРІР°РЅ. РџСЂРѕС‚РѕС‚РёРї СЃР»СѓР¶РёС‚ РєР°Рє РїР»Р°С‚С„РѕСЂРјР° СЂР°Р·СЂР°Р±РѕС‚РєРё Рё СЏРІР»СЏРµС‚СЃСЏ Р±Р°Р·РёСЃРѕРј РґР»СЏ 
+РґР°Р»СЊРЅРµР№С€РµР№ РєРѕРЅС„РёРіСѓСЂР°С†РёРё Рё СЂР°Р·СЂР°Р±РѕС‚РєРё Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ.</span></p>
+<p class="MsoNormal">Р’ СЃР°РјРѕРј РЅР°С‡Р°Р»Рµ СЃРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ РґРѕРєСѓРјРµРЅС‚ РїРѕ РѕР±СЉРµРјСѓ РїСЂРѕС‚РѕС‚РёРїР°, 
+РїСѓС‚РµРј РІС‹Р±РѕСЂР° РЅРµРѕР±С…РѕРґРёРјС‹С… Р‘Рџ РёР· РћСЃРЅРѕРІРЅРѕРіРѕ РЎРїРёСЃРєР° Р‘РёР·РЅРµСЃ-РџСЂРѕС†РµСЃСЃРѕРІ (РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ РЅР° 
+С„Р°Р·Рµ 2).</p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">РљРѕРЅСЃСѓР»СЊС‚Р°РЅС‚С‹ 
+РєРѕРЅС„РёРіСѓСЂРёСЂСѓСЋС‚:</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 81.0pt">
-<span style="layout-grid-mode: line">·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="layout-grid-mode:line">Глобальные настройки</span></p>
+<span style="layout-grid-mode: line">В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="layout-grid-mode:line">Р“Р»РѕР±Р°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 81.0pt">
-<span style="layout-grid-mode: line">·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="layout-grid-mode:line">Организационная структура</span></p>
+<span style="layout-grid-mode: line">В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="layout-grid-mode:line">РћСЂРіР°РЅРёР·Р°С†РёРѕРЅРЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР°</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 81.0pt">
-<span style="layout-grid-mode: line">·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="layout-grid-mode:line">Бизнес-процессы</span></p>
+<span style="layout-grid-mode: line">В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="layout-grid-mode:line">Р‘РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃС‹</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 81.0pt">
-<span style="layout-grid-mode: line">·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="layout-grid-mode:line">Фактические данные – для 
-тестирования</span></p>
-<p class="MsoNormal"><span style="color:black;letter-spacing:-.1pt">Для каждого 
-элемента конфигурации необходимо ввести соответствующие </span>
-<span style="color:black;letter-spacing:.1pt">данные в Руководство по внедрению 
+<span style="layout-grid-mode: line">В·<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="layout-grid-mode:line">Р¤Р°РєС‚РёС‡РµСЃРєРёРµ РґР°РЅРЅС‹Рµ вЂ“ РґР»СЏ 
+С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ</span></p>
+<p class="MsoNormal"><span style="color:black;letter-spacing:-.1pt">Р”Р»СЏ РєР°Р¶РґРѕРіРѕ 
+СЌР»РµРјРµРЅС‚Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РЅРµРѕР±С…РѕРґРёРјРѕ РІРІРµСЃС‚Рё СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ </span>
+<span style="color:black;letter-spacing:.1pt">РґР°РЅРЅС‹Рµ РІ Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕ РІРЅРµРґСЂРµРЅРёСЋ 
 (</span><span lang="EN-US" style="color: black; letter-spacing: .1pt">IMG</span><span style="color:black;letter-spacing:.1pt">).</span></p>
-<p class="MsoNormal"><span style="color:black;letter-spacing:.1pt">&nbsp;</span><span style="layout-grid-mode:line">На опыте конфигурации 
-прототипа проектная группа осуществляет конфигурацию системы </span>
+<p class="MsoNormal"><span style="color:black;letter-spacing:.1pt">&nbsp;</span><span style="layout-grid-mode:line">РќР° РѕРїС‹С‚Рµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё 
+РїСЂРѕС‚РѕС‚РёРїР° РїСЂРѕРµРєС‚РЅР°СЏ РіСЂСѓРїРїР° РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ СЃРёСЃС‚РµРјС‹ </span>
 <span lang="EN-US" style="layout-grid-mode: line">R</span><span style="layout-grid-mode:line">/3 
-посредством тестирования и конфигурирования в итеративном режиме (циклы).</span></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">При конфигурировании 
-прототипа следует работать над процессами, конфигурирование которых не требует 
-программирования или расширений. &nbsp;</span></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">В конце этой операции 
-проводится тестирование прототипа</span>. Проблемы должны быть документированы в 
-БД ВиО в разделе учета проблемм, решены и повторно протестированы. Тестирование 
-осуществляется в среде разработок.</p>
+РїРѕСЃСЂРµРґСЃС‚РІРѕРј С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ Рё РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёСЏ РІ РёС‚РµСЂР°С‚РёРІРЅРѕРј СЂРµР¶РёРјРµ (С†РёРєР»С‹).</span></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">РџСЂРё РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёРё 
+РїСЂРѕС‚РѕС‚РёРїР° СЃР»РµРґСѓРµС‚ СЂР°Р±РѕС‚Р°С‚СЊ РЅР°Рґ РїСЂРѕС†РµСЃСЃР°РјРё, РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёРµ РєРѕС‚РѕСЂС‹С… РЅРµ С‚СЂРµР±СѓРµС‚ 
+РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ РёР»Рё СЂР°СЃС€РёСЂРµРЅРёР№. &nbsp;</span></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">Р’ РєРѕРЅС†Рµ СЌС‚РѕР№ РѕРїРµСЂР°С†РёРё 
+РїСЂРѕРІРѕРґРёС‚СЃСЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РїСЂРѕС‚РѕС‚РёРїР°</span>. РџСЂРѕР±Р»РµРјС‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РґРѕРєСѓРјРµРЅС‚РёСЂРѕРІР°РЅС‹ РІ 
+Р‘Р” Р’РёРћ РІ СЂР°Р·РґРµР»Рµ СѓС‡РµС‚Р° РїСЂРѕР±Р»РµРјРј, СЂРµС€РµРЅС‹ Рё РїРѕРІС‚РѕСЂРЅРѕ РїСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅС‹. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ 
+РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІ СЃСЂРµРґРµ СЂР°Р·СЂР°Р±РѕС‚РѕРє.</p>
 <h3 align="center" style="text-align:center"><b>
-<span style="color:black;layout-grid-mode:line">Роль Основного Списка 
-Бизнес-Процессов (ОСПБ)</span></b></h3>
-<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;ОСБП используется для 
-снабжения рабочих документов необходимой информацией по бизнес-процессам, 
-которая используется для определения, администрирования, мониторинга и контроля 
-следующих процессов работ:</span></p>
+<span style="color:black;layout-grid-mode:line">Р РѕР»СЊ РћСЃРЅРѕРІРЅРѕРіРѕ РЎРїРёСЃРєР° 
+Р‘РёР·РЅРµСЃ-РџСЂРѕС†РµСЃСЃРѕРІ (РћРЎРџР‘)</span></b></h3>
+<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;РћРЎР‘Рџ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ 
+СЃРЅР°Р±Р¶РµРЅРёСЏ СЂР°Р±РѕС‡РёС… РґРѕРєСѓРјРµРЅС‚РѕРІ РЅРµРѕР±С…РѕРґРёРјРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°Рј, 
+РєРѕС‚РѕСЂР°СЏ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ, Р°РґРјРёРЅРёСЃС‚СЂРёСЂРѕРІР°РЅРёСЏ, РјРѕРЅРёС‚РѕСЂРёРЅРіР° Рё РєРѕРЅС‚СЂРѕР»СЏ 
+СЃР»РµРґСѓСЋС‰РёС… РїСЂРѕС†РµСЃСЃРѕРІ СЂР°Р±РѕС‚:</span></p>
 <ul>
 	<li>
 	<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 27.0pt">
-	<span style="layout-grid-mode:line">Конфигурация и подтверждение 
-прототипа</span></p></li>
+	<span style="layout-grid-mode:line">РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ Рё РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ 
+РїСЂРѕС‚РѕС‚РёРїР°</span></p></li>
 	<li>
 	<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 27.0pt">
-	<span style="layout-grid-mode:line">Заключительная конфигурация и 
-подтверждение (циклы)</span></p></li>
+	<span style="layout-grid-mode:line">Р—Р°РєР»СЋС‡РёС‚РµР»СЊРЅР°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ Рё 
+РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ (С†РёРєР»С‹)</span></p></li>
 	<li>
 	<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 27.0pt">
-	<span style="layout-grid-mode:line">Заключительное интеграционное 
-тестирование</span></p></li>
+	<span style="layout-grid-mode:line">Р—Р°РєР»СЋС‡РёС‚РµР»СЊРЅРѕРµ РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРµ 
+С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ</span></p></li>
 </ul>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1037" type="#_x0000_t75" style='width:415.5pt;height:162pt;
  mso-position-horizontal-relative:margin;mso-position-vertical-relative:margin'
  o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
  o:borderrightcolor="black" o:allowoverlap="f">
- <v:imagedata src="Фаза3.files/image007.wmz" o:title="" croptop="3415f"
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image007.wmz" o:title="" croptop="3415f"
   cropbottom="28003f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=216
-src="Фаза3.files/image008.gif" v:shapes="_x0000_s1037"><![endif]></p>
+src="Р¤Р°Р·Р°3.files/image008.gif" v:shapes="_x0000_s1037"><![endif]></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Методика внедрения <span lang="EN-US">ASAP</span> 
-предлагает 4 цикла.</p>
+<p class="MsoNormal">РњРµС‚РѕРґРёРєР° РІРЅРµРґСЂРµРЅРёСЏ <span lang="EN-US">ASAP</span> 
+РїСЂРµРґР»Р°РіР°РµС‚ 4 С†РёРєР»Р°.</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
-<u>Прототип</u> 
-- настройка конфигурации под бизнес-процесс для основных данных и 
-первоприоритетных базовых транзакций. </p>
+<u>РџСЂРѕС‚РѕС‚РёРї</u> 
+- РЅР°СЃС‚СЂРѕР№РєР° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїРѕРґ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ РґР»СЏ РѕСЃРЅРѕРІРЅС‹С… РґР°РЅРЅС‹С… Рё 
+РїРµСЂРІРѕРїСЂРёРѕСЂРёС‚РµС‚РЅС‹С… Р±Р°Р·РѕРІС‹С… С‚СЂР°РЅР·Р°РєС†РёР№. </p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
-Примеры: создание рынков сбыта, производственных календарей и клиентских 
-кодов поиска</p>
+РџСЂРёРјРµСЂС‹: СЃРѕР·РґР°РЅРёРµ СЂС‹РЅРєРѕРІ СЃР±С‹С‚Р°, РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹С… РєР°Р»РµРЅРґР°СЂРµР№ Рё РєР»РёРµРЅС‚СЃРєРёС… 
+РєРѕРґРѕРІ РїРѕРёСЃРєР°</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
-Первоприоритетные основные данные: основные записи материалов, основные 
-записи дебиторов и кредиторов, начальные запасы</p>
+РџРµСЂРІРѕРїСЂРёРѕСЂРёС‚РµС‚РЅС‹Рµ РѕСЃРЅРѕРІРЅС‹Рµ РґР°РЅРЅС‹Рµ: РѕСЃРЅРѕРІРЅС‹Рµ Р·Р°РїРёСЃРё РјР°С‚РµСЂРёР°Р»РѕРІ, РѕСЃРЅРѕРІРЅС‹Рµ 
+Р·Р°РїРёСЃРё РґРµР±РёС‚РѕСЂРѕРІ Рё РєСЂРµРґРёС‚РѕСЂРѕРІ, РЅР°С‡Р°Р»СЊРЅС‹Рµ Р·Р°РїР°СЃС‹</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
-Высокоприоритетные базовые транзакции: создание заказа клиента, создание 
-заказа на поставку, создание производственного заказа и платежа дебитора.</p>
+Р’С‹СЃРѕРєРѕРїСЂРёРѕСЂРёС‚РµС‚РЅС‹Рµ Р±Р°Р·РѕРІС‹Рµ С‚СЂР°РЅР·Р°РєС†РёРё: СЃРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р° РєР»РёРµРЅС‚Р°, СЃРѕР·РґР°РЅРёРµ 
+Р·Р°РєР°Р·Р° РЅР° РїРѕСЃС‚Р°РІРєСѓ, СЃРѕР·РґР°РЅРёРµ РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅРѕРіРѕ Р·Р°РєР°Р·Р° Рё РїР»Р°С‚РµР¶Р° РґРµР±РёС‚РѕСЂР°.</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-top:0; margin-bottom:0">
 &nbsp;</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-top:0; margin-bottom:0">
-<u>Цикл 1</u> - завершение настройки конфигурации под бизнес-процесс для 
-основных данных и базовых транзакций. В рамках 2-го цикла обрабатываются менее распространенные 
-базовые транзакции и условия. </p>
+<u>Р¦РёРєР» 1</u> - Р·Р°РІРµСЂС€РµРЅРёРµ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїРѕРґ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ РґР»СЏ 
+РѕСЃРЅРѕРІРЅС‹С… РґР°РЅРЅС‹С… Рё Р±Р°Р·РѕРІС‹С… С‚СЂР°РЅР·Р°РєС†РёР№. Р’ СЂР°РјРєР°С… 2-РіРѕ С†РёРєР»Р° РѕР±СЂР°Р±Р°С‚С‹РІР°СЋС‚СЃСЏ РјРµРЅРµРµ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹Рµ 
+Р±Р°Р·РѕРІС‹Рµ С‚СЂР°РЅР·Р°РєС†РёРё Рё СѓСЃР»РѕРІРёСЏ. </p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-top:0; margin-bottom:0">
-Пример: создание требований ко времени подготовки, создание маршрутов 
-транспортировки, определение правил расчета процентов и правил кредиторских 
-напоминаний</p>
+РџСЂРёРјРµСЂ: СЃРѕР·РґР°РЅРёРµ С‚СЂРµР±РѕРІР°РЅРёР№ РєРѕ РІСЂРµРјРµРЅРё РїРѕРґРіРѕС‚РѕРІРєРё, СЃРѕР·РґР°РЅРёРµ РјР°СЂС€СЂСѓС‚РѕРІ 
+С‚СЂР°РЅСЃРїРѕСЂС‚РёСЂРѕРІРєРё, РѕРїСЂРµРґРµР»РµРЅРёРµ РїСЂР°РІРёР» СЂР°СЃС‡РµС‚Р° РїСЂРѕС†РµРЅС‚РѕРІ Рё РїСЂР°РІРёР» РєСЂРµРґРёС‚РѕСЂСЃРєРёС… 
+РЅР°РїРѕРјРёРЅР°РЅРёР№</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-top:0; margin-bottom:0">
-Основные данные: дебиторские кредитные лимиты, записи поиска материалов</p>
+РћСЃРЅРѕРІРЅС‹Рµ РґР°РЅРЅС‹Рµ: РґРµР±РёС‚РѕСЂСЃРєРёРµ РєСЂРµРґРёС‚РЅС‹Рµ Р»РёРјРёС‚С‹, Р·Р°РїРёСЃРё РїРѕРёСЃРєР° РјР°С‚РµСЂРёР°Р»РѕРІ</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-top:0; margin-bottom:0">
-Базовые транзакции (среднего приоритета): создание предложения, создание 
-требований авансовых платежей</p>
+Р‘Р°Р·РѕРІС‹Рµ С‚СЂР°РЅР·Р°РєС†РёРё (СЃСЂРµРґРЅРµРіРѕ РїСЂРёРѕСЂРёС‚РµС‚Р°): СЃРѕР·РґР°РЅРёРµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ, СЃРѕР·РґР°РЅРёРµ 
+С‚СЂРµР±РѕРІР°РЅРёР№ Р°РІР°РЅСЃРѕРІС‹С… РїР»Р°С‚РµР¶РµР№</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
 &nbsp;</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
-<u>Цикл 2</u> 
-- уточнение конфигурации и основных данных путем выполнения первоприоритетных 
-бизнес-процессов.</p>
+<u>Р¦РёРєР» 2</u> 
+- СѓС‚РѕС‡РЅРµРЅРёРµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё Рё РѕСЃРЅРѕРІРЅС‹С… РґР°РЅРЅС‹С… РїСѓС‚РµРј РІС‹РїРѕР»РЅРµРЅРёСЏ РїРµСЂРІРѕРїСЂРёРѕСЂРёС‚РµС‚РЅС‹С… 
+Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ.</p>
 <p class="SolQuestSub2" style="margin-top:0;margin-right:0mm;margin-bottom:
 0mm;margin-left:18.0pt;margin-bottom:0;text-indent:-18.0pt">
-Пример: создание заказа клиента 
-с поставкой или блокированием фактуры, создание стандартного заказа клиента, 
-создание накладной для этого заказа, проводка отпуска материала для этой 
-поставки. </p>
+РџСЂРёРјРµСЂ: СЃРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р° РєР»РёРµРЅС‚Р° 
+СЃ РїРѕСЃС‚Р°РІРєРѕР№ РёР»Рё Р±Р»РѕРєРёСЂРѕРІР°РЅРёРµРј С„Р°РєС‚СѓСЂС‹, СЃРѕР·РґР°РЅРёРµ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ Р·Р°РєР°Р·Р° РєР»РёРµРЅС‚Р°, 
+СЃРѕР·РґР°РЅРёРµ РЅР°РєР»Р°РґРЅРѕР№ РґР»СЏ СЌС‚РѕРіРѕ Р·Р°РєР°Р·Р°, РїСЂРѕРІРѕРґРєР° РѕС‚РїСѓСЃРєР° РјР°С‚РµСЂРёР°Р»Р° РґР»СЏ СЌС‚РѕР№ 
+РїРѕСЃС‚Р°РІРєРё. </p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
 &nbsp;</p>
 <p class="SolQuestSub2" style="text-indent: -18.0pt; margin-left: 18.0pt; margin-right: 0mm; margin-top: 0; margin-bottom: 0">
-<u>Цикл 3</u> 
-- завершение уточнения конфигурации путем выполнения бизнес-процессов с 
-исключительными транзакциями, отчетами, профилями пользователей, а также всех 
-бизнес-процессов в рамках заданных функций или компонентов R/3, с целью 
-обеспечения готовности к интеграционному тестированию. </p>
-<p class="MsoNormal" style="text-align: left">На рисунке представлен план работ, общих для каждого цикла.</p>
+<u>Р¦РёРєР» 3</u> 
+- Р·Р°РІРµСЂС€РµРЅРёРµ СѓС‚РѕС‡РЅРµРЅРёСЏ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїСѓС‚РµРј РІС‹РїРѕР»РЅРµРЅРёСЏ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ СЃ 
+РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅС‹РјРё С‚СЂР°РЅР·Р°РєС†РёСЏРјРё, РѕС‚С‡РµС‚Р°РјРё, РїСЂРѕС„РёР»СЏРјРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, Р° С‚Р°РєР¶Рµ РІСЃРµС… 
+Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ РІ СЂР°РјРєР°С… Р·Р°РґР°РЅРЅС‹С… С„СѓРЅРєС†РёР№ РёР»Рё РєРѕРјРїРѕРЅРµРЅС‚РѕРІ R/3, СЃ С†РµР»СЊСЋ 
+РѕР±РµСЃРїРµС‡РµРЅРёСЏ РіРѕС‚РѕРІРЅРѕСЃС‚Рё Рє РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРјСѓ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЋ. </p>
+<p class="MsoNormal" style="text-align: left">РќР° СЂРёСЃСѓРЅРєРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅ РїР»Р°РЅ СЂР°Р±РѕС‚, РѕР±С‰РёС… РґР»СЏ РєР°Р¶РґРѕРіРѕ С†РёРєР»Р°.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1036" type="#_x0000_t75" style='width:415.5pt;height:94.5pt;
  mso-position-horizontal-relative:margin;mso-position-vertical-relative:margin'
  o:bordertopcolor="white" o:borderleftcolor="white" o:borderbottomcolor="white"
  o:borderrightcolor="white" o:allowoverlap="f">
- <v:imagedata src="Фаза3.files/image007.wmz" o:title="" croptop="39175f"
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image007.wmz" o:title="" croptop="39175f"
   cropbottom="6437f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=126
-src="Фаза3.files/image009.gif" v:shapes="_x0000_s1036"><![endif]></p>
+src="Р¤Р°Р·Р°3.files/image009.gif" v:shapes="_x0000_s1036"><![endif]></p>
 <h3 style="margin-left: 0"><b>3.<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></b>Окончательная конфигурация</h3>
+</span></b>РћРєРѕРЅС‡Р°С‚РµР»СЊРЅР°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ</h3>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1035" type="#_x0000_t75" style='width:285pt;height:216.75pt'>
- <v:imagedata src="Фаза3.files/image010.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image010.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=380 height=289
-src="Фаза3.files/image011.gif" v:shapes="_x0000_s1035"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal"><span style="color:black;layout-grid-mode:line">В рамках 
-операции окончательной конфигурации так же предусмотрено тестирование всех 
-объектов. Тестирование осуществляется в среде разработок.</span></p>
+src="Р¤Р°Р·Р°3.files/image011.gif" v:shapes="_x0000_s1035"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal"><span style="color:black;layout-grid-mode:line">Р’ СЂР°РјРєР°С… 
+РѕРїРµСЂР°С†РёРё РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕР№ РєРѕРЅС„РёРіСѓСЂР°С†РёРё С‚Р°Рє Р¶Рµ РїСЂРµРґСѓСЃРјРѕС‚СЂРµРЅРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РІСЃРµС… 
+РѕР±СЉРµРєС‚РѕРІ. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІ СЃСЂРµРґРµ СЂР°Р·СЂР°Р±РѕС‚РѕРє.</span></p>
 <h3 style="margin-left: 0"><b>4.<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></b>Окончательный интеграционный тест</h3>
+</span></b>РћРєРѕРЅС‡Р°С‚РµР»СЊРЅС‹Р№ РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅС‹Р№ С‚РµСЃС‚</h3>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1034" type="#_x0000_t75" style='width:267pt;height:219.75pt'>
- <v:imagedata src="Фаза3.files/image012.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image012.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=356 height=293
-src="Фаза3.files/image013.gif" v:shapes="_x0000_s1034"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">Осуществляется через 
-выполнение предварительно определенных бизнес-процессов или сценариев, 
-эмитирующих обработку вашего бизнеса системой.&nbsp; Эти бизнес-процессы, с 
-использованием перенесенных данных из ранее существовавших систем, будут 
-обрабатываться в многоуровневой электронной среде, состоящей из R/3, внешних 
-программных средств, системных интерфейсов и различных программных и аппаратных 
-компонентов. </span></p>
+src="Р¤Р°Р·Р°3.files/image013.gif" v:shapes="_x0000_s1034"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">РћСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ С‡РµСЂРµР· 
+РІС‹РїРѕР»РЅРµРЅРёРµ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕ РѕРїСЂРµРґРµР»РµРЅРЅС‹С… Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ РёР»Рё СЃС†РµРЅР°СЂРёРµРІ, 
+СЌРјРёС‚РёСЂСѓСЋС‰РёС… РѕР±СЂР°Р±РѕС‚РєСѓ РІР°С€РµРіРѕ Р±РёР·РЅРµСЃР° СЃРёСЃС‚РµРјРѕР№.&nbsp; Р­С‚Рё Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃС‹, СЃ 
+РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїРµСЂРµРЅРµСЃРµРЅРЅС‹С… РґР°РЅРЅС‹С… РёР· СЂР°РЅРµРµ СЃСѓС‰РµСЃС‚РІРѕРІР°РІС€РёС… СЃРёСЃС‚РµРј, Р±СѓРґСѓС‚ 
+РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊСЃСЏ РІ РјРЅРѕРіРѕСѓСЂРѕРІРЅРµРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ СЃСЂРµРґРµ, СЃРѕСЃС‚РѕСЏС‰РµР№ РёР· R/3, РІРЅРµС€РЅРёС… 
+РїСЂРѕРіСЂР°РјРјРЅС‹С… СЃСЂРµРґСЃС‚РІ, СЃРёСЃС‚РµРјРЅС‹С… РёРЅС‚РµСЂС„РµР№СЃРѕРІ Рё СЂР°Р·Р»РёС‡РЅС‹С… РїСЂРѕРіСЂР°РјРјРЅС‹С… Рё Р°РїРїР°СЂР°С‚РЅС‹С… 
+РєРѕРјРїРѕРЅРµРЅС‚РѕРІ. </span></p>
 <p class="MsoNormal">
 <span style="layout-grid-mode:
-line">Здесь вы можете изучить вид
-<a href="accelerators/сц%20тестир.htm#accel_1_7">шаблона для создания сценария интеграционного тестирования</a></span></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;</span>Тестирование 
-должно проводиться в среде контроля качества (<span lang="EN-US">QA</span>)</p>
+line">Р—РґРµСЃСЊ РІС‹ РјРѕР¶РµС‚Рµ РёР·СѓС‡РёС‚СЊ РІРёРґ
+<a href="accelerators/СЃС†%20С‚РµСЃС‚РёСЂ.htm#accel_1_7">С€Р°Р±Р»РѕРЅР° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃС†РµРЅР°СЂРёСЏ РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ</a></span></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;</span>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ 
+РґРѕР»Р¶РЅРѕ РїСЂРѕРІРѕРґРёС‚СЊСЃСЏ РІ СЃСЂРµРґРµ РєРѕРЅС‚СЂРѕР»СЏ РєР°С‡РµСЃС‚РІР° (<span lang="EN-US">QA</span>)</p>
 <span style="font-size: 12.0pt; font-family: Arial"><!--[if gte vml 1]><v:shape
  id="_x0000_s1033" type="#_x0000_t75" style='width:415.5pt;height:256.5pt;
  mso-position-horizontal-relative:margin;mso-position-vertical-relative:margin'
  o:bordertopcolor="white" o:borderleftcolor="white" o:borderbottomcolor="white"
  o:borderrightcolor="white" o:allowincell="f" o:allowoverlap="f">
- <v:imagedata src="Фаза3.files/image014.wmz" o:title="" croptop="4360f"
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image014.wmz" o:title="" croptop="4360f"
   cropbottom="7120f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=342
-src="Фаза3.files/image015.gif" v:shapes="_x0000_s1033"><![endif]></span><h2>
-<font size="3"><a name="part_4_4_1"></a>Дополнительные настройки и разработки</font></h2>
-<p><img border="0" src="Фаза3.files/3.bmp" width="925" height="369"></p>
+src="Р¤Р°Р·Р°3.files/image015.gif" v:shapes="_x0000_s1033"><![endif]></span><h2>
+<font size="3"><a name="part_4_4_1"></a>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Рё СЂР°Р·СЂР°Р±РѕС‚РєРё</font></h2>
+<p><img border="0" src="Р¤Р°Р·Р°3.files/3.bmp" width="925" height="369"></p>
 <p class="MsoNormal" style="text-indent:9.0pt">
 <span style="color:black;
-layout-grid-mode:line">В рамках процессов выполняются следующие операции:</span></p>
+layout-grid-mode:line">Р’ СЂР°РјРєР°С… РїСЂРѕС†РµСЃСЃРѕРІ РІС‹РїРѕР»РЅСЏСЋС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРµ РѕРїРµСЂР°С†РёРё:</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol; color: black; layout-grid-mode: line">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;layout-grid-mode:line">Разработка 
-расширений</span></p>
+<span style="font-family: Symbol; color: black; layout-grid-mode: line">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;layout-grid-mode:line">Р Р°Р·СЂР°Р±РѕС‚РєР° 
+СЂР°СЃС€РёСЂРµРЅРёР№</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol; color: black; layout-grid-mode: line">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;layout-grid-mode:line">Разработка 
-формуляров</span></p>
+<span style="font-family: Symbol; color: black; layout-grid-mode: line">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;layout-grid-mode:line">Р Р°Р·СЂР°Р±РѕС‚РєР° 
+С„РѕСЂРјСѓР»СЏСЂРѕРІ</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol; color: black; layout-grid-mode: line">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;layout-grid-mode:line">Разработка 
-интерфейсов</span></p>
+<span style="font-family: Symbol; color: black; layout-grid-mode: line">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;layout-grid-mode:line">Р Р°Р·СЂР°Р±РѕС‚РєР° 
+РёРЅС‚РµСЂС„РµР№СЃРѕРІ</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol; color: black; layout-grid-mode: line">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;layout-grid-mode:line">Настройка 
-архивации</span></p>
+<span style="font-family: Symbol; color: black; layout-grid-mode: line">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;layout-grid-mode:line">РќР°СЃС‚СЂРѕР№РєР° 
+Р°СЂС…РёРІР°С†РёРё</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol; color: black; layout-grid-mode: line">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;layout-grid-mode:line">Установка 
-полномочий</span></p>
+<span style="font-family: Symbol; color: black; layout-grid-mode: line">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;layout-grid-mode:line">РЈСЃС‚Р°РЅРѕРІРєР° 
+РїРѕР»РЅРѕРјРѕС‡РёР№</span></p>
 <h3 style="margin-left: 0"><b><span style="layout-grid-mode: line">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></b><span style="layout-grid-mode: line">Разработка расширений</span></h3>
+</span></span></b><span style="layout-grid-mode: line">Р Р°Р·СЂР°Р±РѕС‚РєР° СЂР°СЃС€РёСЂРµРЅРёР№</span></h3>
 <p class="MsoNormal" style="margin-left:51.95pt"><!--[if gte vml 1]><v:shape
  id="_x0000_s1032" type="#_x0000_t75" style='width:277.5pt;height:227.25pt'>
- <v:imagedata src="Фаза3.files/image016.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image016.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=370 height=303
-src="Фаза3.files/image017.gif" v:shapes="_x0000_s1032"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal"><span style="letter-spacing:-.25pt">Цель этой операции — 
-разработка модификаций, усовершенствований и до</span>полнительной 
-функциональности для системы <span lang="EN-US">SAP </span>в соответствии с 
-Концепту<span style="letter-spacing:-.2pt">альным планом. Такие расширения могут 
-включать в себя:</span></p>
+src="Р¤Р°Р·Р°3.files/image017.gif" v:shapes="_x0000_s1032"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal"><span style="letter-spacing:-.25pt">Р¦РµР»СЊ СЌС‚РѕР№ РѕРїРµСЂР°С†РёРё вЂ” 
+СЂР°Р·СЂР°Р±РѕС‚РєР° РјРѕРґРёС„РёРєР°С†РёР№, СѓСЃРѕРІРµСЂС€РµРЅСЃС‚РІРѕРІР°РЅРёР№ Рё РґРѕ</span>РїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ 
+С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚Рё РґР»СЏ СЃРёСЃС‚РµРјС‹ <span lang="EN-US">SAP </span>РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ 
+РљРѕРЅС†РµРїС‚Сѓ<span style="letter-spacing:-.2pt">Р°Р»СЊРЅС‹Рј РїР»Р°РЅРѕРј. РўР°РєРёРµ СЂР°СЃС€РёСЂРµРЅРёСЏ РјРѕРіСѓС‚ 
+РІРєР»СЋС‡Р°С‚СЊ РІ СЃРµР±СЏ:</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="letter-spacing:-.1pt">Индивидуальные настройки и 
-модификации стандартных объектов </span>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="letter-spacing:-.1pt">РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё Рё 
+РјРѕРґРёС„РёРєР°С†РёРё СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… РѕР±СЉРµРєС‚РѕРІ </span>
 <span lang="EN-US" style="letter-spacing: -.1pt">R</span><span style="letter-spacing:-.1pt">/3</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="letter-spacing:-.1pt">Разработку индивидуальных 
-настроек и объектов в среде АВАР/4.</span></p>
-<p class="MsoNormal">Разработка расширений состоит из следующих этапо<span style="letter-spacing:-1.0pt">в:</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="letter-spacing:-.1pt">Р Р°Р·СЂР°Р±РѕС‚РєСѓ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹С… 
+РЅР°СЃС‚СЂРѕРµРє Рё РѕР±СЉРµРєС‚РѕРІ РІ СЃСЂРµРґРµ РђР’РђР /4.</span></p>
+<p class="MsoNormal">Р Р°Р·СЂР°Р±РѕС‚РєР° СЂР°СЃС€РёСЂРµРЅРёР№ СЃРѕСЃС‚РѕРёС‚ РёР· СЃР»РµРґСѓСЋС‰РёС… СЌС‚Р°РїРѕ<span style="letter-spacing:-1.0pt">РІ:</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="letter-spacing:-.25pt">Формулировка расширения.</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="letter-spacing:-.25pt">Р¤РѕСЂРјСѓР»РёСЂРѕРІРєР° СЂР°СЃС€РёСЂРµРЅРёСЏ.</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="letter-spacing:-.1pt">Выполнение расширения.</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="letter-spacing:-.1pt">Р’С‹РїРѕР»РЅРµРЅРёРµ СЂР°СЃС€РёСЂРµРЅРёСЏ.</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="letter-spacing:-.2pt">Подготовка процедур 
-тестирования расширения.</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="letter-spacing:-.2pt">РџРѕРґРіРѕС‚РѕРІРєР° РїСЂРѕС†РµРґСѓСЂ 
+С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ СЂР°СЃС€РёСЂРµРЅРёСЏ.</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Тестирование, анализ и одобрение результатов.</p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ, Р°РЅР°Р»РёР· Рё РѕРґРѕР±СЂРµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ.</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 60.95pt">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Транспортировка расширения в среду «Обеспечение качества» (<span lang="EN-US">QA</span>) 
-для <span style="letter-spacing:-.25pt">окончательного интеграционного 
-тестирования.</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>РўСЂР°РЅСЃРїРѕСЂС‚РёСЂРѕРІРєР° СЂР°СЃС€РёСЂРµРЅРёСЏ РІ СЃСЂРµРґСѓ В«РћР±РµСЃРїРµС‡РµРЅРёРµ РєР°С‡РµСЃС‚РІР°В» (<span lang="EN-US">QA</span>) 
+РґР»СЏ <span style="letter-spacing:-.25pt">РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕРіРѕ РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРіРѕ 
+С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ.</span></p>
 <h3><span style="color:black;layout-grid-mode:line">&nbsp;</span><b><span style="layout-grid-mode: line">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></b><span style="layout-grid-mode: line">Разработка Формуляров</span></h3>
+</span></span></b><span style="layout-grid-mode: line">Р Р°Р·СЂР°Р±РѕС‚РєР° Р¤РѕСЂРјСѓР»СЏСЂРѕРІ</span></h3>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1031" type="#_x0000_t75" style='width:277.5pt;height:243.75pt'>
- <v:imagedata src="Фаза3.files/image018.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image018.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=370 height=325
-src="Фаза3.files/image019.gif" v:shapes="_x0000_s1031"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal"><span style="color:black">Разработка специфических для 
-компании бланков документов <span style="letter-spacing:.15pt">производится в 
-строгом соответствии с Концептуальным планом и включает </span>в себя следующие 
-задачи<span style="layout-grid-mode:line">:</span></span></p>
+src="Р¤Р°Р·Р°3.files/image019.gif" v:shapes="_x0000_s1031"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal"><span style="color:black">Р Р°Р·СЂР°Р±РѕС‚РєР° СЃРїРµС†РёС„РёС‡РµСЃРєРёС… РґР»СЏ 
+РєРѕРјРїР°РЅРёРё Р±Р»Р°РЅРєРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ <span style="letter-spacing:.15pt">РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РІ 
+СЃС‚СЂРѕРіРѕРј СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РљРѕРЅС†РµРїС‚СѓР°Р»СЊРЅС‹Рј РїР»Р°РЅРѕРј Рё РІРєР»СЋС‡Р°РµС‚ </span>РІ СЃРµР±СЏ СЃР»РµРґСѓСЋС‰РёРµ 
+Р·Р°РґР°С‡Рё<span style="layout-grid-mode:line">:</span></span></p>
 <ul>
 	<li>
 	<p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 35.45pt; background: white">
-	<span style="color:black">Определение внешнего вида и технических 
-	спецификаций бланков с последующим внесением соответствующих изменений 
-	затронутых бизнес-процессов в Основной список бизнес-процессов. Создание 
-	бланков (если&nbsp; возможно, на основе стандартных бланков и документов, 
-	предусмотренных в системе).</span></li>
+	<span style="color:black">РћРїСЂРµРґРµР»РµРЅРёРµ РІРЅРµС€РЅРµРіРѕ РІРёРґР° Рё С‚РµС…РЅРёС‡РµСЃРєРёС… 
+	СЃРїРµС†РёС„РёРєР°С†РёР№ Р±Р»Р°РЅРєРѕРІ СЃ РїРѕСЃР»РµРґСѓСЋС‰РёРј РІРЅРµСЃРµРЅРёРµРј СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёС… РёР·РјРµРЅРµРЅРёР№ 
+	Р·Р°С‚СЂРѕРЅСѓС‚С‹С… Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ РІ РћСЃРЅРѕРІРЅРѕР№ СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ. РЎРѕР·РґР°РЅРёРµ 
+	Р±Р»Р°РЅРєРѕРІ (РµСЃР»Рё&nbsp; РІРѕР·РјРѕР¶РЅРѕ, РЅР° РѕСЃРЅРѕРІРµ СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… Р±Р»Р°РЅРєРѕРІ Рё РґРѕРєСѓРјРµРЅС‚РѕРІ, 
+	РїСЂРµРґСѓСЃРјРѕС‚СЂРµРЅРЅС‹С… РІ СЃРёСЃС‚РµРјРµ).</span></li>
 	<li>
 	<p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 35.45pt; margin-right: 0mm; margin-top: .25pt; margin-bottom: .0001pt; background: white">
-	<span style="color: black">Подготовка процедур тестирования бланков - 
-	определение функций </span><span style="color:black">и последовательности 
-	тестов и используемых данных. Тестирование, анализ и одобрение результатов.</span></li>
+	<span style="color: black">РџРѕРґРіРѕС‚РѕРІРєР° РїСЂРѕС†РµРґСѓСЂ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ Р±Р»Р°РЅРєРѕРІ - 
+	РѕРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёР№ </span><span style="color:black">Рё РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё 
+	С‚РµСЃС‚РѕРІ Рё РёСЃРїРѕР»СЊР·СѓРµРјС‹С… РґР°РЅРЅС‹С…. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ, Р°РЅР°Р»РёР· Рё РѕРґРѕР±СЂРµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ.</span></li>
 </ul>
 <h3 style="line-height: 12.0pt; text-autospace: none; margin-left: 0; margin-right: 0mm; margin-top: .25pt; margin-bottom: .0001pt; background: white">
 &nbsp;&nbsp;<b>7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b>
-Разработка интерфейсов приложений</h3>
+Р Р°Р·СЂР°Р±РѕС‚РєР° РёРЅС‚РµСЂС„РµР№СЃРѕРІ РїСЂРёР»РѕР¶РµРЅРёР№</h3>
 <p class="MsoNormal" style="margin-left:51.95pt"><!--[if gte vml 1]><v:shape
  id="_x0000_s1030" type="#_x0000_t75" style='width:277.5pt;height:230.25pt'>
- <v:imagedata src="Фаза3.files/image020.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image020.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=370 height=307
-src="Фаза3.files/image021.gif" v:shapes="_x0000_s1030"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal">При разработке интерфейсов для взаимодействия с системой
-<span lang="EN-US">R</span>/3 необходимо рассмотреть следующие аспекты:</p>
+src="Р¤Р°Р·Р°3.files/image021.gif" v:shapes="_x0000_s1030"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal">РџСЂРё СЂР°Р·СЂР°Р±РѕС‚РєРµ РёРЅС‚РµСЂС„РµР№СЃРѕРІ РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ СЃРёСЃС‚РµРјРѕР№
+<span lang="EN-US">R</span>/3 РЅРµРѕР±С…РѕРґРёРјРѕ СЂР°СЃСЃРјРѕС‚СЂРµС‚СЊ СЃР»РµРґСѓСЋС‰РёРµ Р°СЃРїРµРєС‚С‹:</p>
 <p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 54.0pt; margin-right: 0mm; margin-top: .25pt; margin-bottom: .0001pt; background: white">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;letter-spacing:-.15pt">Данные, которые 
-будут проходить через указанный интерфейс</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;letter-spacing:-.15pt">Р”Р°РЅРЅС‹Рµ, РєРѕС‚РѕСЂС‹Рµ 
+Р±СѓРґСѓС‚ РїСЂРѕС…РѕРґРёС‚СЊ С‡РµСЂРµР· СѓРєР°Р·Р°РЅРЅС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 54.0pt; background: white">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;letter-spacing:-.15pt">Система, на основе 
-которой интерфейс будет функционировать</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;letter-spacing:-.15pt">РЎРёСЃС‚РµРјР°, РЅР° РѕСЃРЅРѕРІРµ 
+РєРѕС‚РѕСЂРѕР№ РёРЅС‚РµСЂС„РµР№СЃ Р±СѓРґРµС‚ С„СѓРЅРєС†РёРѕРЅРёСЂРѕРІР°С‚СЊ</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 54.0pt; background: white">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;letter-spacing:-.15pt">Возможные 
-альтернативы данному интерфейсу</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;letter-spacing:-.15pt">Р’РѕР·РјРѕР¶РЅС‹Рµ 
+Р°Р»СЊС‚РµСЂРЅР°С‚РёРІС‹ РґР°РЅРЅРѕРјСѓ РёРЅС‚РµСЂС„РµР№СЃСѓ</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 54.0pt; background: white">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;letter-spacing:-.2pt">Различные 
-дополнительные технологии, которые можно использовать при создании данного 
-интерфейса</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;letter-spacing:-.2pt">Р Р°Р·Р»РёС‡РЅС‹Рµ 
+РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё, РєРѕС‚РѕСЂС‹Рµ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїСЂРё СЃРѕР·РґР°РЅРёРё РґР°РЅРЅРѕРіРѕ 
+РёРЅС‚РµСЂС„РµР№СЃР°</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 54.0pt; margin-right: 0mm; margin-top: .25pt; margin-bottom: .0001pt; background: white">
-<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style="color:black;letter-spacing:-.15pt">Документация по 
-интерфейсу</span></p>
+<span style="font-family: Symbol">В·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:black;letter-spacing:-.15pt">Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ РїРѕ 
+РёРЅС‚РµСЂС„РµР№СЃСѓ</span></p>
 <p class="MsoNormal" style="text-indent: -18.0pt; line-height: 12.0pt; text-autospace: none; margin-left: 54.0pt; margin-right: 0mm; margin-top: .25pt; margin-bottom: .0001pt; background: white">&nbsp;</p>
 <h3 style="margin-top: 3px; margin-bottom: 0"><b>
 <span style="font-style: normal; font-variant: normal; layout-grid-mode: line">
 8.</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman; layout-grid-mode: line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></b><span style="layout-grid-mode: line">Настройка архивации</span></h3>
+</span></b><span style="layout-grid-mode: line">РќР°СЃС‚СЂРѕР№РєР° Р°СЂС…РёРІР°С†РёРё</span></h3>
 <p class="MsoNormal"><span style="color:black;layout-grid-mode:line">&nbsp;</span><!--[if gte vml 1]><v:shape
  id="_x0000_s1029" type="#_x0000_t75" style='width:277.5pt;height:227.25pt'>
- <v:imagedata src="Фаза3.files/image022.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image022.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=370 height=303
-src="Фаза3.files/image023.gif" v:shapes="_x0000_s1029"><![endif]><!--[if gte mso 9]><![endif]--></p>
+src="Р¤Р°Р·Р°3.files/image023.gif" v:shapes="_x0000_s1029"><![endif]><!--[if gte mso 9]><![endif]--></p>
 <p class="MsoNormal"><span style="color:black;layout-grid-mode:line">&nbsp;</span></p>
 <p class="MsoNormal" align="center" style="text-align:center"><!--[if gte vml 1]><v:shape
  id="_x0000_s1028" type="#_x0000_t75" style='width:415.5pt;height:229.5pt;
  mso-position-horizontal-relative:margin;mso-position-vertical-relative:margin;float:left'
  o:bordertopcolor="white" o:borderleftcolor="white" o:borderbottomcolor="white"
  o:borderrightcolor="white" o:allowincell="f" o:allowoverlap="f">
- <v:imagedata src="Фаза3.files/image024.wmz" o:title="" croptop="13733f"
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image024.wmz" o:title="" croptop="13733f"
   cropbottom="3496f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=306
-src="Фаза3.files/image025.gif" align=left v:shapes="_x0000_s1028"><![endif]></p>
+src="Р¤Р°Р·Р°3.files/image025.gif" align=left v:shapes="_x0000_s1028"><![endif]></p>
 <p class="MsoNormal" align="center" style="text-align:center">&nbsp;</p>
 <p class="MsoNormal" align="center" style="text-align:center">&nbsp;</p>
 <span style="font-size: 12.0pt; font-family: Times New Roman; color: black; layout-grid-mode: line">
@@ -466,84 +466,84 @@ src="Фаза3.files/image025.gif" align=left v:shapes="_x0000_s1028"><![endif]></p>
 always">
 &nbsp;</span><h3 style="margin-left: 0"><b><span style="layout-grid-mode: line">
 9.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b>
-<span style="layout-grid-mode: line">Установка полномочий</span></h3>
+<span style="layout-grid-mode: line">РЈСЃС‚Р°РЅРѕРІРєР° РїРѕР»РЅРѕРјРѕС‡РёР№</span></h3>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1027" type="#_x0000_t75" style='width:269.25pt;height:227.25pt'>
- <v:imagedata src="Фаза3.files/image026.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image026.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=359 height=303
-src="Фаза3.files/image027.gif" v:shapes="_x0000_s1027"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">Цель этого процесса 
-состоит в установке ролей пользователей по всему предприятию, вместе с 
-необходимыми полномочиями для доступа к системе.</span></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;Для выполнения задачи 
-сотрудники должны изучить ряд бизнес-приложений. Транзакции и отчеты, 
-характеризующие типичную должность, могут быть объединены в роли пользователя.</span></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;Подробно этот вопрос 
-рассмотрен в главе администрирования.</span></p>
+src="Р¤Р°Р·Р°3.files/image027.gif" v:shapes="_x0000_s1027"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">Р¦РµР»СЊ СЌС‚РѕРіРѕ РїСЂРѕС†РµСЃСЃР° 
+СЃРѕСЃС‚РѕРёС‚ РІ СѓСЃС‚Р°РЅРѕРІРєРµ СЂРѕР»РµР№ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РїРѕ РІСЃРµРјСѓ РїСЂРµРґРїСЂРёСЏС‚РёСЋ, РІРјРµСЃС‚Рµ СЃ 
+РЅРµРѕР±С…РѕРґРёРјС‹РјРё РїРѕР»РЅРѕРјРѕС‡РёСЏРјРё РґР»СЏ РґРѕСЃС‚СѓРїР° Рє СЃРёСЃС‚РµРјРµ.</span></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;Р”Р»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°С‡Рё 
+СЃРѕС‚СЂСѓРґРЅРёРєРё РґРѕР»Р¶РЅС‹ РёР·СѓС‡РёС‚СЊ СЂСЏРґ Р±РёР·РЅРµСЃ-РїСЂРёР»РѕР¶РµРЅРёР№. РўСЂР°РЅР·Р°РєС†РёРё Рё РѕС‚С‡РµС‚С‹, 
+С…Р°СЂР°РєС‚РµСЂРёР·СѓСЋС‰РёРµ С‚РёРїРёС‡РЅСѓСЋ РґРѕР»Р¶РЅРѕСЃС‚СЊ, РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕР±СЉРµРґРёРЅРµРЅС‹ РІ СЂРѕР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.</span></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;РџРѕРґСЂРѕР±РЅРѕ СЌС‚РѕС‚ РІРѕРїСЂРѕСЃ 
+СЂР°СЃСЃРјРѕС‚СЂРµРЅ РІ РіР»Р°РІРµ Р°РґРјРёРЅРёСЃС‚СЂРёСЂРѕРІР°РЅРёСЏ.</span></p>
 <p class="MsoNormal"><!--[if gte vml 1]><v:shape
  id="_x0000_s1026" type="#_x0000_t75" style='width:415.5pt;height:4in;
  mso-position-horizontal-relative:margin;mso-position-vertical-relative:margin'
  o:bordertopcolor="white" o:borderleftcolor="white" o:borderbottomcolor="white"
  o:borderrightcolor="white" o:allowincell="f" o:allowoverlap="f">
- <v:imagedata src="Фаза3.files/image028.wmz" o:title="" croptop="2876f"
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image028.wmz" o:title="" croptop="2876f"
   cropbottom="1875f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=384
-src="Фаза3.files/image029.gif" v:shapes="_x0000_s1026"><![endif]></p>
-<h2><a name="part_4_5_1"></a>Составление документации пользователя и обучение</h2>
-<p><img border="0" src="Фаза3.files/4.bmp" width="925" height="369"></p>
+src="Р¤Р°Р·Р°3.files/image029.gif" v:shapes="_x0000_s1026"><![endif]></p>
+<h2><a name="part_4_5_1"></a>РЎРѕСЃС‚Р°РІР»РµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё РѕР±СѓС‡РµРЅРёРµ</h2>
+<p><img border="0" src="Р¤Р°Р·Р°3.files/4.bmp" width="925" height="369"></p>
 <h3 style="margin-left: 0"><b><span style="layout-grid-mode:line">10.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></b><span style="layout-grid-mode:line">Документация для конечных 
-пользователей и обучение</span></h3>
+</span></span></b><span style="layout-grid-mode:line">Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ РґР»СЏ РєРѕРЅРµС‡РЅС‹С… 
+РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Рё РѕР±СѓС‡РµРЅРёРµ</span></h3>
 <p class="MsoNormal" style="margin-left:9.0pt"><!--[if gte vml 1]><v:shape
  id="_x0000_s1025" type="#_x0000_t75" style='width:273.75pt;height:196.5pt'>
- <v:imagedata src="Фаза3.files/image030.emz" o:title=""/>
+ <v:imagedata src="Р¤Р°Р·Р°3.files/image030.emz" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=365 height=262
-src="Фаза3.files/image031.gif" v:shapes="_x0000_s1025"><![endif]><!--[if gte mso 9]><![endif]--></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">Цель этого подпроцесса 
-состоит в определении, разработке и завершении обучения и документации для 
-конечного пользователя.</span></p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;Определение содержания 
-обучения и документации конечного пользователя: процесс установки стандартов и 
-анализа содержания обучения и разработки документации, для передачи этой 
-информации разработчикам курсов и для подготовки основных разделов курса. </span>
+src="Р¤Р°Р·Р°3.files/image031.gif" v:shapes="_x0000_s1025"><![endif]><!--[if gte mso 9]><![endif]--></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">Р¦РµР»СЊ СЌС‚РѕРіРѕ РїРѕРґРїСЂРѕС†РµСЃСЃР° 
+СЃРѕСЃС‚РѕРёС‚ РІ РѕРїСЂРµРґРµР»РµРЅРёРё, СЂР°Р·СЂР°Р±РѕС‚РєРµ Рё Р·Р°РІРµСЂС€РµРЅРёРё РѕР±СѓС‡РµРЅРёСЏ Рё РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РґР»СЏ 
+РєРѕРЅРµС‡РЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.</span></p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;РћРїСЂРµРґРµР»РµРЅРёРµ СЃРѕРґРµСЂР¶Р°РЅРёСЏ 
+РѕР±СѓС‡РµРЅРёСЏ Рё РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РєРѕРЅРµС‡РЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: РїСЂРѕС†РµСЃСЃ СѓСЃС‚Р°РЅРѕРІРєРё СЃС‚Р°РЅРґР°СЂС‚РѕРІ Рё 
+Р°РЅР°Р»РёР·Р° СЃРѕРґРµСЂР¶Р°РЅРёСЏ РѕР±СѓС‡РµРЅРёСЏ Рё СЂР°Р·СЂР°Р±РѕС‚РєРё РґРѕРєСѓРјРµРЅС‚Р°С†РёРё, РґР»СЏ РїРµСЂРµРґР°С‡Рё СЌС‚РѕР№ 
+РёРЅС„РѕСЂРјР°С†РёРё СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°Рј РєСѓСЂСЃРѕРІ Рё РґР»СЏ РїРѕРґРіРѕС‚РѕРІРєРё РѕСЃРЅРѕРІРЅС‹С… СЂР°Р·РґРµР»РѕРІ РєСѓСЂСЃР°. </span>
 </p>
-<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;Уровень 3 - экспертное 
-обучение - продвинутые курсы для предоставления подробных знаний по настройке, 
-функциям и техническим вопросам, связанным с SAP. </span>В идеальном случае 
-обучение 3-го уровня должно быть завершено к этапу конфигурирования прототипа 
-или проведено в самом его начале.</p>
+<p class="MsoNormal"><span style="layout-grid-mode:line">&nbsp;РЈСЂРѕРІРµРЅСЊ 3 - СЌРєСЃРїРµСЂС‚РЅРѕРµ 
+РѕР±СѓС‡РµРЅРёРµ - РїСЂРѕРґРІРёРЅСѓС‚С‹Рµ РєСѓСЂСЃС‹ РґР»СЏ РїСЂРµРґРѕСЃС‚Р°РІР»РµРЅРёСЏ РїРѕРґСЂРѕР±РЅС‹С… Р·РЅР°РЅРёР№ РїРѕ РЅР°СЃС‚СЂРѕР№РєРµ, 
+С„СѓРЅРєС†РёСЏРј Рё С‚РµС…РЅРёС‡РµСЃРєРёРј РІРѕРїСЂРѕСЃР°Рј, СЃРІСЏР·Р°РЅРЅС‹Рј СЃ SAP. </span>Р’ РёРґРµР°Р»СЊРЅРѕРј СЃР»СѓС‡Р°Рµ 
+РѕР±СѓС‡РµРЅРёРµ 3-РіРѕ СѓСЂРѕРІРЅСЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РІРµСЂС€РµРЅРѕ Рє СЌС‚Р°РїСѓ РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёСЏ РїСЂРѕС‚РѕС‚РёРїР° 
+РёР»Рё РїСЂРѕРІРµРґРµРЅРѕ РІ СЃР°РјРѕРј РµРіРѕ РЅР°С‡Р°Р»Рµ.</p>
 <p class="MsoNormal">
 <span style="layout-grid-mode:
-line">Здесь вы можете изучить структуру 
-<a href="accelerators/Шаблон%20для%20обучения%20конеч%20пользов.htm#accel_1_8">шаблона плана обучения и создания документации для конечных пользователей</a></span></p>
-<h2><a name="part_4_6_1"></a>Проверка качества</h2>
-<p><img border="0" src="Фаза3.files/5.bmp" width="925" height="373"></p>
-<p>&nbsp;&nbsp;&nbsp; <span lang="DE">При проверке качества следует убедиться, 
-что заключительная конфигурация системы SAP удовлетворяет требованиям, указанным 
-в концептуальном проекте. </span>Должно быть завершено создание документации для 
-конечных пользователей и учебных материалов, чтобы на следующей фазе можно было 
-начать обучение. Проверка технических операций и задач. Убедитесь в том, что 
-сроки перехода к фазе заключительной подготовки соблюдаются. Сюда относятся 
-программы переноса данных, интерфейсы, отчеты и процедуры управления системой. 
-Следует рассмотреть и решить вопросы, связанные с бюджетом и планированием 
-ресурсов.</p>
+line">Р—РґРµСЃСЊ РІС‹ РјРѕР¶РµС‚Рµ РёР·СѓС‡РёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ 
+<a href="accelerators/РЁР°Р±Р»РѕРЅ%20РґР»СЏ%20РѕР±СѓС‡РµРЅРёСЏ%20РєРѕРЅРµС‡%20РїРѕР»СЊР·РѕРІ.htm#accel_1_8">С€Р°Р±Р»РѕРЅР° РїР»Р°РЅР° РѕР±СѓС‡РµРЅРёСЏ Рё СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РґР»СЏ РєРѕРЅРµС‡РЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</a></span></p>
+<h2><a name="part_4_6_1"></a>РџСЂРѕРІРµСЂРєР° РєР°С‡РµСЃС‚РІР°</h2>
+<p><img border="0" src="Р¤Р°Р·Р°3.files/5.bmp" width="925" height="373"></p>
+<p>&nbsp;&nbsp;&nbsp; <span lang="DE">РџСЂРё РїСЂРѕРІРµСЂРєРµ РєР°С‡РµСЃС‚РІР° СЃР»РµРґСѓРµС‚ СѓР±РµРґРёС‚СЊСЃСЏ, 
+С‡С‚Рѕ Р·Р°РєР»СЋС‡РёС‚РµР»СЊРЅР°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ СЃРёСЃС‚РµРјС‹ SAP СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚ С‚СЂРµР±РѕРІР°РЅРёСЏРј, СѓРєР°Р·Р°РЅРЅС‹Рј 
+РІ РєРѕРЅС†РµРїС‚СѓР°Р»СЊРЅРѕРј РїСЂРѕРµРєС‚Рµ. </span>Р”РѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РІРµСЂС€РµРЅРѕ СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РґР»СЏ 
+РєРѕРЅРµС‡РЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Рё СѓС‡РµР±РЅС‹С… РјР°С‚РµСЂРёР°Р»РѕРІ, С‡С‚РѕР±С‹ РЅР° СЃР»РµРґСѓСЋС‰РµР№ С„Р°Р·Рµ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ 
+РЅР°С‡Р°С‚СЊ РѕР±СѓС‡РµРЅРёРµ. РџСЂРѕРІРµСЂРєР° С‚РµС…РЅРёС‡РµСЃРєРёС… РѕРїРµСЂР°С†РёР№ Рё Р·Р°РґР°С‡. РЈР±РµРґРёС‚РµСЃСЊ РІ С‚РѕРј, С‡С‚Рѕ 
+СЃСЂРѕРєРё РїРµСЂРµС…РѕРґР° Рє С„Р°Р·Рµ Р·Р°РєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ РїРѕРґРіРѕС‚РѕРІРєРё СЃРѕР±Р»СЋРґР°СЋС‚СЃСЏ. РЎСЋРґР° РѕС‚РЅРѕСЃСЏС‚СЃСЏ 
+РїСЂРѕРіСЂР°РјРјС‹ РїРµСЂРµРЅРѕСЃР° РґР°РЅРЅС‹С…, РёРЅС‚РµСЂС„РµР№СЃС‹, РѕС‚С‡РµС‚С‹ Рё РїСЂРѕС†РµРґСѓСЂС‹ СѓРїСЂР°РІР»РµРЅРёСЏ СЃРёСЃС‚РµРјРѕР№. 
+РЎР»РµРґСѓРµС‚ СЂР°СЃСЃРјРѕС‚СЂРµС‚СЊ Рё СЂРµС€РёС‚СЊ РІРѕРїСЂРѕСЃС‹, СЃРІСЏР·Р°РЅРЅС‹Рµ СЃ Р±СЋРґР¶РµС‚РѕРј Рё РїР»Р°РЅРёСЂРѕРІР°РЅРёРµРј 
+СЂРµСЃСѓСЂСЃРѕРІ.</p>
 <p>&nbsp;</p>
-<h3 style="margin-left:0; margin-top:0; margin-bottom:0"><span lang="EN-US">&nbsp;</span>Контрольные 
-вопросы.</h3>
+<h3 style="margin-left:0; margin-top:0; margin-bottom:0"><span lang="EN-US">&nbsp;</span>РљРѕРЅС‚СЂРѕР»СЊРЅС‹Рµ 
+РІРѕРїСЂРѕСЃС‹.</h3>
 <ol style="margin-top: 0mm; margin-bottom: 0mm" start="1" type="1">
-	<li class="MsoNormal"><font color="#5F9EA0">Что предполагает операция 
-	управления системой в рамках фазы 2?</font></li>
-	<li class="MsoNormal"><font color="#5F9EA0">Опишите 4 цикла конфигурации по 
-	методике <span lang="EN-US">ASAP</span>.</font></li>
-	<li class="MsoNormal"><font color="#5F9EA0">Что такое прототип?</font></li>
-	<li class="MsoNormal"><font color="#5F9EA0">Что конфигурируется в рамках 
-	прототипа?</font></li>
-	<li class="MsoNormal"><font color="#5F9EA0">Изобразите схему работ для цикла 
-	конфигурации.</font></li>
-	<li class="MsoNormal"><font color="#5F9EA0">Что такое окончательный 
-	интеграционный тест?</font></li>
-	<li class="MsoNormal"><font color="#5F9EA0">Какие дополнительные разработки 
-	и настройки могут быть в рамках фазы 3, опишите их.</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">Р§С‚Рѕ РїСЂРµРґРїРѕР»Р°РіР°РµС‚ РѕРїРµСЂР°С†РёСЏ 
+	СѓРїСЂР°РІР»РµРЅРёСЏ СЃРёСЃС‚РµРјРѕР№ РІ СЂР°РјРєР°С… С„Р°Р·С‹ 2?</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">РћРїРёС€РёС‚Рµ 4 С†РёРєР»Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїРѕ 
+	РјРµС‚РѕРґРёРєРµ <span lang="EN-US">ASAP</span>.</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">Р§С‚Рѕ С‚Р°РєРѕРµ РїСЂРѕС‚РѕС‚РёРї?</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">Р§С‚Рѕ РєРѕРЅС„РёРіСѓСЂРёСЂСѓРµС‚СЃСЏ РІ СЂР°РјРєР°С… 
+	РїСЂРѕС‚РѕС‚РёРїР°?</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">РР·РѕР±СЂР°Р·РёС‚Рµ СЃС…РµРјСѓ СЂР°Р±РѕС‚ РґР»СЏ С†РёРєР»Р° 
+	РєРѕРЅС„РёРіСѓСЂР°С†РёРё.</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">Р§С‚Рѕ С‚Р°РєРѕРµ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅС‹Р№ 
+	РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅС‹Р№ С‚РµСЃС‚?</font></li>
+	<li class="MsoNormal"><font color="#5F9EA0">РљР°РєРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЂР°Р·СЂР°Р±РѕС‚РєРё 
+	Рё РЅР°СЃС‚СЂРѕР№РєРё РјРѕРіСѓС‚ Р±С‹С‚СЊ РІ СЂР°РјРєР°С… С„Р°Р·С‹ 3, РѕРїРёС€РёС‚Рµ РёС….</font></li>
 </ol>
 <p style="margin-left:0; margin-top:0; margin-bottom:0">&nbsp;</p>
 <h2>&nbsp;</h2>
