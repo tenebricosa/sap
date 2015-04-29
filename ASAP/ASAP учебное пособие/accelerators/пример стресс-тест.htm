@@ -1,0 +1,300 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Пример плана проведения стресс-т</title>
+</head>
+
+<body>
+
+<b><font face="Arial,Times" color="#0000ff" size="5">
+<p><a name="accel_1_11"></a>Пример плана проведения стресс-теста</p>
+</font><font face="Arial,Times" color="#0000ff" size="4">
+<p>Цель</p>
+</font></b><font face="Arial,Times" color="#0000ff" size="2">
+<p>Цель этого документа&nbsp;– предоставить пример плана проведения стресс-теста в 
+продуктивной среде SAP.</p>
+<p>Стресс-тест выполняется, чтобы подтвердить, что сконфигурированная 
+продуктивная среда пригодна для всех бизнес-процессов при продуктивной 
+эксплуатации, а также позволяет определить потенциальные улучшения, которые надо 
+внести перед переходом к продуктивной эксплуатации.</font>
+<font face="Arial,Times" size="2"></p>
+</font><font face="Arial,Times" color="#0000ff" size="4"><b>
+<p>Методология</p>
+</b></font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Для обеспечения точности 
+результатов выполнение стресс-тестов проводится на реальном продуктивно 
+работающем аппаратном обеспечении.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Соответствующий объем и 
+нагрузка транзакций создаются с помощью инструментария тестирования и 
+оперативного ввода пользователями.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Каждая итерация стресс-теста 
+называется циклом.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Нагрузка будет подаваться на 
+продуктивную систему постепенно.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Процедура управления 
+изменениями должна тщательно контролироваться.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Действия всех групп, 
+участвующих в проведении стресс-тестов, должны быть скоординированы с 
+выполнением общей работы.</p>
+</font><b><font face="Arial,Times" color="#0000ff" size="4">
+<p>Шаги</p>
+<ol>
+	</font><font face="Arial,Times" color="#0000ff" size="2">
+	<li>Определение набора критических бизнес-процессов, для которых необходимо 
+	выполнить стресс-тест:</li>
+</ol>
+<ol type="a">
+	<ol type="a">
+		</font></b><font face="Arial,Times" color="#0000ff" size="2">
+		<li>запись заказа клиента; 
+		</li>
+		<li>создание фактуры; 
+		</li>
+		<li>создание поставок;</li>
+	</ol>
+</ol>
+<dir>
+	<dir>
+		<p>и т.д.</p>
+		</font><font face="Arial,Times" size="2">
+		<p>&nbsp;</p>
+	</dir>
+</dir>
+<b>
+<p>2. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>
+Определение основных технических областей, тестирование/мониторинг которых нужно 
+выполнить:</p>
+</b>
+<ul>
+	<li>производительность SAP R/3 (буферы, ответственные транзакции, время 
+	реакции, ошибки); 
+	</li>
+	<li>производительность уровня ОС (R/3, аппаратное обеспечение, сети, 
+	производительность системы); 
+	</li>
+	<li>база данных (кэш-буферы, память); 
+	</li>
+	<li>интерфейсы SAP; 
+	</li>
+	<li>печать SAP; 
+	</li>
+	<li>сеть.</li>
+</ul>
+</font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>3. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>
+Определение ролей и ответственности, включая ресурсы.</p>
+</b></font>
+<table borderColor="#000000" cellSpacing="1" cellPadding="7" width="100%" border="1" id="table1">
+	<tr>
+		<td vAlign="top" width="45%" bgColor="#000000">
+		<font face="Arial,Times" color="#0000ff" size="2"><b>Ответственность в 
+		рамках стресс-теста</b></font></td>
+		<td vAlign="top" width="55%" bgColor="#000000">
+		<font face="Arial,Times" color="#0000ff" size="2"><b>Ответственные лица</b></font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">
+		<font face="Arial,Times" color="#0000ff" size="2">Цикл тестирования 1, 
+		9:00-10:00</font></td>
+		<td vAlign="top" width="55%">
+		<font face="Arial,Times" color="#0000ff" size="2">интерфейсная группа</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">
+		<font face="Arial,Times" color="#0000ff" size="2">Цикл тестирования 2, 
+		11:00:00-12:00</font></td>
+		<td vAlign="top" width="55%">
+		<font face="Arial,Times" color="#0000ff" size="2">группа приложений SD</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">
+		<font face="Arial,Times" color="#0000ff" size="2">Цикл тестирования 3, 
+		14:00:00-15:00</font></td>
+		<td vAlign="top" width="55%">
+		<font face="Arial,Times" color="#0000ff" size="2">группа приложений FI</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%" height="15">
+		<font face="Arial,Times" color="#0000ff" size="2">Мониторинг 
+		производительности системы SAP R/3</font></td>
+		<td vAlign="top" width="55%" height="15">
+		<font face="Arial,Times" color="#0000ff" size="2">техническая группа, GP</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">
+		<font face="Arial,Times" color="#0000ff" size="2">Производительность ОС</font></td>
+		<td vAlign="top" width="55%">
+		<font face="Arial,Times" color="#0000ff" size="2">DC, WT</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">
+		<font face="Arial,Times" color="#0000ff" size="2">печать SAP;</font></td>
+		<td vAlign="top" width="55%">
+		<font face="Arial,Times" color="#0000ff" size="2">группа ИТ</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">
+		<font face="Arial,Times" color="#0000ff" size="2">Инструментарий 
+		тестирования</font></td>
+		<td vAlign="top" width="55%">
+		<font face="Arial,Times" color="#0000ff" size="2">Техническая группа, 
+		YD, CF</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%"><font face="Arial,Times" size="2">…</font></td>
+		<td vAlign="top" width="55%"><font face="Arial,Times" size="2">…</font></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">&nbsp;</td>
+		<td vAlign="top" width="55%">&nbsp;</td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="45%">&nbsp;</td>
+		<td vAlign="top" width="55%">&nbsp;</td>
+	</tr>
+</table>
+<font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>4. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>Выполнение 
+действий, предшествующих стресс-тесту:</p>
+</b>
+<ul>
+	<li>определение критических бизнес областей (критических транзакций, фоновых 
+	заданий, заданий печати и интерфейсов); 
+	</li>
+	<li>настройка транзакций перед выполнением стресс-теста; 
+	</li>
+	<li>тренировка выполнения действий стресс-теста (мониторинг, настройка 
+	производительности, создание отчетов о проблемах); 
+	</li>
+	<li>определение стандартов мониторинга: 
+	<ul>
+		<li>инструменты мониторинга, 
+		</li>
+		<li>методы сбора статистических данных, 
+		</li>
+		<li>инструменты для отслеживания проблем, 
+		</li>
+		<li>методы координации/коммуникации с другими группами;</li>
+	</ul>
+	</li>
+	<li>установление ролей и сфер ответственности.</li>
+</ul>
+</font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+</font><font face="Arial,Times" color="#0000ff" size="4"><b>
+<p>Процедуры стресс-теста</p>
+</b></font><font face="Arial,Times" color="#0000ff" size="2"><u><b>
+<p>Внимание: прежде чем приступать к выполнению стресс-теста, выполните 
+резервное копирование, чтобы после завершения теста выполнить восстановление.</p>
+</b></u></font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>1. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>Создание 
+эталонных статистических данных</p>
+</b></font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Необходимо записывать 
+статистические данные, чтобы сравнивать предыдущие циклы тестирования с 
+последующими циклами.</p>
+</font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>2. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>Выполнение 
+стресс-тестов</p>
+</b></font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Статистические данные должны 
+аккуратно собираться и записываться, чтобы можно было провести точное их 
+сравнение по каждому из циклов.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Все группы должны 
+взаимодействовать друг с другом, чтобы обеспечить согласованность и полноту 
+выполнения тестов.</font> <font face="Arial,Times" color="#0000ff" size="2">К 
+основным участникам тестирования относятся: группа приложений, техническая 
+группа, группа разработок и сетевая группа.</p>
+</font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>3. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>Анализ 
+результатов</p>
+</b></font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Результаты по каждой из 
+областей мониторинга должны быть записаны и сравнены.</font>
+<font face="Arial,Times" color="#0000ff" size="2">Эти результаты также включают 
+впечатления конечных пользователей, технические статистические данные, 
+статистические данные в области приложений и т.д.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">На этом этапе после завершения 
+каждого из циклов тестирования проводится совещание для сравнения и анализа 
+результатов.</p>
+</font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>4. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>Выполнение 
+настроек среды SAP, если необходимо</p>
+</b></font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Для эффективного тестирования 
+необходимо, чтобы изменения строго контролировались и записывались.</p>
+</font><font face="Arial,Times" size="2">
+<p><font face="Symbol">·</font> </font>
+<font face="Arial,Times" color="#0000ff" size="2">Решения о выполнении изменений 
+принимает группа, проводящая стресс-тесты.</p>
+</font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+<b>
+<p>5. </b></font><font face="Arial,Times" color="#0000ff" size="2"><b>При 
+необходимости повторите процедуру.</p>
+</b></font><font face="Arial,Times" size="2">
+<p>&nbsp;</p>
+</font><font face="Arial,Times" color="#0000ff" size="4"><b>
+<p>Стандарты мониторинга</p>
+</b></font><font face="Arial,Times" color="#0000ff" size="2">
+<p>Интервалы для сбора статистических данных&nbsp;– 15 минут.</p>
+</font><font face="Arial,Times" size="2">
+<ul>
+	</font><font face="Arial,Times" color="#0000ff" size="2">
+	<li>SAP R/3: транзакции в контролируемые буферы, системный журнал, сеть.</li>
+</ul>
+<p>Транзакции: ST02, SM21, SM51, SRZL.</p>
+<ul>
+	<li>Инструментарий уровня ОС для мониторинга аппаратного обеспечения, 
+	производительности R/3, сети.</li>
+</ul>
+<dir>
+	<p>Транзакции: ST06, ST03.</p>
+</dir>
+<ul>
+	<li>Инструментарий базы данных для мониторинга ее производительности.</li>
+</ul>
+<dir>
+	<dir>
+		<dir>
+			<p>Транзакции: ST04.</p>
+		</dir>
+	</dir>
+</dir>
+</font>
+
+</body>
+
+</html>

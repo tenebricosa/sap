@@ -1,0 +1,40 @@
+/**
+ * Body
+ */
+
+BODY	{background-color: #5f9ea0; background-image: url("BackgroundNav.gif");background-attachment: scroll; background-position: 0% 0%; background-repeat: no-repeat; font-family: arial; font-size: 14px; font-weight: normal; margin-top: 0px; margin-left: 0px} 
+
+
+/**
+ * Normal links
+ */
+
+ 
+a:link       {text-decoration: none;   color: #000000; font-family: Arial }
+a:hover      { text-decoration: none; color: #2F5B35; cursor: hand; font-family: Arial }
+a:visited    { text-decoration: none;   color: #000000; font-family: Arial }
+
+
+/**
+ * Normal page styles
+ */
+p             { font-family: Arial; font-size: 8pt; color: #000000; margin-left: 26; margin-top: 0; margin-bottom: 0 }
+
+.tablehead   { font-family: Arial; font-size: 10pt; color: #FFFFFF; background-color: #6B9674; font-weight: bold; text-align: center; }
+
+.tableline   { font-family: Arial; font-size: 8pt; font-weight: normal; text-align: Center }
+.note        { font-family: Arial; font-size: 10pt; margin-left: 200; margin-top: 3; 
+               margin-bottom: 5 }
+.exint        { font-family: Arial; font-size: 10pt; text-align: Left; text-indent: 0; 
+               margin-left: 200; margin-top: 0; margin-bottom: 5 }
+
+h1           { font-family: Arial; font-size: 12pt; margin-left: 0; margin-top: 10; 
+               margin-bottom: 0 }
+h2           { font-family: Arial; font-size: 10pt; color: #000000; 
+               margin-left: 0; margin-top: 6; margin-bottom: 0; padding-top: 
+               5 }
+h3           { font-family: Arial; font-size: 8pt; text-decoration: none; color: #000000; 
+               font-weight: bold; margin-left: 14; margin-top: 0; 
+               margin-bottom: 0 }
+
+li           { font-family: Arial; font-size: 10pt; margin-left: 220; margin-top: 0; margin-bottom: 0 }

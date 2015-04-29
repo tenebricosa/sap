@@ -1,0 +1,631 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>Технологии коммуникации и интеграции</title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+ li.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<div>
+
+<h1><a name="_Toc92013405"></a><a name="_Toc101241272">Технологии коммуникации и интеграции</a></h1>
+
+<p></p>
+
+<p><a href="#_t0">Введение</a></p>
+<p><a href="#_t44">1. Бизнес-структура SAP</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#_t45">1.1 Бизнес-компоненты</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#_t46">1.2 Бизнес-объекты</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#_t23">1.3 Репозитарий бизнес-объектов и BAPI</a></p>
+<p> <a href="#_t1">2. Application Link Enabling (ALE)</a></p>
+<p><a href="#_t2">3. Remote Function Call и BAPIs</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t21">3.1 Обзор интерфейсов</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t22">3.2 Remote Function Call</a></p>
+<p><a href="#_t3">4. WebFlow Engine</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t31">4.1 Поток операций и его участники</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t32">4.2 Поток операций (Workflow) и его технология</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t33">4.3 Прикладные области потоков операций</a></p>
+<p><a href="#_t4">5. Интернет-технологии</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t41">5.1 SAP Internet Transaction Server (SAP ITS)</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t42">5.2 SAP Web Application Server (SAP Web AS)</a></p>
+<p>&nbsp;&nbsp;&nbsp; <a href="#_t43">5.3 SAP Business Connector (SAP BC)</a></p>
+<p><a href="#_t7">6. Контрольные вопросы</a></p>
+
+<h2><a name="_t0">Введение</a></h2>
+<p class="MsoNormal">Существует 
+множество методов организации связи с внешними системами и оптимизации процессов 
+внутри системы. Многие из них кратко описываются в этом разделе, что позволяет 
+получить общее представление о различных вариантах использования каждого метода.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<h2><a name="_t44">1. Бизнес-структура SAP</a></h2>
+<p class="MsoNormal">Компания SAP представила технологию ориентации на объекты, 
+придав бизнес-процессам и данным в системе R/3 роль бизнес-объектов; любые 
+внешние приложения и системы могут взаимодействовать с этими объектами через 
+стандартизованные, независимые от платформы и операционной системы интерфейсы, 
+которые называются BAPI (Business Application Programming Interfaces).</p>
+
+<h3><a name="_t45">1.1 Бизнес-компоненты</a>
+</h3>
+<p class="MsoNormal">Бизнес-компоненты — это полуавтономные компоненты, которые 
+охватывают основные области потребностей бизнеса, обеспечивая 
+сконфигурированные, стандартные интерфейсы для взаимодействия с 
+инкапсулированными в них данными. Эта инкапсуляция позволяет модернизировать и 
+усовершенствовать компоненты, не создавая помех в работе других компонентов 
+системы. Каждый компонент имеет свое отдельное ядро.</p>
+<p class="MsoNormal">Инкапсуляция — свойство объекта и класса 
+скрывать (содержать внутри себя) свои свойства и методы. </p>
+
+<h3><a name="_t46">1.2 Бизнес-объекты</a>
+</h3>
+<p class="MsoNormal">Бизнес-объекты — это уникальные функциональные единицы, 
+которые представляют собой обычно опознаваемые, тесно взаимодействующие виды 
+деятельности, связанные с заказами на закупку и поставку, счетами-фактурами и т. 
+п.</p>
+<p class="MsoNormal">Как и любой другой типичный объект, бизнес-объект 
+определяется по его типу, методам (BAPIs), атрибутам, и т. д. </p>
+<p class="MsoNormal">Основная выгода от объектной ориентации состоит в 
+возможности повторного использования программного обеспечения и функциональных 
+возможностей. </p>
+<p class="MsoNormal">Повторное использование программного обеспечения — это 
+возможность получения новых объектов из уже существую­щих: полученные объекты 
+называются <b>подтипами</b>, а те, что легли в их основу — <b>супертипами</b>. 
+Подтип наследует все признаки и методы супертипа, хотя он дополнительно может 
+иметь и свои собственные. Например, подтип Грузовик имеет все свойства супертипа 
+— Автомобиля.</p>
+<p class="MsoNormal">Бизнес-объекты SAP инкапсулируют данные&nbsp; и 
+бизнес-процессы, скрывая структуру и детали исполнения лежащих в основе данных. 
+Это достигается за счет того, что модули бизнес-объектов SAP имеют 
+многоуровневую структуру, состоящую из:</p>
+<ul style="margin-top: 0cm; margin-bottom: 0cm" type="disc">
+	<li class="MsoNormal"><b>Ядра:</b> этот внутренний слой представляет 
+	принадлежащие объекту данные.</li>
+	<li class="MsoNormal"><b>Уровня целостности:</b> на этом уровне представлена 
+	бизнес-логика объекта, которая состоит из делового регламента, а также 
+	ограничений на объем и границ, применяемых к бизнес-объектам SAP .</li>
+	<li class="MsoNormal"><b>Уровня интерфейса:</b> этот уровень обеспечивает 
+	независимое от платформы описание внедрения бизнес-объекта SAP для внешних 
+	систем. Это достигается через BAPI.</li>
+	<li class="MsoNormal"><b>Уровня доступа:</b> этот уровень идентифицирует и 
+	определяет технологии, которые дают внешним системам доступ к уровню ядра, 
+	то есть к данным объекта. Это могут быть COM/DCOM, RFC(Remote Function Call) 
+	и другие технологии.</li>
+</ul>
+<p class="image"><img src="Images/image013.jpg" border="0" Name = "1" ></p>
+<p class="image">Рис.1 Уровни бизнес-объекта</p>
+
+<h3><a name="_t23">1.3 Репозитарий бизнес-объектов и BAPI</a></h3>
+<p class="MsoNormal" style="text-align:justify">Интерфейс программирования 
+бизнес-приложений (BAPI) - это стандартизированный интерфейс программирования, 
+облегчающий внутренний и внешний доступ к бизнес-процессам и данным в 
+SAP-системах. </p>
+<p class="MsoNormal" style="text-align:justify">Различные BAPI определены в репозитарии бизнес-объектов (РБО), как 
+методы бизнес-объектов SAP. Они обеспечивают объектно-ориентированное 
+представление бизнес-данных в SAP-системе. Функции, доступные для вызова с 
+помощью BAPI обычно реализуются и хранятся в построителе функций в виде 
+RFC-вызываемых функциональных модулей. Для обзора всех доступных BAPI в РБОв 
+окне построителя бизнес-объектов предусмотрена соответствующая транзакция. </p>
+<p class="image"><img src="Images/image005.jpg" border="0" Name = "10" ></p>
+<p class="MsoNormal" align="center" style="text-align:center">Рис. 47 
+Репозитарий бизнес-объектов и BAPI</p>
+<p class="MsoNormal" style="text-align:justify">BAPI, являющиеся методами для 
+бизнес-объектов в SAP-системе, применяются в различном контексте.</p>
+<p class="MsoNormal" style="text-align:justify">Возможности применения BAPI:</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Связывание бизнес-процессов среди разных систем (например, с 
+помощью ALE)</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Интеграция различных решений в рамках системы mySAP Business Suite</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Подключение к SAP-системе через Интернет</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Использование в сочетании с WebFlow Engine</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Подключение к внешним программам</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<h2><a name="_t1">2.Application Link Enabling (ALE)</a>
+</h2>
+<p class="MsoNormal">Рассмотрим общие для всех систем бизнес-процессы на примере 
+обычных ситуаций.</p>
+<p class="MsoNormal"><i>Например</i>, система управления персоналом компании может быть 
+отделена от остальных бизнес-приложений. Очевидно, что полное разделение систем 
+невозможно, поскольку данные о заработной плате сотрудников необходимы в системе 
+бухгалтерского учета. В этой ситуации для обмена соответствующими данными 
+необходимо внедрить общие для всех систем бизнес-процессы.</p>
+<p class="MsoNormal">Общие для всех систем бизнес-процессы используются, 
+например, для обеспечения совместной работы двух компаний, которые направляют 
+поставщикам объединенные заказы. Для консолидации заказываемых количеств 
+необходим обмен данными между ИТ-системами компаний. В этом случае 
+бизнес-процесс выходит не только за границы системы, но и за границы компании.</p>
+<p class="MsoNormal"><b>Application Link Enabling</b> - это набор средств для создания 
+и применения распределенных приложений. </p>
+<p class="MsoNormal">Основная концепция Application Link 
+Enabling предусматривает создание распределенной, но интегрированной системной 
+среды. Это подразумевает использование непротиворечивых данных и определяемый 
+коммерческими потребностями информационный обмен между слабо связанными 
+прикладными системами.</p>
+<p class="MsoNormal">&nbsp;Приложения интегрируются при помощи механизмов <b>синхронной</b> 
+и <b>асинхронной</b> связи, а не через центральную базу данных. Системы, обменивающиеся 
+данными с помощью ALE, могут принадлежать одной или разным компаниям. 
+Особенностью ALE является обеспечение бизнес-связи между различными системами с 
+помощью переноса защищенных и непротиворечивых данных.</p>
+<p class="image"><img src="Images/image001.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" style="text-align: center">
+Рис. 43 
+Использование ALE для распределения бизнес-процессов</p>
+<p class="MsoNormal" style="text-align:justify;text-indent:27.0pt">Задачи:</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: PalatinoLinotype+1">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Определить бизнес-процесс и вовлеченные объекты</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: PalatinoLinotype+1">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Определить состав передаваемой информации</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: PalatinoLinotype+1">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Указать формат для переносимых данных</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: PalatinoLinotype+1">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Выбрать используемые для переноса технические средства</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: PalatinoLinotype+1">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Определить вид переноса</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: PalatinoLinotype+1">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Указать пункт назначения для переноса данных</p>
+<p class="MsoNormal" style="text-align:justify">Формат IDoc описывает структуру 
+&quot;промежуточных документов (&quot;intermediate documents&quot;)&quot;. Существуют различные виды 
+форматов IDoc для различных типов передаваемых данных. Альтернативным вариантом 
+является использование ALE для переноса данных в согласованном формате XML.</p>
+<p class="MsoNormal" style="text-align:justify">Выбор технологии переноса данных 
+ограничен только особенностями конкретной системы. Например, для переноса данных 
+используется <a href="#_t22">Remote Function Call (RFC)</a> или протоколы HTTP и HTTPS.</p>
+<p class="MsoNormal" style="text-align:justify">Существует два основных типа 
+переноса: синхронный и асинхронный. При синхронном переносе передача данных 
+выполняется во время их создания или изменения. Асинхронный перенос инициируется 
+в произвольное время.</p>
+<p class="MsoNormal" style="text-align:justify">Лишь несколько причин могут 
+помешать связать системы между собой. В соответствующих системах необходима 
+техническая возможность передачи данных (поддержка RFC или HTTP) и интерпретации 
+формата передаваемых сообщений (IDoc, XML). </p>
+<p class="MsoNormal" style="text-align:justify">Развитием системы
+<span lang="en-us">ALE </span>стала инфраструктура обмена -&nbsp;
+<b><span style="font-style: normal">SAP Exchange Infrastructure, </b>созданная<b> </b></span>
+для интеграции бизнес процессов в рамках нескольких приложений посредством 
+обмена данными.&nbsp; (Подробнее см. <a href="#_t43">SAP Business Connector (SAP BC)</a>)</p>
+
+<h2><a name="_t2">3. Remote Function Call</a></h2>
+
+<h3><a name="_t21">3.1 Обзор интерфейсов</a>
+</h3>
+<p class="MsoNormal" >SAP-системы включают интерфейсы 
+для различных уровней связи. Среди этих интерфейсов есть и высокотехнологичные 
+методы передачи данных, например, по протоколу TCP/IP или CPI-C, и 
+специализированные интерфейсы для бизнес-объектов, например, интерфейсы 
+программирования бизнес-приложений (BAPI) или EDI-интерфейсы, используемые в 
+среде ALE. Все <span lang="ru">&quot;</span>вышестоящие<span lang="ru">&quot;</span> интерфейсы, т.е. интерфейсы, обеспечивающие доступ 
+к бизнес-объектам или процессам, используют одинаковую технологию - <b>Remote 
+Function Call</b> (RFC).</p>
+<p class="image"><img src="Images/image002.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" style="text-align: center">Рис.&nbsp; 44 
+Интерфейсные технологии, применяемые в SAP-системах</p>
+<p class="MsoNormal" style="text-align: left">
+Далее перечислены 
+технологии, представленные на рисунке:</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>TCP/IP: Transmission Control Protocol/Internet Protocol</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span lang="EN-US" style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-US">CPI-C: Common Program Interface Communication</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>LU 6.2: Logical Unit Type 6.2</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>HTTP: HyperText Transfer Protocol</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMTP: Simple Mail Transfer Protocol</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>RFC:RemoteFunctionCall</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>OLE: Object Linking and Embedding</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ALE: Application Link Enabling</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>EDI: Electronic Data Interchange</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BAPI: Business Application Programming Interface</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>XML: Extensible Markup Language</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span lang="EN-US" style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SOAP: Simple Object Access Protocol</p>
+</p>
+
+<h3><a name="_t22">3.2 Remote Function Call</a></h3>
+<p class="MsoNormal" style="text-align:justify">Remote Function Call - это 
+интерфейсный протокол SAP, основанный на протоколах CPI-C and TCP/IP. Этот 
+инструмент упрощает программирование процесса коммуникации между различными 
+системами. </p>
+<p class="MsoNormal" style="text-align:justify"><b>RFC применяется для вызова и выполнения предварительно 
+определенных функций в удаленной или в той же системе.</b> С помощью RFC 
+осуществляется обмен информацией, перенос параметров и обработка ошибок.</p>
+<p class="MsoNormal" style="text-align:justify">RFC описывает интерфейс, а не 
+язык программирования, на котором написана функция. </p>
+<p class="image"><img src="Images/image003.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" align="center" style="text-align:center"><i>Рис. 2.2.1 
+Возможности RFC-соединения</i></p>
+<p class="MsoNormal" style="text-align:justify">Для дистанционного запуска 
+внешних программ необходим RFC-интерфейс вне SAP-системы. Например, таким 
+интерфейсом может быть обычная динамически компонуемая библиотека (Dynamic Link 
+Library - DLL). Любой RFC-интерфейс является двусторонним, т.е. через него 
+возможен доступ к функциям SAP-систем и из внешних программ.</p>
+<p class="MsoNormal" style="text-align:justify">Чтобы вызвать RFC-модуль из 
+SAP-системы, необходимо знать параметры импорта и экспорта (определенные в 
+построителе функций). Кроме того, между двумя системами должна существовать 
+техническая связь. Эта связь называется &quot;RFC-соединение&quot; или &quot;RFC-адрес&quot;.</p>
+<p class="image"><img src="Images/image004.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" align="center" style="text-align:center"><i>Рис. 2.2.2 Структура Remote Function Call</i></p>
+<p class="MsoNormal" style="text-align:justify">На приведенном выше рисунке 
+слева показана вызывающая программа, в которой создан RFC-адрес &quot;DEST&quot;. 
+</p>
+<p class="MsoNormal" style="text-align:justify"><span lang="ru">Ч</span>исло 
+RFC-соединений между двумя системами может соответствовать числу мандантов в 
+целевой системе. Поскольку при регистрации в каждом RFC-соединении указывается 
+имя пользователя, возможен многократный доступ к мандантам в целевой системе с 
+различными именами. </p>
+<p class="MsoNormal" style="text-align:justify">Если необходимо двустороннее RFC-соединение между двумя 
+системами, т.е. вызываемая система должна также выполнять RFC-модули в 
+вызывающей системе, в ней следует настроить второе эквивалентное RFC-соединение.</p>
+<p class="MsoNormal" style="text-align:justify">RFC стал самым важным 
+интерфейсом в среде SAP. Некоторые специальные удаленно вызываемые RFC-модули, 
+соответствующие определенным соглашениям, называются BAPI (интерфейсы 
+программирования бизнес-приложений).</p>
+
+<h2><a name="_t3">4. WebFlow Engine</a></h2>
+<p class="MsoNormal" style="text-align:justify">В SAP-системах (или даже между 
+SAP-системами) потоки операций применяются для ускорения бизнес-процессов и 
+обеспечения их прозрачности. Модель потока операций предусматривает разделение 
+процесса на отдельные шаги, которые затем присваиваются разным людям, или, 
+точнее, их ролям в компании. Автоматизированная последовательность шагов 
+гарантирует быстрое присвоение задач соответствующим сотрудникам. </p>
+<p class="MsoNormal" style="text-align:justify">Рассмотрим два ракурса потока операций<span lang="ru">:</span></p>
+<ul>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">ракурс человека, 
+участвующего в потоке операций<span lang="ru">;</span> </p></li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">технический ракурс, предназначенный для 
+более четкого отражения процесса в системе.</p></li>
+</ul>
+
+<h3><a name="_t31">4.1 Поток операций и его участники</a></h3>
+<p class="MsoNormal" style="text-align:justify">В качестве типичного примера 
+рассматривается процесс «сотрудник подает заявку на отпуск».</p>
+<p class="image"><img src="Images/image006.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" align="center" style="text-align:center"><i>Рис<span lang="en-us">. 
+3.1</span> Пример 
+процесса WebFlow Engine</i></p>
+<p class="MsoNormal" style="text-align:justify">В процессе участвуют два 
+человека<span lang="en-us"> - </span>автор заявки и его начальник, который утверждает заявку. Автор заявки 
+заполняет формуляр и сохраняет введенные данные. Операция сохранения инициирует 
+событие потока операций, например «подана заявка на отпуск». Это событие 
+поступает в предварительно сконфигурированный поток операций и в соответствии с 
+заданными правилами передается «утверждающему лицу». Начальник (или 
+«утверждающее лицо») получает соответствующий элемент потока операций в рабочую 
+входящую почту. Следовательно, событие потока операций связывает операцию в 
+SAP-системе и участвующих в процессе людей. Вызывая элемент потока операций, 
+утверждающее лицо автоматически запускает функцию «Утвердить/отклонить заявку».</p>
+<p class="MsoNormal">Возможны два сценария:</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 45.0pt">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Заявка утверждена</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 45.0pt">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Заявка отклонена</p>
+<p class="MsoNormal" style="text-align:justify">Если заявка утверждена 
+(соответствующее действие инициирует событие потока операций), автор заявки 
+получает уведомление, а поток операций завершается. Если заявка отклонена, автор 
+также получает уведомление и выбирает одно из двух действий:</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 45.0pt">
+1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Принять 
+отклонение</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 45.0pt">
+2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Изменить 
+заявку на отпуск</p>
+<p class="MsoNormal" style="text-align:justify">Если автор заявки принимает 
+отклонение, поток операций завершается. Если автор изменяет заявку, во входящую 
+почту утверждающего лица направляется другой элемент потока операций.</p>
+
+<h3><a name="_t32">4.2 Поток операций (W<span lang="en-us">eb</span>flow) и его технология</a></h3>
+<p class="MsoNormal" style="text-align:justify">Поток операций 
+связывает участников процесса и шаги программы, относящиеся к этому процессу.</p>
+<p class="image"><img src="Images/image007.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" align="center" style="text-align:center"><i>Рис. 
+<span lang="en-us">3.2</span> Среда 
+потока операций</i></p>
+<p class="MsoNormal" style="text-align:justify">Определенные полномочия дают 
+сотрудникам компании право на выполнение различных задач в одной или нескольких 
+системах.</p>
+<p class="MsoNormal" style="text-align:justify">Некоторые из этих задач 
+инициируют события, которые, в свою очередь, присвоены шагам модели потока 
+операций. Другими словами, когда сотрудник использует свои права для выполнения 
+задачи, которая инициирует присвоенное ей событие потока операций, то в системе 
+вызывается, например, конкретный метод соответствующего бизнес-объекта.</p>
+<p class="MsoNormal" style="text-align:justify">Обычно полномочия сотрудника 
+обеспечивают доступ к отдельным шагам более широкого процесса. Процесс работает 
+с конкретным бизнес-объектом, например, обеспечивает доступ с помощью 
+присвоенных объекту методов. В системе эти методы определены в виде BAPI.</p>
+
+<h3><a name="_t33">4.3 Прикладные области потоков операций</a></h3>
+<p class="MsoNormal" style="text-align:justify">Процессу можно 
+присвоить сложные последовательности потоков операций, а событию потока операций 
+можно присвоить неограниченное число шагов потока. Благодаря этому функция 
+потока операций широко используется в различных бизнес-сферах SAP-систем. 
+Например, без интеграции с потоками операций реализация сложных процессов в 
+решениях <a href="../BusinessSuite/BusinessSuite.htm#_Toc104332224">mySAP CRM </a> или <a href="../BusinessSuite/BusinessSuite.htm#_Toc104332225"> mySAP SCM  </a>была бы невозможной.</p>
+<p class="MsoNormal" style="text-align:justify">Кроме того, потоки операций 
+очень хорошо подходят для автоматизации распределения информации о незавершенном 
+производстве (например, информации о статусе заказа на поставку) среди всех 
+заинтересованных сторон. Дополнительно потоки операций могут использовать 
+сгенерированные XML-сообщения, инициирующие общие для нескольких систем операции 
+в удаленных системах. Возможность определять события и присваивать их методам 
+бизнес-объектов позволяет использовать потоки операций практически в любой 
+области.</p>
+<h2><a name="_t4">5. Интернет-технологии</a></h2>
+<p class="MsoNormal">Начиная с версии SAP Web AS 6.10, для соединения 
+SAP-системы с Интернетом существуют, в частности, следующие возможности. </p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span lang="EN-US" style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Подключение при помощи<span lang="EN-US"> SAP Internet Transaction 
+Server (SAP ITS)</span></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span lang="EN-US" style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Обмен данными с использованием компонента<span lang="EN-US"> 
+Internet Communication Manager (ICM) </span>сервера<span lang="EN-US"> SAP Web 
+Application Server (SAP Web AS).</span></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Обмен бизнес-данными в формате HTTP и XML при помощи SAP Business 
+Connector (SAP BC)</p>
+<p class="MsoNormal" style="text-align:justify">Эти способы можно также 
+различить по видам использования:</p>
+<p class="MsoNormal" style="text-align:justify">Решения SAP ITS и SAP Web AS 
+обеспечивают работу пользователей в диалоговом режиме, в то время как SAP BC 
+обеспечивает автоматический обмен данных между различными системами. SAP BC 
+также может применяться в качестве автономного компонента программного 
+обеспечения с SAP-инфраструктурой обмена (SAP XI) 2.0. Если SAP XI изначально 
+предназначалась для бизнес-интеграции нескольких систем в рамках одной компании, 
+то компонент SAP BC рассчитан на обмен данными между разными предприятиями.</p>
+<p class="image"><img src="Images/image009.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" align="center" style="text-align:center"><i>Рис<span lang="EN-US">.</span> 
+4<span lang="EN-US"> SAP ITS, SAP Web AS: HTTP-</span>коммуникация</i></p>
+
+<h3><a name="_t41">5.1 SAP Internet Transaction Server (SAP ITS)</a></h3>
+<p class="MsoNormal" style="text-align:justify">Опции SAP ITS:</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Автоматическое преобразование экранов SAP в формат HTML (SAP GUI 
+для HTML)</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Использование основанных на экранах прикладных 
+Интернет-компонентов (IAC) Этот метод представления бизнес-процессов в сети 
+работает с бизнес-транзакциями в настраиваемых форматах HTML, предварительно 
+определенных SAP</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Применение 
+основанных на файлах потока прикладных Интернет-компонентов (IAC). 
+Интернет-форматирование<span lang="ru"> </span>разрабатывается клиентом, а поток бизнес-процессов 
+контролируется с помощью файлов потока </p>
+<p class="MsoNormal" style="text-align:justify">SAP ITS обеспечивает 
+взаимодействие подключенных к нему SAP-систем при помощи протокола передачи 
+гипертекста (Hypertext Transfer Protocol - HTTP). SAP ITS функционирует как шлюз 
+к SAP-системе. Одной из ключевых задач SAP ITS в данном контексте является 
+преобразование протокола коммуникации из HTTP в DIAG или RFC и обратно.</p>
+<p class="image">
+<img src="Images/image010.jpg" border="0" Name = "1" width="580" height="409" ></p>
+<p class="MsoNormal" align="center" style="text-align:center">Рис. 52 Принципы 
+работы SAP ITS</p>
+<p class="MsoNormal" style="text-align:justify">Порядок работы SAP ITS:</p>
+<ol>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">Веб-сервер пересылает 
+отправленные браузером запросы в SAP ITS <b>WGate</b> (веб-шлюз).</p></li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">&nbsp;WGate 
+переадресовывает запрос второму компоненту SAP ITS - <b>AGate </b>(шлюзу приложения).</p>
+	</li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">&nbsp;AGate загружает файл сервиса, определенный в URL, из файловой системы хоста 
+	<b>AGate</b>, и использует записи в файле сервиса для идентификации системы SAP, к 
+которой он будет обращаться. </p></li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">Далее <b>AGate</b> запускает процесс регистрации для 
+SAP-системы. Для нее запрос преобразуется в протокол DIAG или RFC.</p></li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">Ответ SAP-системы (SAP BW, SAP 
+CRM, SAP R/3 и т.д.) использует протокол DIAG или RFC и направляется в ITS <b>AGate</b> 
+	(шлюз приложения). Со стороны SAP-системы, ITS функционирует как SAP GUI для 
+Windows или SAP GUI для Java.</p></li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">&nbsp;AGate использует шаблоны HTMLBusiness для 
+генерирования HTML-страницы в качестве ответа браузеру. Для передачи этой 
+страницы на соответствующий веб-сервер <b>WGate</b> использует CGI-интерфейс (Common 
+Gateway Interface) или интерфейсы NSAPI/ISAPI. </p></li>
+	<li>
+	<p class="MsoNormal" style="text-align:justify">Далее веб-сервер переадресовывает 
+станицу на фронтэнд браузера, который отправил исходный запрос.</p></li>
+</ol>
+<p class="MsoNormal">Резюме задач SAP ITS:</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Регистрация сеанса браузера в SAP-системе</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Администрирование информации сеанса</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Преобразование HTTP в форматы DIAG или RFC и обратно</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Управление потоком процессов на основе файлов потока (опция)</p>
+
+<h3><a name="_t42">5.2 SAP Web Application Server (SAP Web AS)</a></h3>
+<p class="MsoNormal">Классическая система SAP внедряется на основе трехуровневой 
+архитектуры клиент-сервер (Подробнее см. <a href="../BaseOfSystem/BaseOfSystem.htm#_t1">Архитектура 
+клиент-сервер</a>):</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Уровень представления</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Уровень приложения</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Уровень базы данных</p>
+<p class="MsoNormal" style="text-align:justify">Система является расширяемой в 
+смысле уровня представления и уровня приложения. Хорошие возможности расширения 
+являются важной предпосылкой для обеспечения одновременной работы в системе 
+различного количества пользователей. </p>
+<p class="MsoNormal" style="text-align:justify"><b>SAP Web Application Server</b> 
+представляет собой дальнейшее развитие классической технологии SAP-базис. В ядро 
+SAP был добавлен новый процесс - Internet Communication Manager (ICM). Он 
+позволяет осуществлять прямую обработку запросов из Интернета, например, 
+отправленных из браузера с помощью протокола HTTP. Это обеспечивает 
+масштабируемость сервера SAP Web Application Server.</p>
+<p class="MsoNormal" style="text-align:justify"><b>ICM</b> обеспечивает 
+коммуникацию SAP-систем вне среды SAP с использованием протоколов HTTP, HTTPS и 
+SMTP. ICM может обрабатывать запросы из Интернета, которые в своих URL содержат 
+соответствующую комбинацию сервер-порт. Если для обработки запроса необходимы 
+данные из базы данных, то при помощи каналов памяти устанавливается соединение с 
+рабочим процессом.</p>
+<p class="image"><img src="Images/image011.jpg" border="0" Name = "1" ></p>
+<p class="MsoNormal" align="center" style="text-align:center"><i>Рис. 4.2 SAP Web 
+Application Server</i></p>
+<p class="MsoNormal" style="text-align:justify">Начиная с версии SAP Web AS 
+6.10, рабочие процессы могут напрямую создавать доступное через Интернет 
+содержимое, которое ICM отправляет затем на фронтэнд браузера, приславшего 
+исходный запрос. </p>
+<p class="MsoNormal" style="text-align:justify">С помощью SAP-системы можно создавать некоторые графические элементы, 
+необходимые для корпоративного веб-сайта (Например, HTML-страницы или веб-темы), 
+а также контролировать (и сохранять) эти и другие элементы (например, 
+используемые объекты MIME). В качестве языка программирования можно использовать 
+как ABAP, так и JavaScript. </p>
+<p class="MsoNormal" style="text-align:justify">Для создания бизнес-логики используется язык ABAP 
+Objects. ABAP Objects - это объектно-ориентированное расширение языка 
+программирования ABAP. Это позволяет использовать в ABAP принципы 
+объектно-ориентированного программирования, например, инкапсуляцию, 
+наследование, классы и интерфейсы.</p>
+<p class="MsoNormal" style="text-align:justify;">Зачастую 
+клиенты SAP уже имеют инструменты для создания привлекательных корпоративных 
+веб-сайтов. Чтобы и в дальнейшем пользоваться этими инструментами SAP-системы 
+поддерживают стандарт WebDAV (DAV - распределенная разработка и контроль 
+версий). Иными словами, веб-страницы можно разрабатывать как в SAP Web AS, так и 
+с помощью других инструментов.</p>
+
+<h3><a name="_t43">5.3 SAP Business Connector (SAP BC)</a></h3>
+<p class="MsoNormal"><b>SAP Business Connector</b> (сокращенно: <b>SAP BC</b>) 
+обеспечивает технологию, дающую возможность простой интеграции приложений в 
+разных системах. Отличия в использовании SAP BC по сравнению с RFC или IDoc 
+заключаются в том, что для переноса протоколов или данных используются следующие 
+форматы:</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>В качестве формата данных используется открытый (не 
+запатентованный) стандарт XML</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Обмен данных осуществляется на основе HTTP – стандартного 
+протокола Интернета</p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 63.0pt">
+<span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Возможно безопасное соединение через протокол защищенных сокетов (Secure 
+Socket Layer - SSL)</p>
+<p class="MsoNormal" style="text-align:justify">Как и SAP ITS, SAP BC не 
+интегрирован в SAPWeb AS. Он представляет собой независимый программный 
+компонент со своим собственным циклом выхода версий. Это гарантирует, что 
+предлагаемые функции представлены на максимально возможном современном уровне. В 
+то же время, использование стандартных интерфейсов SAP, таких как RFC, BAPI и 
+IDoc, может обеспечить полную совместимость со всеми решениями SAP вне 
+зависимости от версии SAP-системы.</p>
+<p class="MsoNormal" style="text-align:justify">Поскольку SAP BC может 
+сообщаться со всеми совместимыми с XML внешними системами (или, точнее, с их 
+конверторами в XML), то этот компонент можно использовать в сочетании с ALE. 
+Иными словами, есть возможность отображать внутренние бизнес-процессы 
+предприятия, основанные на использовании Интернета. </p>
+<p class="MsoNormal" style="text-align:justify">Чтобы использовать XML для 
+обмена данными, оба деловых партнера должны договориться о схеме XML, которую 
+они будут использовать, и которую смогут интерпретировать обе системы.</p>
+<p class="MsoNormal" style="text-align:justify">Эта схема определяет, как должен 
+интерпретироваться каждый тэг XML в специфическом бизнес-контексте. Поскольку 
+компании может потребоваться обмен данными в формате XML с другими 
+организациями, необходимо убедиться, что все участники процесса используют одну 
+и ту же схему XML. Удобным способом обмена схемами XML является репозитарий 
+интерфейсов SAP (SAP IFR).</p>
+<p class="MsoNormal" style="text-align:justify">Доступ к репозитарию интерфейсов 
+возможен через Интернет http://ifr.sap.com. Здесь доступны все стандартные схемы 
+XML, используемые компанией SAP. Выгрузив одну из этих схем, можно запросить 
+уведомление о ее возможном изменении. Это обеспечит использование наиболее 
+современных схем всеми участниками. </p>
+<p class="MsoNormal"><b>SAP Exchange Infrastructure</b></p>
+<p class="MsoNormal" style="text-align:justify">SAP XI интегрирует существующее 
+в вашей компании коммерческое программное обеспечение. Так как SAP XI предлагает 
+центральную платформу интеграции, для обмена данными могут использоваться 
+приложения даже различных поставщиков. Обмен данными осуществляется, например, 
+по протоколу XML, который «понятен» всем приложениям. Однако, SAP XI также 
+предлагает опцию преобразования в формат XML потоков данных из других форматов.</p>
+<p class="MsoNormal" style="text-align:justify">Существует большое количество 
+механизмов «отображения», которые доступны для такого преобразования. 
+Использование SAP XI позволяет значительно сократить количество «двухточечных» 
+интерфейсов, необходимых для связи между приложениями, что упрощает ИТ-среду. 
+Таким образом, внедрение SAP XI упрощает интерфейсы внутренних данных 
+предприятия.</p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<h2><a name="_t7">6. Контрольные вопросы</a></h2>
+<ol>
+	<li>Какими уровнями обладает бизнес-объект <span lang="en-us">SAP</span>?</li>
+<li>Какие существуют&nbsp; функции репозитария бизнес объектов?</li>
+	<li>В чем заключается технология Application Link Enabling (ALE)?</li>
+	<li>&nbsp;Какие интерфейсы и варианты передачи данных поддерживают 
+<span lang="en-us">SAP-</span>системы?</li>
+	<li>Доступ к BAPI в SAP-системах осуществляется через RFC-интерфейс? Что 
+	такое <span lang="en-us">RFC-</span>интерфейс?</li>
+<li>Что обеспечивает WebFlow Engine?</li>
+	<li>Какими функциями обладает SAP ITS? опишите порядок работы
+	<span lang="en-us">SAP ITS?</span></li>
+<li>SAP BC позволяет использовать сценарии ALE в масштабе нескольких компании?</li>
+<li>Какую роль в интеграции программного обеспечения играет SAP Exchange Infrastructure?</li>
+	<li>&nbsp;Какую роль играет в интернет - коммуникации SAP Web Application Server, 
+	в частности Internet Communication Manager (ICM)?</li>
+</ol>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+</body>
+
+</html>

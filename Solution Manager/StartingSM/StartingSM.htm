@@ -1,0 +1,912 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<link rel=Edit-Time-Data href="StartingIFS.files/editdata.mso">
+<title>Обзор платформы SAP Solution Manager</title>
+
+<link rel=Stylesheet type="text/css" media=all
+href="../General/TMExternalStyleSheet.css">
+
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=darkblue
+vlink=darkblue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+
+
+		<h2><font size="6"><a name = "part_1"></a>1. Обзор платформы SAP Solution Manager</font></h2>
+		<p>&nbsp;&nbsp;<a href="#vved_1"> Введение</a></p>
+		<p>&nbsp;&nbsp;<a href="#part_1_1">1.1 Основные возможности SAP Solution Manager</a></p>
+		<p>&nbsp;&nbsp; <a href="#part_1_2">1.2 Структура SAP Solution Manager</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#part_1_2_1">
+		Интерфейс с компанией SAP</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#part_1_2_2">
+		Информационное наполнение</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#part_1_2_3">
+		Инструментарий</a></p>
+		<p>&nbsp;&nbsp; <a href="#part_1_3">1.3 Implementation Guige. Проектный 
+		IMG</a></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#part_1_3_1">
+				Проектный IMG. Транзакции конфигурации</a>&nbsp;
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#part_1_3_2">
+			Импользование IMG для внесения настроек в SAP</a></p>
+					<p>&nbsp;&nbsp; <a href="#q_1">1.4 Вопросы для 
+					самоконтроля</a></p>
+
+	<div>
+		<h2><a name="vved_1"></a>Введение</h2>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Платформа 
+		<b>SAP Solution Manager</b> предоставляет функциональные возможности в области 
+		внедрения, эксплуатации и постоянной оптимизации используемого решения 
+		mySAP Business Suite. 
+		Эта система предоставляет центральную точку доступа к методам 
+		инструментальных средств и предварительно сконфигурированному 
+		содержимому, которыми можно воспользоваться в ходе внедрения, 
+		тестирования и продуктивной эксплуатации решений.</p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SAP 
+		Solution Manager предназначен для управления всем ландшафтом решения 
+		mySAP Business Suite клиента, включая взаимодействие с внешними (не SAP) системами, 
+		т.е. SAP Solution Manager функционирует в рамках используемой в компании 
+		ИТ-среды.
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		SAP Solution Manager является дополнением, находящимся над SAP Web 
+		Application Server, mySAP Workplace 2.11 или SAP R/3 4.6C.</div>
+	<h2>&nbsp;<a name="part_1_1"></a>1.1 Основные возможности SAP Solution Manager</h2>
+	<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Платформа SAP Solution Manager 
+	основана на стратегии компании SAP в области управления 
+	ИТ-сервисами и приложениями и позволяет 
+	наиболее эффективно использовать сервисы поддержки SAP.</p>
+	<p style="line-height: 150%">&nbsp;SAP Solution Manager обеспечивает (см. 
+	рис. 1.1)<span lang="en-us">:</span></p>
+			<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/obzor.jpg" border="0" align="middle" width = "554" height="300" Name = "1_1" ></p>
+		<p style="line-height: 150%; text-align: center">Рисунок 1.1 
+		– Возможности SAP Solution Manager.</p>
+
+	<ul>
+		<li>
+		<p class="Normal" style="text-align: justify; text-autospace: none; line-height: 150%">
+		<span style="color:black">Реализацию 
+		<a href="../Implementation/Implementation.htm">проектов внедрения</a> и <a href="#glob_imp">глобального развертывания решений </a></span>
+		<span style="layout-grid-mode:line">mySAP Business Suite с 
+		процессно-ориентированным подходом к конфигурированию и тестированию. SAP Solution Manager 
+		может использоваться на всех фазах внедрения методологии<span style="background-color: #C0C0C0">
+		</span> </span>
+		<span lang="EN-US" style="layout-grid-mode: line; background-color:#C0C0C0">ASAP</span><span lang="en-us">;</span>&nbsp; </li>
+		<li>
+		<p class="Normal" style="text-align: justify; text-autospace: none; line-height: 150%">
+		SAP Solution Manager предоставляет единую точку доступа к системам 
+		компонентов для работ по созданию дизайна, конфигурированию и 
+		тестированию<span lang="en-us">;</span></li>
+		<li>
+		<p class="Normal" style="text-align: justify; line-height: 150%">
+		<span style="layout-grid-mode:
+line">Доступ к лучшим методам для mySAP Business Suite, <a href="#roadmap">маршрутным картам</a>, шаблонам 
+		документов, предварительно сконфигурированным <a href="#bussin_scen">бизнес-процессам</a>.</span></li>
+		<li>
+		<p class="Normal" style="text-align: justify; text-autospace: none; line-height: 150%">
+		<a href="#mon_opt">Мониторинг и оптимизацию </a>всего 
+		комплекса решений SAP<span lang="en-us">;</span></li>
+		<li>
+		<p class="Normal" style="text-align: justify; text-autospace: none; line-height: 150%">
+		<span style="color:black">Повышение 
+		надежности функционирования системной среды за счет 
+		профилактического контроля
+		решений, а также за счет <a href="../Implementation/Phase03.htm#part_2_3_2">настройки синхронизации 
+		и проверок непротиворечивости неоднородных сред</a></span><span lang="en-us">;</span></li>
+		<li>
+		<p class="Normal" style="text-align: justify; text-autospace: none; line-height: 150%">
+		<span style="color:black">Проективное 
+		распознавание потенциальных проблем благодаря мониторингу и <a href="#sys_otch">системе 
+		отчетов</a>.</span></li>
+		<li>
+		<p class="Normal" style="text-align: justify; text-autospace: none; line-height: 150%">
+		<span style="color:black">Доступ к 
+		<a href="#SSM">централизованной справочной платформе</a> для поддержки пользователей </span>
+		SAP<span style="color:black">, 
+		создание внутренней системы технической поддержки<span lang="en-us">.</span></span></li>
+	</ul>
+	<div>
+		<h2>&nbsp;
+		<a name="part_1_2"></a>1.2 Структура SAP Solution Manager</h2>
+		<p style="text-align: justify; text-indent: 34.0pt; text-autospace: none; line-height: 150%">
+		Компоненты, входящие в 
+		платформу SAP<span lang="EN-US" style="color:black">
+		</span><span style="color:black">Solution Manager 
+		разобьем на три группы, которые имеют следующие названия (см. рис. 1.2):</span></p>
+		<ul>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			<a href="#part_1_2_1">Интерфейс с компанией
+			SAP</a></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			<a href="#part_1_2_2">Информационное наполнениее</a></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%">
+			<a href="#part_1_2_3">Инструментарий </a></li>
+		</ul>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/structure.jpg" border="0" align="middle" width = "627" height="386" Name = "1_2" ></p>
+		<p style="line-height: 150%; text-align: center">Рисунок 1.2
+		<font face="Times New Roman">–</font> 
+		Обзор компонентов SAP Solution Manager.</p>
+		<h3><a name="part_1_2_1"></a>Интерфейс с компанией  SAP</h3>
+		<p style="text-align: justify; line-height: 150%; margin-bottom: 0">
+		<span style="font-family:&quot;Times New Roman&quot;;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><span style="color: black">&nbsp;В процессе работы, 
+		чтобы обеспечить надежную бесперебойную эксплуатацию решений SAP, 
+		клиентам и партнерам SAP может потребоваться углубленная информация о 
+		решениях, техническая поддержка программного обеспечения или 
+		консультационные услуги. Клиентам требуется полная и актуальная 
+		информация о предлагаемых компанией SAP услугах в сфере обучения. 
+		Разработчикам и администраторам на предприятиях необходима своевременная 
+		и надежная техническая поддержка. </span>SAP 
+		<span style="color: black">Solution Manager обеспечивает удобный 
+		интерфейс для взаимодействия с компанией </span>
+		<span lang="EN-US" style="color: black">SAP</span><span style="color: black"><font size="3">.
+		</font></span></p>
+		<p><b>&nbsp;&nbsp;&nbsp; <a name="SSM"></a>Взаимодействие с платформой
+		SAP Service Marketplace</b></p>
+		<p class="Pa3" style="text-align: justify; text-indent: 35.4pt; line-height: 150%; margin-bottom: .0001pt">
+		<span style="color: black">Единая централизованная 
+		комплексная платформа сервиса и поддержки SAP Service Marketplace 
+		обеспечивает основу для коммуникации и сотрудничества между клиентами, 
+		партнерами и компанией SAP. </span></p>
+		<p class="Pa3" style="text-align: justify; text-indent: 35.4pt; line-height: 150%; margin-bottom: .0001pt">
+		<span style="color: black">Информационные ресурсы SAP 
+		Service Marketplace разделены на несколько отдельных порталов: SAP 
+		Support Portal (Портал поддержки), SAP Developer Network (Портал для 
+		разработчиков), SAP Partner Portal (Портал для партнеров), SAP SMB 
+		Portal (Портал для компаний среднего и малого бизнеса), SAP Help Portal 
+		(Портал справочной службы) и SAP Community (Портал SAP-сообщества). </span></p>
+		<p class="Pa3" style="text-align: justify; line-height: 150%; margin-bottom: .0001pt">
+		<span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Центральный портал находится по адресу  </span>
+		<a href="http://service.sap.com">http://service.sap.com</a>.</p>
+		<p class="Pa3" style="text-align: justify; line-height: 150%; margin-bottom: .0001pt">
+		<font size="3" color="#000080"><b><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</i></b></font>Для работы с этими 
+		информационными ресурсами с помощью 
+		Solution Manager 
+		можно создать необходимое число пользователей портала, настроить им 
+		права доступа и осуществлять администрирование этих настроек. </p>
+		<p style="line-height: 150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Платформа SAP Service Marketplace включает в себя функциональные 
+		возможности системы обслуживания клиентов и содержит широкий спектр 
+		информации о компании SAP, ее продуктах и услугах. В портале 
+		представлены разнообразные тематические разделы, предназначенные для 
+		клиентов и партнеров (см. рис. 1.3): </p>
+				<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/serv_mar.jpg" border="0" align="middle" width = "458" height="323" Name = "1_3" ></p>
+		<p style="line-height: 150%; text-align: center">Рисунок 1.3
+		<font face="Times New Roman">–</font> Информационные 
+		разделы в SAP Service Marketplace.<ul>
+			<li>
+			<p style="text-align: justify; line-height: 150%">
+			<span style="color: black">Карты решений</span> 
+			SAP Solution Maps<span lang="en-us">;</span> </li>
+			<li>
+			<p style="text-align: justify; line-height: 150%">
+			Подробная информация о 
+			решениях и технологиях, сведения о партнерах SAP и сертифицированных 
+			продуктах других производителей (дополнительное программное 
+			обеспечение)<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; line-height: 150%">
+			Подробная информация о 
+			версиях для различных платформ, включая планируемые и существующие 
+			версии<span lang="en-us">;</span> </li>
+			<li>
+			<p style="text-align: justify; line-height: 150%">
+			Информация о 
+			дополнительных разработках, учитывающих специфику стран СНГ<span lang="en-us">;</span></li>
+			<li>
+			<p style="line-height: 150%">
+			Подробная информация о семинарах, проводимых в 
+			московском Сервисном центре SAP, а также в Сервисных центрах, 
+			расположенных в других странах<span lang="en-us">;</span> </li>
+			<li>
+			<p style="line-height: 150%">
+			Руководства по инсталляции для текущих версий 
+			решений SAP<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; line-height: 150%">
+			Новости, обзор событий, 
+			истории успешных проектов внедрения решений SAP<span lang="en-us">;</span> </li>
+			<li>
+			<p style="line-height: 150%">
+			Множество другой полезной информации<span lang="en-us">.</span></li>
+		</ul>
+		<p style="text-align: justify; text-indent: 35.4pt; line-height: 150%">
+		<span style="font-family:TimesNewRomanPSMT">С помощью 
+		платформы </span>SAP Service Marketplace 
+		осуществляется обращение клиента <span lang="EN-US">SAP</span> к 
+		информационному пакету SAP Best Practices (Лучшие практики SAP), который&nbsp; 
+		включает методологии, набор документации и предварительно 
+		сконфигурированные примеры для комплекса решений mySAP Business Suite.&nbsp; </p>
+		<p style="text-align:justify;line-height:normal"><b>&nbsp;&nbsp;&nbsp; 
+		Дистанционные профилактические услуги</b></p>
+		<p style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:justify;
+text-indent:35.45pt;line-height:150%">В 
+		SAP 
+		существуют специальные <a href="../Optimization/Optimization.htm#part_3_1">профилактические и предупредительные сервисыы</a>, которые увеличивают безопасность 
+		используемого решения в течение всего его жизненного цикла. Помимо их 
+		локального использования клиент может воспользоваться услугой 
+		дистанционного запуска сервисов 
+		<span style="background-position: 0% 0%; background-image:none; background-repeat:repeat; background-attachment:scroll">
+		компанией </span>
+		<span lang="EN-US" style="background-position: 0% 0%; color: black; background-image:none; background-repeat:repeat; background-attachment:scroll">SAP</span><span style="color: black"><font size="3">.
+		</font></span></p>
+		<p><b>&nbsp;&nbsp;&nbsp; 
+		<a name="mess"></a>Сообщения поддержки 
+		SAP</b></p>
+		<p style="text-align: justify; text-indent: 35.4pt; line-height: 150%; margin-bottom: .0001pt">
+		<span style="color: black">Если при внедрении или 
+		эксплуатации решения возникает проблема, связанная с работой системы, 
+		клиенту необходим совет эксперта. </span>
+		<span lang="EN-US">SAP Solution Manager </span>
+		открывает доступ к ряду инструментов при 
+		помощи которых можно создать сообщение для внутренней группы поддержки, 
+		получить доступ к локальной базе знаний SAP Notes, которые помогают 
+		решить проблему самостоятельно. Если клиент не может найти решение 
+		самостоятельно, <span lang="EN-US">SAP Solution Manager 
+		</span><span style="color: black">позволяет 
+		отправить созданное сообщение в подразделение <b>SAP Active Global Support</b>. </span></p>
+		<p style="text-align: justify; text-indent: 35.4pt; line-height: 150%; margin-bottom: .0001pt">
+		<span style="color: black">При получении сообщения о сбое 
+		в системе компания SAP снабжает клиента информацией относительно того, 
+		как обойти, избежать или исправить ошибки. </span>Пользователи могут посылать сообщения в SAP круглосуточно в любой день 
+		недели. Клиенты из стран СНГ и Балтии могут выставлять сообщения на 
+		русском языке, но рекомендуется, по возможности, в качестве языка 
+		коммуникации использовать английский язык. </p>
+		<p class="Default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Более подробно об обработке сообщений поддержки&nbsp; мы поговорим в разделе 
+		<a href ="Optimization/Optimization.htm#part_3_3" >&quot;Служба поддержки&quot;</a>.</p>
+		<h3><a name="part_1_2_2"></a>Информационное наполнение</h3>
+		<p style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp; 
+		<a name="bussin_scen"></a>Бизнес-сценарии</b><span style="font-weight: 700"><font size="3">
+		</font></span></p>
+		<p style="text-align: justify; text-indent: 26.95pt; line-height: 150%">
+		Решение SAP Solution Manager предоставляет 
+		экспертные знания в процессе прохождения всех 
+		<span style="background-color: #CCCCCC">фаз проекта внедрения</span>. В 
+		состав SAP Solution Manager входит значительный объем бизнес-сценариев 
+		для внедрения комплекса решений <span lang="EN-US">mySAP</span> <span lang="EN-US">
+		Business Suite</span>. 
+		Эти сценарии содержат предварительно определенные бизнес-процессы из 
+		Репозитария бизнес-процессов (RBP)<span lang="en-us">.</span> </p>
+		<p style="text-align: justify; text-indent: 26.95pt; line-height: 150%">
+		Поставляемый вместе с SAP Solution Manager <a name="business_process"></a><b>Репозитарий 
+		бизнес-процессов</b> представляет собой базу содержимого внедрения с 
+		предварительно определенными и многократно используемыми данными по 
+		бизнес-процессам. Репозитарий бизнес-процессов содержит предварительно сконфигурированные процессы, их 
+		графическое представление, поэтапные руководства по их внедрению, данные 
+		предварительной конфигурации 
+		<span style="background-position: 0% 0%; background-image:none; background-repeat:repeat; background-attachment:scroll">(<a href="#tran">транзакции 
+		конфигурации</a>, </span>
+		<a href="#part_1_3">IMG-проект</a>), 
+		а также материалы для тестирования (см. рис 1.4). </p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/business_process.jpg" border="0" align="middle" width = "418" height="374" Name = "1_3" ></p>
+		<p style="text-align: center"><font size="2">&nbsp;Рисунок 1.4</font><font face="Times New Roman"> 
+		–</font><font size="2"> 
+		Бизнес-содержимое SAP Solution Manager.</font></p>
+
+		<p style="text-align: justify; text-indent: 27.0pt; line-height: 150%">
+		&nbsp;&nbsp;&nbsp; При создании концептуального проекта 
+		заказчики выбирают предварительно сконфигурированные бизнес-процессы, 
+		которые требуется внедрить, а затем адаптируют их к существующим 
+		требованиям на предприятии. Кроме того, клиент может сам создавать 
+		бизнес-процессы. В зависимости от  бизнес-сценария, указанного в 
+		документе <a href="../Implementation/Phase01.htm#part_2_1_2">объема</a>, будет доступно соответствующее содержимое из 
+		репозитария бизнес-процессов. </p>
+<p class="MsoNormal" style="text-autospace: none; background: white; line-height:150%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Последнюю версию содержимого для 
+Репозитария 
+бизнес-процессов можно выгрузить с SAP Service Marketplace по адресу <u>
+<a style=" text-decoration: underline; text-underline: single" href="http://service.sap.com/solutionmanager">
+http://service.sap.com/solutionmanager</a>.</u></p>
+		<p style="text-align: justify; text-indent: 35.4pt; line-height: 150%">
+		При использовании бизнес-содержимого SAP информация о 
+		конфигурации и предварительной конфигурации уже считается присвоенной 
+		необходимым элементам системы. Следовательно, использование бизнес-содержимого SAP 
+		помогает снизить затраты на проектирование бизнес-процессов, а также 
+		соответствующую настройку, тестирование и обучение, выполняемые на более 
+		поздних этапах проекта.</p>
+		<p style="line-height: 150%"><b>Взаимодействие SAP Solution Manager и 
+		ARIS</b></p>
+		<p style="text-indent: 35.4pt; line-height: 150%">При 
+		внедрении решений mySAP Business Suite наиболее эффективным считается 
+		процессно-ориентированный подход. Он может быть реализован за счет 
+		совместного использования системы SAP Solution Manager фирмы SAP и 
+		инструментальной среды ARIS for mySAP.com фирмы IDS Scheer AG. Это 
+		предоставляет следующие возможности:</p>
+		<ul>
+			<li>
+			<p style="line-height: 150%">Визуального отображения результатов проекта по внедрению системы на любой стадии 
+его выполнения;</li>
+			<li>
+			<p style="line-height: 150%">Добавления или 
+удаления компонент системы непосредственно на графических моделях;</li>
+			<li>
+			<p style="line-height: 150%">Запуска транзакций SAP для  рассматриваемых бизнес-процессов (транзакции запускаются с сервера системы SAP);</li>
+			<li>
+			<p style="line-height: 150%">Использование сценариев бизнеса (business scenarios) и ссылочных моделей R/3 (R/3 
+reference model) в ARIS for mySAP.com позволяет предприятиям настроить 
+стандартные сценарии mySAP
+Business Suite 
+на собственные нужды и документировать бизнес-процессы;</li>
+			<li>
+			<p style="line-height: 150%">Дополнительная компонента ARIS™ Connectivity for SAP HR позволяет использовать 
+данные об организационных единицах из SAP R/3 HR. </li>
+		</ul>
+		<p style="line-height: 150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Используя 
+		инструментальное средство ARIS for mySAP.com можно описать необходимые 
+		интерфейсы с системой SAP R/3, основываясь на бизнес-процессах 
+		предприятия. </p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для 
+		моделирования бизнес-процессов существует возможность экспорта модели 
+		процессов SAP R/3 в инструментальное средство моделирования ARIS for 
+		mySAP.com&nbsp;и последующей настройки на основе обработанных моделей
+		IMG-проекта 
+		через SAP Solution Manager.</p>
+		<p style="line-height: 150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Изменения, 
+		сделанные в референтной модели SAP, могут быть перенесены как из SAP в 
+		ARIS, так и обратно из ARIS в SAP.</p>
+		<p style="text-indent: 35.4pt; line-height: 150%">
+		Таким 
+		образом, 
+		ARIS for mySAP.com 
+		является функциональным и идеологическим расширением системы 
+		SAP Solution Manager 
+		для управления проектом по внедрению 
+		mySAP Business Suite.
+		</p>
+		<p style="text-align: justify; text-indent: 35.4pt; line-height: 150%">
+		&nbsp;</p>
+		<p style="text-align:justify;text-indent:27.0pt"><b><a name="roadmap"></a>Маршрутные карты  </b></p>
+		<p style="text-align: justify; text-indent: 26.95pt; text-autospace: none; line-height: 150%; background: white">
+		&nbsp;Основным компонентом маршрутных карт являются ссылки на акселераторы и 
+		инструментальные средства, предназначенные для выполнения задач проекта.
+		Актуальные маршрутные карты поставляются вместе с
+		SAP Solution Manager. Они содержат стандартную 
+		методологию внедрения <span lang="EN-US">SAP</span> и информацию о 
+		важнейших аспектах и фазах внедрения <span lang="EN-US">SAP</span>.</p>
+		<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+	В Solution Manager в работе с маршрутными картами имеются 
+		следующие возможности:</p>
+		<ul>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Осуществление навигации в структуре<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Фильтрация структурных элементов по ролям или 
+			тематическим областям<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Просмотр и присвоение документов<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Печать отдельных документов или структур с 
+			присвоенными документами<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Поиск определенных элементов в структуре и 
+			акселераторах<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Контроль статуса и создание примечаний для каждого 
+			структурного элемента, например, для пакета работ<span lang="en-us">;</span></li>
+			<li>
+			<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+			Создание сообщений<span lang="en-us">.</span></li>
+		</ul>
+		<p style="text-align: justify; text-autospace: none; line-height: 150%; background: white">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В
+		SAP Solution Manager доступны следующие виды маршрутных карт (см. рис. 
+		1.5)<span lang="en-us">.</span></p>
+				<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/roadmaps_vid.jpg" border="0" width = "606" height="297" Name = "1_4" ></p>
+		<p style="text-align: center"><font size="2">&nbsp;Рисунок 1.5 </font>
+		<font face="Times New Roman">–</font><font size="2"> 
+		Виды маршрутных карт.</font></p>
+
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Маршрутная карта  <b>внедрения</b> 
+описывает методы организации и реализации проекта внедрения с функциональной 
+точки зрения. Она содержит методологические предпосылки для выполнения задач по 
+внедрению решения SAP. Сюда входят, помимо прочего, сведения 
+о руководстве проектом и конфигурации бизнес-процессов, а также технические 
+аспекты, процедуры тестирования и концепции обучения.</p>
+<p style="text-autospace: none; line-height: 150%; background: white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Маршрутная карта внедрения дополняет маршрутную 
+карту <b>управления решением</b>. Они построены на основе концепции вех с 
+указанием критических точек синхронизации.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Глобальный шаблон </b>определяется в сценариях глобального развертывания в 
+головной фирме. В нем размешаются сценарии, документы концептуального проекта и 
+конфигурации. Можно определить, какие компоненты шаблона релевантны для дочерних компаний, а также то, могут ли 
+эти дочерние компании изменять шаблон в проектах развертывания, и в какой 
+степени. Маршрутная карта 
+глобального шаблона не синхронизирована с маршрутной картой управления решением.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<h3><a name="part_1_2_3"></a>Инструментарий</h3>
+		<p style="line-height: 150%"><span style="font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span>
+	Эту группу компонентов мы рассмотрим с точки зрения их 
+		функционального назначения. Более подробно об инструментах
+		SAP Solution Manager будет рассказываться в 
+		дальнейших главах.</p>
+		<p style="text-align:justify; line-height:150%"><b>
+		Организация и ведение проекта внедрения решения SAP</b></p>
+		<p class="Default" style="text-align:justify; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		SAP Solution Manager представляет собой инструмент создания и ведения 
+		проекта по внедрению. В главе
+		<a href="../Implementation/Implementation.htm">&quot;Внедрение решения 
+		mySAP Business Suite&quot;</a> мы рассмотрим использование SAP 
+		Solution Manager &nbsp;в фазах методологии ASAP, а 
+		пока несколько слов о возможностях платформы. 
+		</p>
+		<p class="Default" style="text-align:justify;text-indent:35.4pt; line-height:150%">
+		На этапе <a href="../Implementation/Phase01.htm">&quot;Подготовка проекта&quot;</a> осуществляется 
+		централизованное определение всех задействованных систем и объема их 
+		использования в рамках проекта внедрения бизнес-решения, т.е. 
+		определяется ИТ-ландшафт проекта. Таким образом, создается основа для 
+		автоматического входа в соответствующие системы из SAP Solution Manager 
+		с целью настройки системы по <a href="../Implementation/Phase02.htm#part_2_2_1">концептуальному проектуу</a> или с целью 
+		<a href="test">тестирования</a>. </p>
+		<p class="BodyText" style="text-indent:35.4pt;line-height:150%">
+	С помощью SAP Solution Manager можно 
+		обеспечить целостность данных в процессе пользовательской настройки 
+		неоднородной ИТ-среды. Платформа SAP Solution Manager обеспечивает 
+		администрирование процесса настройки, копирование пользовательских 
+		настроек, а также упрощение проверок непротиворечивости. SAP Solution 
+		Manager снижает объем ручных операций по синхронизации путем 
+		одновременного автоматического распространения пользовательских настроек 
+		на различных системах и централизованного управления всеми запросами на 
+		синхронизацию настроек.</p>
+		<p class="Normal" style="text-align:justify;text-indent:35.4pt; line-height:150%">
+		Платформа  SAP Solution Manager также 
+		представляет собой среду для анализа, дизайна и конфигурирования 
+		персональных бизнес-процессов. Решение SAP Solution Manager позволяет:</p>
+		<ul>
+			<li>
+			Определить 
+			все бизнес-процессы компании и использовать заранее определенные 
+			сценарии&nbsp;&nbsp;&nbsp; внедрения решений SAP<span lang="en-us">;</p>
+			</li>
+			<li>
+			<p class="Normal" style="line-height: 150%">
+			Хранить документацию в форматах PPT, 
+			XLS, DOC и т.д.<span lang="en-us">;</span></p>
+			</li>
+			<li>
+			<p class="Normal" style="line-height: 150%">
+			Выполнить настройку бизнес-процессов, 
+			распределенных по нескольким системам SAP<span lang="en-us">;</span></p>
+			</li>
+			<li>
+			<p class="Normal" style="line-height: 150%">
+			Провести тестирование сконфигурированных 
+			бизнес-процессов<span lang="en-us">.</span></p>
+			</li>
+		</ul>
+		<p style="line-height:150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="test"></a>Организация тестирования</b></p>
+		<p style="line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+		Платформа предоставляет единую точку доступа ко всей системной среде и 
+		обеспечивает централизованное хранение материалов и результатов 
+		тестирования. SAP Solution Manager содержит инструмент Test Organizer 
+		(Организатор тестирования). Он обеспечивает поддержку различных 
+		вариантов тестирования: от выполнения контрольных примеров до 
+		интеграционных сценариев тестирования, которые обрабатывают 
+		распределенные бизнес-процессы в рамках всего решения, а также 
+		предоставляет комплексную отчетность по тестированию. </p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Инструмент  Test Organizer включает в себя тестовые сценарии, выполняемые 
+		вручную или автоматически, такие как компьютерные средства тестирования 
+		(Computer Aided Test Tools – CATTs) и eCATTS. Наряду с тестовыми 
+		сценариями, предоставляемыми для определенных решений mySAP Business 
+		Suite, существует возможность определить собственные сценарии 
+		тестирования и включить в них существующие сценарии тестирования. </p>
+		<p style="margin-bottom:.0001pt;text-align:justify; line-height:150%; margin-left:0cm; margin-right:0cm; margin-top:0cm">
+		<span style=" font-style: normal; font-weight: 700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a name="glob_imp"></a>Глобальное развертывание</span></a></p>
+		<p style="line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Холдинговые компании сталкиваются с необходимостью 
+		унифицировать свои основные бизнес-процессы, а также основные данные и 
+		организационные структуры, после чего координировать их в рамках всего 
+		ландшафта решения. С помощью SAP Solution Manager можно централизованно 
+		определить глобальные корпоративные бизнес-процессы (включая 
+		предварительную конфигурацию, документацию по процессам и предварительно 
+		определенные тестовые сценарии, относящиеся ко всей структуре холдинга), 
+		а затем сформировать на их базе корпоративный шаблон. В дальнейшем 
+		развертывание системы на региональных рынках можно начинать с внедрения 
+		корпоративного шаблона, а затем сконфигурировать систему исходя из 
+		локальных требований.</p>
+		<p style="text-align:justify;text-indent:35.4pt; line-height:150%">
+		Функции управления версиями позволяют управлять выпуском 
+		версий шаблонов и обеспечивают основу для оптимизации глобальных 
+		процессов. В этом сценарии также можно использовать предварительно 
+		определенное бизнес-содержимое из центрального каталога бизнес-процессов 
+		SAP. </p>
+		<p style="line-height: 150%"><b><span style="font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><a name="mon_opt"></a>Мониторинг и оптимизация решения</b></p>
+		<p style="text-align:justify;text-indent:35.4pt; line-height:150%">
+		После запуска системы в эксплуатацию важно обеспечить поддержание 
+		работоспособности и производительности используемых решений. Платформа 
+		<span lang="EN-US">SAP Solution Manager </span>обеспечивает полный 
+		интегрированный мониторинг бизнес-процессов и систем на основе полного 
+		документирования среды решений и базовых бизнес-процессов. </p>
+		<p style="text-align:justify;text-indent:35.4pt; line-height:150%">
+	Мониторинг решений включает контроль за системой и 
+		бизнес-процессами, а также представление отчетов об 
+		уровне сервиса, что 
+		помогает отслеживать и администрировать все используемые решения. 
+		Предупреждения о нештатных ситуациях или возможности их возникновения в 
+		SAP Solution Manager отображаются в графическом виде с указанием точного 
+		места возникновения проблемы в ландшафте решения. 
+		<span style="background-position: 0% 0%; background-image:none; background-repeat:repeat; background-attachment:scroll">
+		С помощью щелчка мыши можно получить доступ к подробной информации о 
+		проблеме, а также о способах ее решения и услугах, которые помогут 
+		устранить возникшую проблемуу</span>.</p>
+		<p style="text-align:justify;text-indent:35.4pt; line-height:150%">
+		<a name="sys_otch"></a>С помощью системы отчетов <a href="../Optimization/Optimization.htm#part_3_2">SAP Early Watch</a> 
+		пользователь может самостоятельно формировать отчеты по статусу работы 
+		системы. Пользователь сам определяет содержимое создаваемых отчетов и 
+		временные интервалы их выполнения. 
+		</p>
+		<p style="text-align: justify; text-indent: 35.4pt; text-autospace: none; line-height:150%">
+		Пакет сервисов SAP Solution 
+		Management Optimization (Оптимизация управления решением SAP) 
+		обеспечивает оптимальную работу решения SAP на протяжении всего его 
+		жизненного цикла. Этот пакет оптимизирует работу приложений и систем, 
+		обеспечивая тем самым максимальную эффективность ключевых 
+		бизнеспроцессов.
+		</p>
+		<p style="text-align: justify; text-autospace: none; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Более подробный обзор сервисов 
+		пакета 
+			<span lang="EN-US" style="color: black">SAP</span>Solution <span lang="EN-US" style="color: black">Managementt</span> Optimization 
+		будет представлен в главе <a href="../Optimization/Optimization.htm#part_3_1">&quot;Мониторинг и оптимизация решения&quot;</a>.</p>
+		<p style="line-height: 150%"><b>&nbsp; Электронное обучение e-Learning</b></p>
+		<p style="text-indent: 35.4pt; line-height: 150%">Платформа SAP Solution Manager позволяет создавать и предоставлять 
+		интерактивные учебные материалы, предназначенные для ознакомления всех 
+		пользователей с новой или модифицированной функциональностью. </p>
+		<p style="text-indent: 35.4pt; line-height: 150%">Для 
+		упрощения и ускорения подготовки корпоративных учебных материалов в 
+		платформу SAP Solution Manager включены средства электронного обучения. 
+		С их помощью можно создавать ролевые <a href="../Implementation/Phase04.htm#part_2_4_1">карты обучения</a>, основанные на 
+		составленных в ходе проекта документах, которые могут быть использованы 
+		для обучения пользователей, а также учебные материалы SAP Tutor, которые 
+		в последствии будут переданы конечным пользователям. Решение 
+		поддерживает возможность повторного использования документации в учебных 
+		целях. </p>
+		<p style="text-indent: 0cm; line-height: 150%"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Хранение документации</b></p>
+		<p style="text-align:justify;text-indent:27.0pt; line-height:150%">При использовании интегрированного компонента SAP Knowledge Warehouse 
+		(Хранилище знаний) можно хранить всю проектную документацию в одном 
+		репозитарии. Предварительно настроенные решения и бизнес-процессы SAP 
+		предоставляют пользователю модифицируемый набор операционной и 
+		технической документации, в который входят:</p>
+		<ul>
+			<li>
+			<p style="text-align:justify; line-height:150%">Описания бизнес-сценариев<span lang="en-us">;</span></p>
+			</li>
+			<li>
+			<p style="text-align:justify; line-height:150%">Руководства по настройке<span lang="en-us">;</span></p>
+			</li>
+			<li>
+			<p style="text-align:justify; line-height:150%">
+			Документация по 
+			процессам<span lang="en-us">.</span></p>
+			</li>
+		</ul>
+		<p style="text-align:justify; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; По мере осуществления проекта можно 
+		централизованно добавлять, загружать, копировать и модифицировать 
+		собственную документацию, связанную с реализуемым проектом. 
+		Централизацияя<br>
+		усилий по ведению документации позволяет предоставить доступ к ней всем 
+		членам проектной группы в любое удобное время.</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>
+		Обновление ПО</b></p>
+		<p style="text-align: justify; text-indent: 35.4pt; text-autospace: none; line-height:150%">
+	В комплект поставки SAP 
+		Solution Manager (версия 3.1) входит справочник Upgrade Roadmap, 
+		представляющий собой методическое руководство по реализации проектов 
+		обновления ПО. В этом руководстве подробно описываются необходимые 
+		процедуры и действия для пошагового обновления компонентов, например, 
+		для перехода с версий SAP R/3 3.1 I – 4.6 C на версию SAP R/3 
+		Enterprise. Здесь приводится анализ бизнес-процессов и 
+		ИТ-инфраструктуры, описываются методы адаптации технологии к новой 
+		версии программного обеспечения и к конфигурации системы, включая 
+		тестирование обновленных процессов.</p>
+		<p style="margin-bottom:.0001pt;text-align:justify; line-height:150%; margin-left:0cm; margin-right:0cm; margin-top:0cm">
+		<span style="font-size: 12.0pt; font-family: Times New Roman; font-style: normal">
+		&nbsp;&nbsp;&nbsp; </span>
+		<span style="font-size: 12.0pt; font-style: normal">&nbsp;&nbsp; </span>
+		&nbsp;<b>Центральное системное администрированиее</b></p>
+		<p style="text-align:justify;text-indent:27.0pt; line-height:150%">
+	Платформа SAP Solution Manager позволяет централизованно 
+		управлять административными задачами, которые носят повторяющийся 
+		характер, и регистрировать выполнение данных задач. </p>
+		<p style="text-align:justify;text-indent:27.0pt; line-height:150%">
+		Возможность централизованного управления всеми связанными 
+		с внедрением запросами на перенос
+		из единой точки доступа, что, в свою 
+		очередь, увеличивает прозрачность администрирования и уменьшает объем 
+		административных работ..</p></div><div>
+		<h2>&nbsp;
+		<a name="part_1_3"></a>1.3 Implementation Guide</h2>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Конфигурация корпоративных бизнес-процессов осуществляется в среде, 
+		называемой <b> &quot;Руководство по внедрению&quot; </b>(Implementation Guide	IMG).
+		Все бизнес-процессы компании могут внедряться в функциональность системы 
+		посредством конфигурации параметров в IMG. </p>
+		<p style="line-height: 150%"><span style="letter-spacing: -0.05pt">
+		<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span>
+		Implementation Guide (IMG) SAP играет самую важную роль в настройке системы SAP под требования
+		конкретной компании. Настройка осуществляется посредством конфигурации программных продуктов 
+		SAP в то время, как базовая система SAP остается в неприкосновенности.</p>
+		<p style="line-height: 150%"><span style="letter-spacing: -0.05pt">
+		<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span>
+		Существуют 
+		следующие виды Руководства по внедрению (см. рис. 1.6)::</p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/img.jpg" border="0" align="middle" Name = "1_5" width="330" height="236" ></p>
+		<p style="text-align: center"><font size="2">Рисунок 1.6 </font>
+		<font face="Times New Roman">–</font><font size="2"> Виды IMG.</font></p>
+<ul>
+			<li>
+			<p style="line-height: 150%">
+			Справочное IMG (Reference IMG)<span lang="en-us">;</span></li>
+			<li>
+			<p style="line-height: 150%">
+			IMG по предприятию (Enterprise IMG)<span lang="en-us">;</span></li>
+			<li>
+			<p style="line-height: 150%">
+			IMG по проекту/проектам (Project(s)IMG)<span lang="en-us">.</span></li>
+		</ul>
+		<p style="line-height: 150%">
+		<span style="color:black; letter-spacing:.05pt">&nbsp;&nbsp;&nbsp; 
+		</span>&nbsp;&nbsp;&nbsp;
+		<b>Справочное (ссылочное) IMG</b><span style="font-family: Arial; color: black; letter-spacing: -.05pt"><b>&nbsp;</b>–
+		</span><font face="Arial">это стартовое Руководство по внедрению, которое содержит базовый 
+		набор опций конфигурации, с помощью которых можно получить любую 
+		производную функциональность SAP в зависимости от специфических требований. Это самая 
+		общая версия Руководства по внедрению, все остальные версии – производные от нее. Иерархия директорий Ссылочного 
+		IMG показана на рис. 1.7.</font></font></p>
+		<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/References_IMG.jpg" border="0" align="middle" Name = "1_5" width="503" height="605" ></p>
+		<p style="text-align: center"><font size="2">Рисунок 1.7 </font>
+		<font face="Times New Roman">–</font><font size="2"> Ссылочный IMG.</font></p>
+		<p style="text-align: justify; text-indent: 15.1pt; line-height: 150%; margin-left: 1.2pt; margin-right: .7pt; background: white">
+		<span style="color: black; letter-spacing: .5pt">&nbsp;<font size="3">&nbsp;&nbsp;
+		</font></span><b>IMG по предприятию </b>– 
+		это сокращенный вариант Ссылочного  IMG и 
+		представляет только ту функциональность, которая необходима конкретному 
+		предприятию. Относящиеся к исключенным модулям опции конфигурации  отфильтровываются 
+		во время генерации 	IMG по предприятию<span style="letter-spacing: 0.5pt">..</span></p>
+		<p style="text-align: justify; text-indent: 14.2pt; line-height: 150%; background: white">
+		<span style="color:black;
+letter-spacing:.15pt"><font size="3">&nbsp;</font></span><span style="letter-spacing: 0.15pt"><b><font size="3">&nbsp;</font></b><font size="3">&nbsp;&nbsp; 
+		</font></span>Так как внедрение проекта SAP проходит поэтапно,
+		IMG по предприятию создается отдельно для каждого из таких этапов, полученные руководства 
+		называются Проектными IMG (IMG-проект). 
+		Все конфигурации для конкретного проекта осуществляются в IMG через соответствующее 
+		Проектное IMG, причем доступ к IMG по предприятию и Ссылочному IMG
+		ограничивается с целью исключения возможности внесения в них случайных изменений.
+		 В случае необходимости, рамки Проектного IMG могут расширяться 
+		– именно поэтому такая архитектура оказывается чрезвычайно удобной для управления настройками. 
+		В оставшейся части этого раздела речь пойдет только о Проектном IMG<span style="color:black;letter-spacing:.15pt"><font size="3">.</font></span></p>
+		<h3><a name="part_1_3_1"></a>Проектный IMG. Транзакции конфгурации</h3>
+		<p style="text-align: justify; text-indent: 15.35pt; line-height: 150%; margin-left: 0cm; margin-right: 1.45pt; margin-top: 8.15pt; margin-bottom: .0001pt; background: white">
+		<span style="color:black;letter-spacing:-.05pt">&nbsp;&nbsp;&nbsp; 
+		Проектный IMG содержит множество <b><a name="tran"></a>транзакций конфигурации</b>, которые 
+		являются средствами настройки различных процессов или функциональностей, 
+		предоставляемых SAP. Конкретный бизнес-процесс может настраиваться с помощью нескольких транзакций 
+		конфигурации. По сути, каждая транзакция конфигурации – это одна 
+		из 8000 таблиц параметров, предусмотренных в SAP. Это могут быть такие параметры, как коды компании, счета 
+		Главной книги, диапазоны номеров счетов, контрольные коды счетов дебиторской или 
+		кредиторской задолженности, коды записи, коды местоположений, категории поставщиков
+		или потребителей, коды налогов, фискальные календари, 
+		валюты и факторы обменного курса, диапазоны номеров бухгалтерских транзакций и т. д.
+		Для каждой транзакции конфигурации предусмотрен текст со справкой 
+		(помощью) для конкретной транзакции, ее назначение и влияние на 
+		функциональность того или иного процесса.</span></p>
+		<p style="text-align: justify; text-indent: 15.35pt; line-height: 150%; margin-left: 0cm; margin-right: 1.45pt; margin-top: 8.15pt; margin-bottom: .0001pt; background: white">
+		<span style="color:black;letter-spacing:-.3pt">&nbsp; Проектное IMG организовано по иерархическому принципу – различные транзакции конфигурации сгруппированы в иерархии 
+		директорий, которые отражают порядок внесений настроек в тот или иной модуль (см. рис. 1.8). На уровне модулей
+		директории IMG упорядочены в соответствии с порядком внедрения модулей
+		SAP. Впрочем, некоторые параметры или 
+		транзакции конфигурации не зависят от конкретных модулей, и затрагивают 
+		все (или почти все) модули и функциональности системы. Такие транзакции конфигурации, 
+		которые называются Общие установки, размещаются на верхнем уровне 
+		иерархии IMG. Таким образом, порядок размещения 
+		призван предотвратить появление громадного одноуровневого 
+		списка транзакций конфигурации, который был бы совершенно неуправляем. </span></p>
+				<p class="image">&nbsp;&nbsp;&nbsp;
+		<img src="Images/tran_IMG.jpg" border="0" align="middle" width="529" height="631"  Name = "1_6" ></p>
+		<p style="text-align: center">&nbsp;Рис</span>унок <span lang="en-us">1.8</span>
+		<font face="Times New Roman">–</font><span lang="en-us"> Иерархия директорий Ссылочного IMG.<p style="text-align: justify; text-indent: 10.3pt; line-height: 150%; margin-left: 1.45pt; background: white">
+		<span style="color:black;letter-spacing:-.15pt">Статус конфигурации 
+		может обновляться на любом уровне иерархии Проектного IMG. </span>
+		<span style="color:black;letter-spacing:-.15pt">В SAP предусмотрены стандартные значения статусов – такие, 
+		как «завершенный» и «незавершенный» (значения статусов также могут быть 
+		созданы пользователем), их необходимо обновлять вручную.</span></p>
+		<p style="text-align: justify; text-indent: 13.9pt; line-height: 150%; margin-left: 1.2pt; margin-right: .7pt; margin-top: 0cm; background: white">
+		<span style="color:black;letter-spacing:-.1pt">&nbsp;&nbsp;&nbsp; 
+		Документация по конфигурации обеспечивает запись аннотаций, тем и 
+		проблем по различным установкам конфигурации для каждой 
+		транзакции конфигурации. Эта документация обычно создается в 
+		свободной форме, но ее можно 
+		стандартизировать на основе требований различных проектов..</span></p>
+		<p style="text-align: justify; text-indent: 13.9pt; line-height: 150%; margin-left: 1.2pt; margin-right: .7pt; margin-top: 0cm; background: white">
+		<span style="background-position: 0 0">&nbsp;&nbsp;&nbsp; 
+		В дальнейшем Проектный IMG будем называть  &quot;IMG-проект&quot;.</span></p>
+		<h3><a name="part_1_3_2"></a>Использование IMG для внесения настроек в SAP</h3>
+		<p style="text-align: justify; text-indent: 14.9pt; line-height: 150%; margin-left: 0cm; margin-right: 1.2pt; margin-top: 3.6pt; background: white">
+		<span style="letter-spacing: -0.3pt">&nbsp;&nbsp;&nbsp; </span>
+		Для любого проекта 
+		внедрения SAP существует небольшой набор изначальных параметров или 
+		<a href="#tran">транзакций конфигурации</a>, которые необходимо задать:</p>
+		<ol>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; background: white">Клиент (Client) – cамый высокий организационный уровень в SAP R/3</li>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; margin-right: 0cm; margin-top: .25pt; margin-bottom: .0001pt; background: white">Код 
+			компании (Company code) – самое мелкое юридическое образование, 
+			необходимое для внешней отчетности, годового баланса, 
+			выписок из Книги закупок и т. д. Клиенту может быть присвоено несколько кодов 
+			компании, но никогда наоборот.</li>
+			</span>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; margin-right: 0cm; margin-top: .25pt; margin-bottom: .0001pt; background: white">
+			Параметры для настройки&nbsp; бухгалтерского учета:</li>
+		</ol>
+		<span lang="en-us">  
+		<ul>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; margin-right: 0cm; margin-top: .25pt; margin-bottom: .0001pt; background: white">План счетов (Chart of accounts) 
+			– необходим для внешней отчетности. 
+			У каждого клиента может быть только один план счетов, 
+			причем все коды компании внутри клиента должны использовать именно 
+			этот план счетов.</li>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+			<span style="color: black; letter-spacing: -.55pt">Область контроля кредита (Credit control area)
+			– организационная структура, которая 
+			используется для управления и контроля кредита, а также для 
+			отчетности.</span></li>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+			<span style="color: black; letter-spacing: -.1pt">Области бизнеса (Business areas) 
+			– применяются для гибкой финансовой 
+			отчетности, в случае необходимости создания 
+			отдельного годового баланса, или отчета о прибылях и убытках, обычно используется в США.</span></li>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; background: white">Область контроллинга (Controlling area)&nbsp; 
+            – высшая&nbsp; организационная cтруктура для внутренней 
+			отчетности и бухучета, которой может быть
+			присвоен один или несколько кодов компании.</li>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+			<span style="color: black">Единица учета результатов 
+			(Operating concern) –
+			каждой области контроллинга 
+			присваивается только одна единица учета результатов, которая 
+			используется при наличии модуля анализа прибыльности. Не все клиенты
+			SAP внедряют этот модуль.</span></li>
+			<li>
+			<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+			<span style="color: black; letter-spacing: -.15pt">Счет Главной книги (General Ledger account) 
+			– применяется для внешней (обязательной) отчетности с использованием плана 
+			счетов.</span></li>
+			</ul>
+			<ol>
+				<li value="4">
+				<p style="line-height: 150%; margin-left: 7.0pt; background: white">Завод (Plant) – единица хранения, учета, обработки или производства. 
+			Коду компании или закупающей организации может быть 
+			присвоено несколько	заводов.</spn></li>
+			</li>
+				<li>
+				<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+				Параметры для настройки процессов закупок и продаж</span>:</li>
+		</ol>
+		<span lang="en-us"> 
+		<span lang="en-us"> 
+			<li>
+			<p style="line-height: 150%; margin-left: 27.0pt; background: white">
+			<span style="line-height: 150%; color: black">Организация продаж (Sales organization) 
+			– высший уровень управления продажами и соответствующей отчетности.</span></li>
+			<li>
+			<p style="line-height: 150%; margin-left: 27.0pt; background: white">
+			<span style="color: black; letter-spacing: -.1pt">Канал продаж и дистрибуции (Sales distribution channel) 
+			– характеризует различные режимы поставок конечным клиентам 
+			(дистрибуторам, агентам, точкам розничной торговли, интернет-магазинам и 
+			т.д.). Организации продаж 
+			может быть присвоено несколько каналов продаж и дистрибуции.</span></li>
+			<li>
+			<p style="line-height: 150%; margin-left: 27.0pt; background: white">Подразделение продаж (Sales division) –
+			используется для управления группой продуктов и отчетности по ним. Несколько 
+			подразделений продаж может быть присвоено нескольким организациям продаж или каналам
+			продаж и дистрибуции.</li>
+			<li>
+			<p style="line-height: 150%; margin-left: 27.0pt; background: white">Область продаж (Sales area) 
+			– используется для гибкого управления и отчетности; 
+			это комбинация нескольких организаций продаж, каналов продаж, 
+			дистрибуции и подразделений продаж.</li>
+			<li>
+			<p style="line-height: 150%; margin-left: 27.0pt; background: white">Организация закупок (Purchasing organization) 
+			— организационная единица 
+			для осуществления закупок и создания заказов на закупку.</li> </ul>
+			<ol start="6">
+				<li>
+				<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+				<span style="color: black; letter-spacing: -.05pt">Места хранения (Storage	locations) 
+			– физическое место, где хранятся все учетные единицы компании, 
+			нескольким заводам может быть присвоено 
+			несколько мест хранения.</span></li>
+				</ul>
+				<li>
+				<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+				<span style="color: black; letter-spacing: -.1pt">Банк и Банковский счет (House Bank and Bank Account) –
+			организационные структуры, которые отражают 
+			банковские отношения компании и ее банковские счета.</span></li>
+				<li>
+				<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+				<span style="color: black; letter-spacing: -.15pt">Основные данные по поставщикам (Vendor Master) 
+			– важная информация о поставщиках. Например, название, адрес, номера телефонов и факсов, 
+			контактное лицо, информация о закупках, банковская и бухгалтерская информация. 
+			Эти данные сохраняются в полях транзакций, причем при выполнении 
+			транзакции эти данные могут использоваться по умолчанию.</span></li>
+				<li>
+				<p style="line-height: 150%; margin-left: 7.0pt; background: white">
+				<span style="font-family: Arial; color: black">Основные данные по потребителям (Customer Master) 
+			– схожи с основными данными по поставщикам, содержат информацию о клиентах компании 
+			–  такую, как название, адрес, покупательские предпочтения, маркетинговая 
+			и бухгалтерская информация. Когда выполняется транзакция, эти данные 
+			могут использоваться по умолчанию.</span></span></span></li>
+				</ul>
+				<h2 style="line-height: 150%"><a name="q_1"></a>1.4 Вопросы для самоконтроля</h2>
+				<ol>
+					<li>
+					<p style="line-height: 150%">Назначение платформы SAP Solution 
+			Manager. Основные возможности платформы.</p></li>
+					<li>
+					<p style="line-height: 150%">Общая структура SAP Solution Manager.</p>
+					</li>
+					<li>
+					<p style="line-height: 150%">Какую роль играет платформа во 
+			взаимодействии компании с компанией SAP?</p></li>
+					<li>
+					<p style="line-height: 150%">Что такое Репозитарий 
+					бизнес-процессов?</p>
+					</li>
+					<li>
+					Маршрутные карты. Существующие в
+SAP Solutin Manager 
+виды маршрутных карт.</li>
+					<li>
+					<p style="line-height: 150%">Обзор инструментов SAP Solution Manager.</p>
+					</li>
+					<li>
+					<p style="line-height: 150%">Что такое Implementation Guide? Виды IMG. 
+			IMG-проект.</p></li>
+					<li>
+					<p style="line-height: 150%">Роль Implementation Guide в 
+			конфигурировании системы.</p></li>
+				</ol><b>
+				<h2>&nbsp;</h2>
+		</ol>
+		</div>
+
+</body>
+
+</html>

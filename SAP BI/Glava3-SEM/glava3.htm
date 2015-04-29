@@ -1,0 +1,914 @@
+<html>
+
+<head>
+<title>Проектирование систем бизнес анализа на основе SAP SEM</title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.4, li.4, div.4
+	{margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:15.0pt;
+	font-family:Tahoma;
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<h1>Проектирование систем бизнес анализа на основе <span lang=EN-US>SAP</span><span
+lang=EN-US> </span><span lang=EN-US>SEM</span></h1>
+
+<h2><a name="_Toc138459073"></a><a name="_Toc138050825">Основы теории
+стратегического управления</a></h2>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><i>(предметная
+область стратегического управления)</i></p>
+
+<p class=MsoNormal style='line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=424 height=590 src="glava3.files/image001.gif"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+32 – </i></b><i>Определение связи между Целями&nbsp;–&nbsp;Задачами&nbsp;–&nbsp;Средствами</i></p>
+
+<p class=MsoNormal style='line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Все <b>«Цели&nbsp;–&nbsp;Задачи&nbsp;–&nbsp;Средства»</b> можно разбить
+на 3 вида: </p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+45.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Стратегические </b>(обычно 3&nbsp;–&nbsp;7 лет)</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+45.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Тактические </b>(1&nbsp;–&nbsp;3 лет)</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+45.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Операционные </b>(до 1 года)</p>
+
+<span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'>На данном
+рисунке показана взаимосвязь между Стратегическими, Тактическими и Операционными
+«Целями&nbsp;–&nbsp;Средствами&nbsp;–&nbsp;Задачами».</p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:45.0pt;
+line-height:150%'><img width=624 height=871 src="glava3.files/image002.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>Рисунок
+33 – </b> Иерархия целей производственного предприятия<a name="_Toc138459074"></a><a
+name="_Toc138050826"></a></p>
+
+<h2><span lang=EN-US>SAP</span><span lang=EN-US> </span><span lang=EN-US>Business</span><span
+lang=EN-US> </span><span lang=EN-US>Intelligence</span>: <span lang=EN-US>BW</span>-<span
+lang=EN-US>SEM</span></h2>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>SAP AG предлагает для обеспечения функций бизнес анализа (<span
+lang=EN-US>Business</span><span lang=EN-US> </span><span lang=EN-US>Intelligence</span>)
+следующие программные пакеты: <b>SAP Business Information Warehouse (SAP BW)</b>
+и <b>SAP Strategic Enterprise Management (</b><b><span lang=EN-US>SAP</span><span
+lang=EN-US> </span>SEM)</b>. Эти пакеты представляют собой единую
+интегрированную среду для построения автоматизированной системы поддержки
+принятия решений (СППР) компании. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Использование SAP BI особенно эффективно при автоматизации управленческой
+деятельности в компаниях со сложной структурой или холдингах, действующих в
+условиях конкурентного рынка. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>SAP BI дает возможность интегрировать СППР с разнообразными учетными и
+ERP системами, используемыми в компании (или предполагаемыми к использованию).
+Эти системы могут быть заказной разработки, либо быть построены на основе
+промышленных ERP-пакетов как от SAP AG, либо от других производителей. </p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'>Набор SAP BI SEM
+от SAP AG состоит из следующих основных модулей, поддерживающих соответствующие
+управленческие технологии: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>SEM-BPS</b> (Планирование и моделирование&nbsp;-&nbsp;Business
+Planning and Simulation)&nbsp;–&nbsp;модуль, поддерживающий планирование
+(бюджетирование); </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>SEM-CPM</b> (Монитор эффективности предприятия&nbsp;-&nbsp;Corporative
+Performance Monitor)&nbsp;-&nbsp;модуль, поддерживающий наглядное, эргономичное
+отображение информации о состоянии дел в компании, ее подразделениях и
+окружающей бизнес&nbsp;-&nbsp;среде; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>SEM-BCS</b> (Консолидация&nbsp;-&nbsp;Business Consolidation)&nbsp;-&nbsp;модуль,
+поддерживающий процесс консолидации финансовой отчетности структурных
+подразделений компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>SEM-SRM</b> (Взаимодействие с заинтересованными лицами&nbsp;-&nbsp;Stakeholder
+Relation Management)&nbsp;-&nbsp;модуль, поддерживающий информационное
+взаимодействие с лицами, имеющими интерес в компании (акционерами, партнерами,
+клиентами и т.п.); </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>SEM-BIC</b> (Сбор сведений в компьютерных сетях&nbsp;-&nbsp;Business
+Information Collection)&nbsp;-&nbsp;модуль, поддерживающий поиск и накопление
+сведений из глобальной мировой сети Интернет, из иных доступных в корпоративной
+компьютерной сети источников информации<a
+name="_SEM-BPS_–_планирование_компании / б"></a>.</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=683 height=462 src="glava3.files/image003.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+34 – </i></b><i>Компоненты системы стратегического управления</i></p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><a
+name="_Toc138050827"></a><a name="_SEM-BPS_–_планирование_компании / б_1"></a><b>SEM-BPS
+(Business Planning and Simulation)&nbsp;–&nbsp;планирование бизнеса и
+бюджетирование</b><b> </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Традиционно в основе любой системы управления крупным российским
+предприятием находится система планирования. Сегодня, в связи со значительным
+усложнением бизнес&nbsp;-&nbsp;среды, требования к оперативности разработки
+вариантов плана компании возросли. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Технологически и организационно задача разработки плана крупной,
+территориально-распределенной многоотраслевой компании весьма сложна. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Адекватно ответить на требование повышения оперативности, снижения
+трудоемкости планирования и учета большого количества экономических параметров
+можно лишь автоматизируя само планирование. Инструментом для построения
+автоматизированной системы корпоративного планирования является модуль SEM-BPS.
+</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Этот модуль обеспечивает: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>централизованное определение плановых форм (таблиц) для
+комплексного плана компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>централизованное ведение нормативно-справочной информации,
+включая данные по нормам и нормативам; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>централизованное хранение плановой информации; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>любую организацию процедуры планирования&nbsp;–&nbsp;как
+«снизу-вверх», «сверху-вниз», так и «встречное планирование»; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>централизованное определение автоматических функций планирования;
+</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>проведение многовариантное планирования </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>мониторинг состояния выполнения работ по планированию.</p>
+
+<p class=MsoNormal style='line-height:150%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img width=650 height=458 src="glava3.files/image004.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+35 – </i></b><i>Создание бюджета предприятия</i></p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'>Для определения
+автоматических функций планирования используются встроенные элементарные
+автоматические операции, некоторые из которых перечислены ниже: </p>
+
+<p class=MsoNormal style='margin-left:81.25pt;text-indent:-36.25pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>копирование значений показателя (в том числе массовое, например
+плановая таблица для текущего года копируется в таблицу для будущего года); </p>
+
+<p class=MsoNormal style='margin-left:81.25pt;text-indent:-36.25pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>прогнозирование значений показателя (например, экстраполяция
+показателя «объем продаж» на основе имеющихся ретроспективных данных за
+последние пять лет); </p>
+
+<p class=MsoNormal style='margin-left:81.25pt;text-indent:-36.25pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>переоценка показателей (например, пропорциональное изменение
+показателя «объем продаж», в соответствии с темпом инфляции); </p>
+
+<p class=MsoNormal style='margin-left:81.25pt;text-indent:-36.25pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>вычисление по формуле (например, вычисляется показатель «объем
+выпуска» как сумма «объема продаж» и изменения «остатков продукции на складах и
+в пути»); </p>
+
+<p class=MsoNormal style='margin-left:81.25pt;text-indent:-36.25pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>распределение сверху&nbsp;-&nbsp;вниз (например, показатель
+«объем выпуска» для компании, распределяется по входящим в нее предприятиям в
+соответствии с какой-либо базой распределения); </p>
+
+<p class=MsoNormal style='margin-left:81.25pt;text-indent:-36.25pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>агрегирование&nbsp;-&nbsp;сведение снизу-вверх (например,
+сведение показателя «Фонд оплаты труда предприятия» в «Фонд оплаты труда
+компании»).</p>
+
+<p align=center style='text-align:center;line-height:150%'><img width=608
+height=444 src="glava3.files/image005.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i>Рисунок 36 – </i></b><i>Интегрированные
+планы</i></p>
+
+<p class=MsoNormal><i><span lang=EN-US>&nbsp;</span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><i><img
+width=638 height=382 src="glava3.files/image006.jpg"></i></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+37 – </i></b><i>Интегрированные планы по подразделениям</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Такие элементарные операции планирования объединяются в последовательные
+цепочки и определяют т.о. автоматические функции планирования. Функции
+планирования используют специалисты плановых служб для выполнения плановых
+расчетов. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>SEM-BPS позволяет индивидуализировать каждое автоматизированное рабочее
+место плановика (экономиста) в соответствии с его должностными обязанностями. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Индивидуализация обеспечивается ограничением для него доступа к
+информации компании только тем составом, который необходим ему для выполнения
+его обязанностей, и предоставлением ему возможности использовать
+соответствующие автоматические плановые функции. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Работа с корпоративной автоматизированной системой планирования,
+построенной на основе пакета SEM-BPS, производится в интерактивном режиме, с
+непосредственным доступом в хранилище данных в течение сеанса работы над
+планом. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Автоматизированное рабочее место специалиста может быть построено на базе
+MS Excel, что значительно снижает потребность в дополнительном обучении
+специалистов экономических (финансовых) служб компании и сокращает срок ввода
+системы в эксплуатацию.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>В пакет SEM-BPS также встроен инструментарий динамического моделирования <span
+lang=EN-US>PowerSim</span>.</p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><a
+name="_Toc138050828"></a><a name="#002"></a><a
+name="_SEM-CPM_-_Монитор_эффективности ком"></a><b><span lang=IT>SEM-CPM
+(Corporative Performance Monitor)&nbsp;-&nbsp;</span>Монитор</b><b> эффективности</b><b>
+компании</b><b><span lang=IT> </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Модуль предназначен для создания автоматизированной системы
+информационного обеспечения руководителей компании.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=809 height=594 src="glava3.files/image007.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+38 – </i></b><i>Состав </i><i><span lang=EN-US>SEM</span>-</i><i><span
+lang=EN-US>CPM</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Данный модуль ориентирован на автоматизированную поддержку нескольких
+управленческих технологий, в настоящее время являющихся инновационными для
+российского корпоративного управления: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>технология Balanced Scorecard&nbsp;–&nbsp;сбалансированная
+система показателей успешности деятельности (также применяют термины
+«эффективности», «результативности»). </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>технология Management Cockpit –пульт (кабина) управления.</p>
+
+<p class=MsoNormal style='line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><b>Сбалансированная Система Показателей (Balanced Scorecard)</b>&nbsp;–&nbsp;это
+управленческая технология, призванная «выстроить» или «ориентировать»
+руководителей разного уровня в их текущей деятельности на достижение
+корпоративных целей и решение корпоративных задач. </p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=657 height=543 src="glava3.files/image008.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+39 – </i></b><i>Карты выбора стратегии</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Преимущество <b>Balanced ScoreCard</b> в том, что для компании в целом
+выстраивается иерархическая система целей и показателей оценки их достижения.
+Для руководителя каждого уровня определяются показатели из этой системы,
+характеризующие успешность его деятельности. <i>Показатели успешности могут
+быть финансовыми и нефинансовыми. </i>На данном рисунке показан экран с
+классификацией <span lang=EN-US>Scorecards</span>, где они определяют: <i>рыночные,
+финансовые, операционные перспективы, а также профессиональное развитие
+сотрудников компании.</i></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=815 height=616 src="glava3.files/image009.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+40 – </i></b><i>Состав </i><i><span lang=EN-US>Scorecards</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>При настройке модуля SEM-CPM показатели успешности формально увязываются
+между собой в соответствии с причинно-следственными связями. Вершиной таких
+связей являются показатели успешности для компании целиком (соответствуют
+достижению целей компании, ее высших руководителей). Детализация вниз приводит
+к определению (выявлению) показателей успешности для подчиненных руководителей.
+Значения всех показателей успешности автоматически рассчитываются модулем на
+основе фактических данных, поступающих автоматически из различных учетных
+систем компании. В модуле SEM-CPM постоянно поддерживается актуальная оценка
+состояния дел для управленцев компании на всех уровнях управления. Значение
+показателя успешности на экране монитора может быть также подсвечено некоторым
+условным цветом (например&nbsp;–&nbsp;зеленый цвет&nbsp;–&nbsp;дела идут
+хорошо, желтый&nbsp;–&nbsp;удовлетворительно, красный&nbsp;-&nbsp;неудовлетворительно).
+Ниже на рисунке приведен пример.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=815 height=614 src="glava3.files/image010.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+41 – </i></b><i>Экран монитора </i><i><span lang=EN-US>CPM</span><span
+lang=EN-US> </span></i><i><span lang=EN-US>c</span> подсветкой показателей</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Функция сбалансированной карты оценок в SEM-CPM определяет шкалу из шести
+различных статусов, которые используются для отображения фактического статуса
+элементов стратегии, показателей и инициатив. Для этого значение результата
+(фактическое значение элемента стратегии) преобразуется в статус. В
+представленной ниже таблице показаны существующие значения статуса и
+предопределенные для них значения результатов (эти сведения могут быть
+изменены, за исключением символа).<i> </i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><b>Таблица 4 – </b>Значения статусов</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=1 cellpadding=0 width=523
+ style='width:392.25pt'>
+ <tr>
+  <td width="20%" valign=top style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Символ статуса</p>
+  </td>
+  <td width="34%" valign=top style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Краткий текст статуса</p>
+  </td>
+  <td width="21%" valign=top style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Интервал значений</p>
+  </td>
+  <td width="23%" valign=top style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Значение результата по умолчанию</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="20%" style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img width=19
+  height=19 src="glava3.files/image011.gif"></p>
+  </td>
+  <td width="34%" style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Не определен</p>
+  </td>
+  <td width="21%" style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>нет</p>
+  </td>
+  <td width="23%" style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>нет</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="20%" style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img width=19
+  height=19 src="glava3.files/image012.gif"></p>
+  </td>
+  <td width="34%" style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Очень хороший</p>
+  </td>
+  <td width="21%" style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>100..119</p>
+  </td>
+  <td width="23%" style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>110</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="20%" style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img width=19
+  height=19 src="glava3.files/image013.gif"></p>
+  </td>
+  <td width="34%" style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Хороший</p>
+  </td>
+  <td width="21%" style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>80..99</p>
+  </td>
+  <td width="23%" style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>90</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="20%" style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img width=19
+  height=19 src="glava3.files/image014.gif"></p>
+  </td>
+  <td width="34%" style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Средний</p>
+  </td>
+  <td width="21%" style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>60..79</p>
+  </td>
+  <td width="23%" style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>70</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="20%" style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img width=19
+  height=19 src="glava3.files/image015.gif"></p>
+  </td>
+  <td width="34%" style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Пригодный</p>
+  </td>
+  <td width="21%" style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>30..59</p>
+  </td>
+  <td width="23%" style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>45</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="20%" style='width:20.4%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img width=19
+  height=19 src="glava3.files/image016.gif"></p>
+  </td>
+  <td width="34%" style='width:34.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal>Неудовлетворительный</p>
+  </td>
+  <td width="21%" style='width:21.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0..29</p>
+  </td>
+  <td width="23%" style='width:23.36%;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'>15</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:45.0pt;
+line-height:150%'><b><i>Таблица 4 – </i></b><i>Значения статусов</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Рассмотрение всей сбалансированной системы показателей позволяет быстро
+анализировать состояние дел в компании, а также выявлять причины каких-либо
+негативных явлений в ее деятельности (благодаря установленным
+причинно-следственным связям между ними). Особенно хорошо эта технология может
+быть применена в крупных компаниях с многоотраслевым производством. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><b>Пульт (кабина) управления (Management Cockpit)</b>&nbsp;–&nbsp;это
+управленческая технология визуального отображения значений <span lang=EN-US>KPI</span>
+компании в легко воспринимаемом, эргономически&nbsp;-&nbsp;обоснованном,
+структурированном виде. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Эта система позволяет рассматривать компанию как единый
+экономико-социальный организм, характеризующийся следующими четырьмя важнейшими
+аспектами ее деятельности: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-27.0pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>внутренний аспект&nbsp;-&nbsp;бизнес&nbsp;-&nbsp;процессы
+компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-27.0pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>кадровый аспект&nbsp;–&nbsp;развитие и продвижение персонала
+компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-27.0pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>клиентский аспект&nbsp;-&nbsp;взаимоотношения с клиентами
+компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-27.0pt;line-height:
+150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>финансовый аспект&nbsp;-&nbsp;взаимоотношения с лицами, имеющими
+интерес в компании (акционеры и т.п.).</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Показатели успешности деятельности группируются в эти четыре категории.
+Значения показателей одновременно отображаются в виде хорошо воспринимаемых
+диаграмм, что обеспечивает легкое считывание их с экрана. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>«Пульт (кабина) управления» используется для информационной поддержки
+работы коллегиальных органов управления компании, для проведения разного рода
+совещаний, заседаний. Специальное проекционное оборудование одновременно
+отображает показатели каждой из четырех категорий на одну из четырех стен зала
+заседаний. Тем самым обеспечивается наглядность и простота анализа существа
+обсуждаемых проблем. Участники совещания ведут обсуждение на единой информации,
+что создает базу взаимопонимания между руководителями различных подразделений и
+функциональных служб, участвующих в коллективной работе. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Доступ к визуальному отображению «пульта (кабины) управления» можно
+получить и на автоматизированном рабочем месте руководителя, специалиста
+аппарата управления. Также возможен доступ и из сети Интернет, по защищенному
+коммуникационному каналу. Соответствующая защита обеспечивается специальным
+программным обеспечением SAP AG.</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=912 height=547 src="glava3.files/image017.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+42 – </i></b><i>Пульт управления</i></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=767 height=468 src="glava3.files/image018.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+43 – </i></b><i>Четыре стены с шестью логическими ракурсами на каждой</i></p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=827 height=586 src="glava3.files/image019.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+44 – </i></b><i>Обзор стены</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>«Пульты (кабины) управления» могут быть сформированы для каждого из
+уровней управления, для любого из подразделений компании.</p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><i>Пример:</i></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=898 height=419 src="glava3.files/image020.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+45 – </i></b><i><span lang=EN-US>Management</span><span lang=EN-US> </span></i><i><span
+lang=EN-US>Cockpit</span> для различных уровней управления</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Модуль SEM-CPM обеспечивает: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ведение каталога и классификатора показателей успешности
+деятельности; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>определение источников данных для вычисления показателей
+успешности; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>построение сети причинно-следственных связей между показателями
+успешности; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>настройку алгоритмов вычисления показателей успешности; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ведение модели стратегии компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-size:10.0pt;line-height:150%;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>привязку к модели стратегии компании целей и показателей
+успешности.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=1116
+height=702 src="glava3.files/image021.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i>Рисунок 46 – </i></b><i>Ситуационная
+комната на основе </i><i><span lang=EN-US>Management</span><span lang=EN-US> </span></i><i><span
+lang=EN-US>Cockpit</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><a name="_Toc138050829"></a><a name="#003"></a><a
+name="_SEM-BCS_-_Консолидация"></a><b><span lang=EN-US>SEM-BCS (Business Consolidation)&nbsp;-&nbsp;</span>Консолидация</b><b>
+бизнеса</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Модуль SEM-BCS обеспечивает выполнение консолидации отчетности по группе
+предприятий, входящих в компанию. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>При этом обеспечивается автоматизация следующих функций: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>исключение внутренних оборотов; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>исключение дебиторской и кредиторской задолженности между
+предприятиями компании; </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>консолидируются инвестиции (с учетом взаимных инвестиций).</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Также предоставляется возможность проведения нестандартных проводок
+вручную. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Консолидацию можно проводить в следующих вариантах: </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>для расчета налогов </p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-27.0pt;line-height:150%'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>для целей управления компанией.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Сбор данных для консолидации может производиться из нескольких
+источников: из учетных систем предприятий и из системы корпоративного
+планирования автоматически, также возможна загрузка данных из компьютерных
+файлов и ручной ввод непосредственно в модуле SEM-BCS. В процессе загрузки
+данных возможно выполнение автоматической переоценки и перерасчета валют. </p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=799 height=599 src="glava3.files/image022.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i>Рисунок 47 – </i></b><i>Инструмент
+Консолидации&nbsp;–&nbsp;Дерево показателей </i><i><span lang=EN-US>SEM</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Инструментами управления работой модуля являются монитор данных,
+позволяющий управлять процессом сбора и предварительной обработки данных
+предприятий компании, а также монитор консолидации, обеспечивающий просмотр
+хода консолидации и ее результатов.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Результатом работы модуля являются внешние отчеты для государственных
+органов по группе предприятий компании, а также внутренние управленческие
+отчеты холдинга, сохраняемые в Хранилище данных BW и доступные для просмотра из
+модуля SEM-CPM. </p>
+
+</div>
+
+<span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><a name="#004"></a><a
+name="_SEM-SRM_-_Взаимодействие_с заинтере"></a><a name="_Toc138050830"><b>SEM-SRM
+(Stakeholders Relationship Management)&nbsp;-&nbsp;Взаимодействие с
+заинтересованными лицами (сторонами)</b></a><b> </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Для больших компаний, где количество акционеров и других заинтересованных
+сторон исчисляется сотнями и тысячам особое значение приобретает организация и
+проведение специальной работы с ними. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Как правило, такие лица должны получать своевременную и точную информацию
+о ходе дел в компании из первоисточника&nbsp;–&nbsp;от служб компании. Также
+при принятии важнейших решений должно учитываться их мнение. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Наладить информационное взаимодействие компании с такими лицами помогает
+модуль SEM-SRM. С помощью этого модуля для лиц, заинтересованных в деятельности
+компании постоянно поддерживаются в актуальном состоянии
+персонально-ориентированные варианты «пульта управления компанией» и
+«сбалансированной системы показателей», финансовые отчеты компании с
+возможностью оперативного (интерактивного) анализа показателей отчетности.</p>
+
+<p align=center style='text-align:center'><img width=614 height=406
+src="glava3.files/image023.jpg"></p>
+
+<p align=center style='text-align:center'><b><i>Рисунок 48 – </i></b><i>Планирование
+отношений со стейкхолдерами</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Модулем SEM-SRM также обеспечивается массовое изготовление почтовых
+рассылок заинтересованным лицам, ведется информация о мероприятиях для них:
+собраниях, встречах и т.п. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Доступ к своей персональной информационной службе заинтересованное лицо
+получает через Интернет. </p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=931 height=601 src="glava3.files/image024.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+49 – </i></b><i>Форма Доступа</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Средствами данного модуля, через Интернет, производится также опрос
+заинтересованных лиц для обеспечения обратной связи с ними. Высший менеджмент
+компании получает возможность учесть их мнения при принятии важнейших решений </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Для работы модуля используется база данных по заинтересованным лицам,
+содержащая такие основные данные, как почтовый адрес, язык, количество и состав
+акций предприятий компании, которыми владеет лицо, и другие сведения.
+Информация о компании, отображаемая для заинтересованных лиц, находится в
+хранилище данных BW, куда автоматически поступает из учетных систем компании,
+либо иным способом. </p>
+
+<span style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><a name="_Toc138050831"></a><a name="#005"></a><a
+name="_SEM-BIC_-_Сбор_сведений в компьютер"></a><b>SEM-BIC (Business
+Information Collection)&nbsp;-&nbsp;Сбор сведений в компьютерной сети</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Качественные управленческие решения основываются на разнообразной и
+разнородной информации. При этом ее сбор и каталогизация становятся проблемой,
+т.к. современное общество производит информацию во все возрастающих масштабах.
+Автоматизация сбора сведений, важных для ведения бизнеса компании возможна с
+использованием модуля SEM-BIC. </p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=900 height=606 src="glava3.files/image025.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+50 – </i></b><i>Отображение важности внешних данных</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Для сбора сведений могут использоваться следующие источники информации: в
+глобальной сети Интернет&nbsp;-&nbsp;открытые WEB-сайты, коммерческие
+поставщики информации (информационные агентства), в корпоративной компьютерной
+сети компании&nbsp;-&nbsp;базы документов и данных. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>При этом сами данные могут быть как структурированными&nbsp;–&nbsp;в виде
+записей базы данных, так и неструктурированными&nbsp;–&nbsp;в виде обычных
+текстовых документов либо почтовых (e-mail) сообщений. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Для управления работой модуля SEM-BIC производится определение критериев
+отбора информации, определение источников информации (указываются их адреса в
+компьютерной сети), а также привязка критериев отбора к источникам информации. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Модуль автоматически производит периодическую (в соответствии с расписанием)
+проверку источников на наличие информации, удовлетворяющей критериям отбора. В
+случае обнаружения такой информации ссылка на нее (ее адрес) включается в набор
+ссылок для определенного структурного подразделения или руководителя. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Доступ к данным по сформированным ссылкам производится с
+автоматизированных рабочих мест специалистов компании на основе технологии
+Интернет.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

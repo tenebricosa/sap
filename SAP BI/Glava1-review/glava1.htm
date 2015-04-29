@@ -1,0 +1,390 @@
+<html>
+
+<head>
+<title>Проектирование информационных систем </title>
+<link rel="stylesheet" type="text/css" href="../General/TMExternalStyleSheet.css">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;}
+p.4, li.4, div.4
+	{margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:15.0pt;
+	font-family:Tahoma;
+	font-weight:bold;}
+p.40, li.40, div.40
+	{margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:15.0pt;
+	font-family:Tahoma;
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<h1>Место систем бизнес анализа в иерархии АСУ </h1>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Так как в нашем курсе используется большое количество терминов и
+обозначений, я бы хотел дать определения наиболее распространенным из них.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><b>Понятие предметной и инструментальной области.</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Существуют две области человеческой деятельности. Одна&nbsp;–&nbsp;<span
+class=keyworddef><b>прикладная (предметная)</b></span>&nbsp;-&nbsp;связана с
+постановкой и решением задач определенного класса. Другая&nbsp;-&nbsp;<span
+class=keyworddef><b>инструментальная</b></span>&nbsp;-&nbsp;связана с
+разработкой средств для решения прикладных задач. Области эти вполне
+самостоятельны: программист занимается не только кодированием, а экономист
+строит свои модели, как пример или средство дальнейших исследований, а не как
+их цель. В каждой области существует свой язык, свои традиции, свои задачи и
+свои методики их решения. Машина, а в особенности компьютер, выступает как <b>универсальный
+инструмент</b>, с помощью которого можно решать разнообразные прикладные
+задачи, был бы подходящий инструмент.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><b>Понятие системы.</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><i>Отличительные качества системы: </i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>• система есть нечто целое; </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>• система есть множество элементов, свойств и отношений; </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>• система есть организованное множество элементов; </p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'>• система есть
+динамическое множество элементов. <a name="_Toc138459064"></a><a
+name="_Toc138050808"></a></p>
+
+<h2>Классификация автоматизированных систем управления</h2>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><i>(Изучение
+предметной области АСУ&nbsp;–&nbsp;инструментальной области организации
+производства и управления производством)</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>При изучении систем автоматизации часто возникают трудности с пониманием
+того, какие функции несет каждая система. Для облегчения представления о
+различных типах АСУ, применяющихся на производстве, их удобно представить в
+виде иерархически структурированной схемы.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><img
+width=516 height=357 src="glava1.files/image001.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+2</i></b><i> </i><i><span style='font-family:Symbol'>-</span>  Иерархическое
+представление систем автоматизированного управления.</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>На рисунке 2 выделены цветом два раздела&nbsp;–&nbsp;<span lang=EN-US>ERP</span><span
+lang=EN-US> </span>системы и <span lang=EN-US>BI</span>&nbsp;–&nbsp;системы.
+Это сделано специально для того, чтобы акцентировать внимание на предмете
+нашего изучения. Теперь представим характеристику каждого уровня, через
+описание того, какие устройства задействованы на нем и как происходит
+взаимодействие человека с системой автоматизации.</p>
+
+<p class=MsoNormal style='line-height:150%'><img width=626 height=156
+src="glava1.files/image002.gif"></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+3</i></b><i> </i><i><span style='font-family:Symbol'>-</span>  Представление взаимодействия
+человека и АСУ на различных уровнях.</i></p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><b>Подробное
+описание уровней автоматизации.</b></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>АСУТП. </b>Автоматизированная система управления технологическими
+процессами. Человеко-машинный комплекс, обеспечивающий управление
+технологическими процессами на современных механизированных и
+автоматизированных промышленных предприятиях. Основная цель АСУТП&nbsp;-&nbsp;оптимизация
+технологических процессов, характеризующихся большим числом параметров и
+сложностью алгоритмов управления.</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span lang=EN-US>MES</span>. </b><span lang=EN-US>Manufactory</span><span
+lang=EN-US> </span><span lang=EN-US>Execution</span><span lang=EN-US> </span><span
+lang=EN-US>Systems</span>. Автоматизированная система управления и оптимизации
+производственной деятельности, которая в режиме реального времени: инициирует;
+отслеживает; оптимизирует; документирует производственные процессы от начала
+выполнения заказа до выпуска готовой продукции.</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span lang=EN-US>ERP</span>. </b><span lang=EN-US>Enterprise</span><span
+lang=EN-US> </span><span lang=EN-US>Resource</span><span lang=EN-US> </span><span
+lang=EN-US>Planning</span>. Система управления деятельностью предприятия&nbsp;-&nbsp;Набор
+интегрированных приложений, позволяющих создать единую среду для автоматизации
+планирования, учета, контроля и анализа всех основных бизнес&nbsp;-&nbsp;операций
+предприятия (производство, финансы, снабжение, сбыта, хранение, техническое
+обслуживание и др.)</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-18.0pt;line-height:
+150%'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span lang=EN-US>BI</span>. </b><span lang=EN-US>Business</span><span
+lang=EN-US> </span><span lang=EN-US>Intelligence</span> (<span lang=EN-US>Systems</span>).
+Системы углубленного анализа детальных данных бизнеса, основанные на
+технологиях хранилищ данных и аналитических приложений.<br>
+Иногда используется как синоним «систем поддержки принятия решений», хотя
+Business Intelligence (<span lang=EN-US>Systems</span>) понятие технически
+более широкое, более подробно оно будет рассмотрено в <i>лекции 2</i>.</p>
+
+<h3><a name="_Toc138050809">Системы MES</a></h3>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Чем отличаются MES системы от ERP-систем, и почему они находятся на
+разных уровнях информационной структуры? ERP-системы ориентированны на
+планирование выполнения заказов, т.е. отвечают на вопрос: <b>когда и сколько
+продукции должно быть произведено?</b> MES системы фокусируются на вопросе: <b>как
+в действительности продукция производится?</b> и оперируют более точной
+информацией о производственных процессах. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>В частности на уровне <span lang=EN-US>MES</span> работают SCADA<b> </b>системы.
+</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'><b>Supervisory Control And Data Acquisition</b>&nbsp;-&nbsp;система супервизорного
+управления и сбора данных. Система управления и мониторинга, содержащая
+программно- аппаратные средства, взаимодействующие между собой через локальные
+и глобальные сети.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Главная задача SCADA-системы&nbsp;-&nbsp;обеспечение удобного инструмента
+визуализации технологического процесса для оператора.</p>
+
+<p class=MsoNormal style='line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><img
+width=425 height=319 src="glava1.files/image003.gif"> </b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><i>Рисунок
+4</i></b><i> </i><i><span style='font-family:Symbol'>-</span> <b> </b>Пример
+интерфейса </i><i><span lang=EN-US>SCADA</span> системы</i></p>
+
+<h2><a name="_Toc138459065"></a><a name="_Toc138050810">Аналогии между
+стратегическим управлением и моделированием систем</a></h2>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><i>(изучение
+предметной области стратегического управления)</i></p>
+
+<p class=MsoNormal style='text-indent:45.0pt;line-height:150%'><b>Элементы моделирования.
+Понятие модели. Принципы системного подхода</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>Мы повторим основные понятия из <i>предмета
+моделирования</i>. Потому что, как правило, моделирование является инструментом,
+облегчающим изучение сложных систем. Моделирование не может существовать само
+по себе, создание моделей имеет ясную цель - познания (получение знаний). В
+связи с этим процесс создания и анализа модели фактически нацелен на сопровождение
+процесса<i> принятия решений</i>. Так как в принятии решений, необходимо в первую
+очередь исследовать систему: получить знания о ней, далее получить знания о том,
+как дальше работать с такой системой.  Именно поэтому предметы <i>моделирования</i>
+и <i>принятия управленческих решений</i> имеют так много общего, ведь и в
+одном, и другом случае сложной ситуации требуется проведение многофакторного
+анализа, поиска аналогий; формализация проблемы, выдвижение гипотез, их
+проверка и приведение окончательных выводов.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Моделирование</i>&nbsp;–&nbsp;это замещение одного
+объекта другим с целью получения информации о важнейших свойствах оригинала с
+помощью модели путем проведения эксперимента с моделью.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Гипотеза&nbsp;–&nbsp;</i>определенные
+предсказания, предположения, основанные на небольшом количестве опытных данных,
+наблюдений, догадок. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Аналогия&nbsp;–&nbsp;</i>суждение о каком-либо
+частном сходстве двух объектов.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Эксперимент</i>&nbsp;–&nbsp;процедура организации
+наблюдений каких-то явлений, которые осуществляют в условиях, близких к естественным,
+либо имитируют их.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Модель&nbsp;–&nbsp;</i>заместитель оригинала,
+обеспечивающий изучение некоторых свойств оригинала.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Анализ&nbsp;–&nbsp;</i>это метод исследования,
+состоящий в мысленном или фактическом разложении целого на составные части.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Синтез</i>&nbsp;–&nbsp;это познание какого-либо
+предмета, явления как единого целого; соединение, обобщение.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>В общем, процесс моделирования представлен следующим
+образом: используя ранее известные данные об объекте, выдвигается гипотеза, по
+которой на основе аналогии строится упрощенная логическая модель и с ней
+проводится эксперимент для изучения свойств объекта.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>Моделирование состоит из двух стадий: анализа и
+синтеза.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>При <i>анализе</i> задана модель, необходимо
+определить и исследовать неизвестные ее характеристики. Этапы анализа:</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;text-autospace:none'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>составление модели объекта, наиболее подходящей с позиции получения
+требуемых функций;</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;text-autospace:none'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>написание программ оценки характеристик модели;</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;text-autospace:none'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>определение характеристик объекта по модели с помощью программ оценки.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>При <i>синтезе</i> задаются требуемые характеристики
+объекта, необходимо получить некоторую модель, которая обеспечивала бы заданные
+характеристики. Если определяют в некотором смысле наилучшие структуру и
+параметры, то синтез называется <i>оптимизацией</i>, соответственно структурной
+или параметрической. Этапы синтеза:</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;text-autospace:none'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>создание исследовательской модели;</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;text-autospace:none'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>анализ этой модели и определение  ее функций;</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%;text-autospace:none'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>сравнение полученных результатов с заданными требованиями.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>Если результаты и требования не совпадают, то
+необходимо синтезировать сначала. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'>Существует два основных подхода моделирования систем:
+классический и системный. Как было сказано выше, <i>э</i>ти подходы можно с
+успехом применить не только к моделированию, но и к процессу принятия
+управленческих решений.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Классический</i> <i>подход</i>&nbsp;–&nbsp;синтез
+системы осуществляется путем суммирования отдельных компонент в единую модель,
+причем каждая из компонент разработана раздельно, решает свои собственные
+задачи и изолирована от других частей модели. Процесс моделирования
+осуществляется от частного к общему. Классический подход может быть использован
+для реализации сравнительно простых моделей, в которых возможно разделение и
+взаимно независимое рассмотрение отдельных сторон функционирования реального
+объекта. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%;text-autospace:none'><i>Системный</i> <i>подход</i> в отличие от
+классического предполагает переход от общего к частному, когда в основе
+рассмотрения лежит цель, причем исследуемый объект выделяется из внешней среды.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>В теории менеджмента существует также <i>ситуационный</i> подход, который
+не предполагает моделирования&nbsp;-&nbsp;это ориентация на ближайший
+положительный результат (&quot;а дальше видно будет...&quot;). Мыслится, что
+&quot;дальше&quot; опять будет поиск лучшего решения в той ситуации, которая
+возникнет. Но решение в данный момент наилучшее, может оказаться совсем не
+таким, как только ситуация изменится или в ней обнаружатся неучтенные
+обстоятельства. Стремление отреагировать на каждое изменение ситуации
+адекватным образом приводит к тому, что менеджер вынужден принимать все новые и
+новые решения. Он фактически перестает управлять событиями.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Это не означает, что управление по обстоятельствам неэффективно в
+принципе. Ситуативный подход к принятию решений необходим и оправдан, когда
+сама ситуация экстраординарна и использование прежнего опыта заведомо
+рискованно, когда ситуация изменяется быстро и непредсказуемым образом, когда
+нет времени для учета всех обстоятельств&nbsp;–&nbsp;другими словами <i>применение
+данного подхода оправдано только в критических ситуациях.</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:45.0pt;line-height:
+150%'>Однако подтверждает, что в стратегическом управлении, требующем создания
+долгосрочных планов, возможно, гораздо больше общего с теорией моделирования,
+чем с общим менеджментом.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

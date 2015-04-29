@@ -1,0 +1,232 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<link rel=Edit-Time-Data href="StartingIFS.files/editdata.mso">
+<title>Запуск служб IFS и Oracle</title>
+
+<link rel=Stylesheet type="text/css" media=all
+href="../General/TMExternalStyleSheet.css">
+
+</head>
+
+<body bgcolor=white background="../General/background.jpg" lang=RU link=darkblue
+vlink=darkblue style='tab-interval:35.4pt;margin-left:10.25pt;margin-top:11.25pt;
+margin-right:55.0pt'>
+
+
+		<h2 style="line-height: 150%"><font size="6"><a name = "part_4"></a>4. Глобальное развертывание</font></h2>
+		<p style="line-height: 150%">&nbsp;&nbsp;<a href="#vved_4"> Введение</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;<a href="#part_4_1">4.1 Подход к глобальному шаблону</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;<a href="#part_4_2">4.2 Глобальное развертывание</a></p>
+		<p style="line-height: 150%">&nbsp;&nbsp;<a href="#part_4_3">4.3 Вопросы для самоконтроля</a></p>
+
+	<div>
+		<h2 style="line-height: 150%"><a name="vved_4"></a>Введение</h2>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Созданный проект внедрения может стать шаблоном для других 
+		организационных единиц в компании. Этот шаблон можно распределить между 
+		различными дочерними компаниями и в дальнейшем настроить для конкретных 
+		проектов, тем самым уменьшив 
+		затраты на внедрение решения. </p>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Созданный в системе шаблон переносится в другие системы как основа 
+		концептуального проекта для определенного проекта клиента в 
+		рамках <a href="../StartingSM/StartingSM.htm#glob_imp">глобального развертывания</a>.&nbsp;&nbsp;&nbsp;</p></div>
+	<h2 style="line-height: 150%">&nbsp;<a name="part_4_1"></a>4.1 Подход к глобальному шаблону&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+		<p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Схему глобального развертывания иллюстрирует рисунок 4.1.</p>
+		<p class="image" style="line-height: 150%">&nbsp;&nbsp;&nbsp;
+		<img src="Images/sh_proj.jpg" border="0" align="middle" width = "554" height="300" Name = "1_1" ></p>
+		<p style="line-height: 150%; text-align: center">Рисунок 4.1
+		<font face="Times New Roman">–</font> Подход к 
+		глобальному шаблону.</p>
+		<p style="text-autospace: none; background: white; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В сценариях глобального развертывания в 
+		головной фирме определяется глобальный шаблон, в котором размещаются 
+		сценарии, документы концептуального проекта и конфигурации. Можно определить, какие компоненты 
+		шаблона релевантны для дочерних компаний, а также то, до какой степени 
+		эти дочерние компании могут изменять шаблон в проектах развертывания.</p>
+		<p style="text-autospace: none; background: white; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Централизованно определенный глобальный 
+		шаблон переносится в дочерние компании. В дочерних компаниях этот шаблон 
+		используется в проекте внедрения для реализации/конфигурирования решений 
+		в соответствии с инструкциями, полученными от вышестоящих инстанций.</p>
+	<h2 style="line-height: 150%">&nbsp;<a name="part_4_2"></a>4.2 Глобальное развертывание&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+<p style="text-autospace: none; background: white; line-height:150%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Новые шаблоны определяются в 
+		головной фирме, и их можно создавать 
+		на основе любого другого шаблона, как поставляемого SAP, так и 
+		собственного. Настройка шаблонов идет в соответствии со специфичной для 
+		заказчика структурой решения, которая будет многократно использоваться 
+		как стандартизированная настройка в локальной среде. В данном контексте 
+		термин &quot;локальная среда&quot; обозначает среду внедрения на дочернем предприятии (см. 
+		рис. 4.1). Рассмотрим основные этапы глобального развертывания (см. рис. 
+		4.2).</p>
+		<p class="image" style="line-height: 150%">&nbsp;&nbsp;&nbsp;
+		<img src="Images/glob_raz.jpg" border="0" align="middle" width = "554" height="359" Name = "1_1" ></p>
+		<p style="line-height: 150%; text-align: center">Рисунок 4.2
+		<font face="Times New Roman">–</font> Схема этапов глобального развертывания.<p style="text-autospace: none; background: white; line-height:150%"><b>
+Определение&nbsp; шаблонного проекта</b></p>
+<ol>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Составление глобальной программы 
+(фаза подготовки проекта): </p></li>
+</ol>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	При создании основного проекта,
+	<a href="../Implementation/Phase01.htm#vid_project">вид проекта</a> 
+	определить как <b>шаблонный проект</b>. Далее в рамках основного проекта необходимо создать 
+	требуемое количество шаблонов;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">При 
+	<a href="../Implementation/Phase01.htm#part_2_1_2">определении объема</a> проекта необходимо выбрать стандартные сценарии, которые 
+будут использоваться в качестве отправной точки при создании бизнес-сценариев в 
+основном проекте.</p></li>
+</ul>
+<ol>
+	<li value="2">
+	<p style="text-autospace: none; background: white; line-height:150%">Глобальный концептуальный проект:</p>
+	</li>
+</ol>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Уточнение стандартных сценариев в соответствии 
+со специфичной для заказчика структурой решения;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Установка глобальных атрибутов для определения 
+глобальных/ стандартных/ согласованных/ локальных процессов;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Описание глобальных бизнес- и 
+технических требований.</p></li>
+</ul>
+<ol>
+	<li value="3">
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Конфигурирование ссылочной системы в контексте 
+глобального шаблона:</p></li>
+</ol>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">Присвоение связанных областей
+	IMG по специфичной для заказчика структуре решения;</p>
+	</li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	В определенном для <b>шаблона</b> контексте: 
+создание и присвоение пакетов настройки бизнес-конфигурации по специфичной для 
+заказчика структуре решения;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Присвоение собственных глобальных 
+разработок (например, отчетов) ;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+		Запись примерных или основных данных в качестве 
+САТТ и их присвоение;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Создание стандартных контрольных примеров 
+(контрольных примеров, выполняемых вручную, или САТТ) для повторного 
+использования в местоположении развертывания.</p></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%"><b>
+Использование шаблона в локальном проекте развертывания</b></p>
+<p style="text-autospace: none; background: white; line-height:150%">После 
+переноса шаблона в локальную систему можно определить проект внедрения по этому 
+шаблону. </p>
+<ol>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">Подготовка проекта:</p>
+	</li>
+</ol>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Создание локального проекта 
+развертывания (вид проекта – <b>внедрение</b>);</p>
+	</li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Выбор одного или нескольких шаблонов и 
+связанных сценариев.</p></li>
+</ul>
+<ol>
+	<li value="2">
+	<p style="text-autospace: none; background: white; line-height:150%">Концептуальный проект:</p>
+	</li>
+</ol>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Адаптация согласованных и локальных 
+процессов в соответствии с локальными требованиями (например, расширение объема 
+процесса);</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Документирование локальных требований к 
+согласованным или локальным процессам.</p></li>
+</ul>
+<ol>
+	<li value="3">
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Реализация:</p></li>
+</ol>
+<ul>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Применение определенной для шаблона 
+настройки (связанные пакеты настройки бизнес-конфигурации) к стандартным 
+процессам;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Окончательное конфигурирование 
+	на основе локальных требований;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+	Повторное использование примеров 
+основных данных, созданных в контексте шаблона;</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+		Анализ собственных глобальных разработок 
+(например, отчетов);</p></li>
+	<li>
+	<p style="text-autospace: none; background: white; line-height:150%">
+		Повторное использование стандартных контрольных 
+примеров (контрольных примеров, выполняемых вручную, или САТТ) для тестирования 
+стандартных процессов.</p></li>
+</ul>
+<p style="text-autospace: none; background: white; line-height:150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Несмотря на то, что бизнес-сценарии и процессы уже определены в шаблоне, 
+дочерние компании могут в определенных рамках изменять структуры и 
+бизнес-содержимое, полученные из этого шаблона, в соответствующих локальных 
+проектах развертывания. Для каждого структурного элемента можно определить 
+должен ли он быть обязательным, изменяемым или неизменяемым в системах дочерних 
+компаний.</p>
+		<div>
+		<font size="2">
+		<h2 style="line-height: 150%"><a name="part_4_3"></a>4.3 Вопросы для самоконтроля</h2>
+		<ol>
+			<li>
+			<p style="line-height: 150%">Глобальный шаблон. Глобальное 
+			развертывание.</li>
+		<li>
+		<p style="line-height: 150%">Схема глобального развертывания.</li>
+<li>
+<p style="line-height: 150%">Определение шаблонного проекта.</li>
+<li>
+<p style="line-height: 150%">Использование шаблона в локальном проекте 
+развертывания.</li>
+		</ol>
+		<h2 style="line-height: 150%">&nbsp;</h2>
+		</div>
+
+</body>
+
+</html>
